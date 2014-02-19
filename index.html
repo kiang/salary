@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>
+            var bli, nhi;
+            $.get('data/nhi.json', {}, function(data) {
+                nhi = data;
+            });
+            $.get('data/bli.json', {}, function(data) {
+                bli = data;
+            });
+        </script>
+    </head>
+    <body>
+        這個網頁試著解決一個問題，就是當公司設定一個員工薪資的預算時，薪資條細節到底應該怎麼算出來？
+
+        <p>每月預算：<br />
+            <input type="text" size="40" id="salary_budget" />
+            <input type="submit" value="開始計算" id="salary_budget_submit" />
+        </p>
+        <p>健保投保薪資：<span id="nhi_salary"></span></p>
+        <p>勞保投保薪資：<span id="bli_salary"></span></p>
+        <table border="1" width="500">
+            <tr>
+                <td>項目</td>
+                <td width="100">勞工</td>
+                <td width="100">雇主</td>
+            </tr>
+            <tr>
+                <td>健保費：</td>
+                <td><span id="nhi_fee" class="employee"></span></td>
+                <td><span id="nhi_cost" class="company"></span></td>
+            </tr>
+            <tr>
+                <td>勞保費：</td>
+                <td><span id="bli_fee" class="employee"></span></td>
+                <td><span id="bli_cost" class="company"></span></td>
+            </tr>
+            <tr>
+                <td>就業保險費：</td>
+                <td><span id="bli_addition_fee" class="employee"></span></td>
+                <td><span id="bli_addition_cost" class="company"></span></td>
+            </tr>
+            <tr>
+                <td>勞退新制：</td>
+                <td>0</td>
+                <td><span id="bli_company_cost" class="company"></span></td>
+            </tr>
+            <tr>
+                <td>小計：</td>
+                <td><span id="employee_sum"></span></td>
+                <td><span id="company_sum"></span></td>
+            </tr>
+        </table>
+        <script>
+            $(function() {
+                $('input#salary_budget_submit').click(function() {
+                    var currentBliKey, companySum = 0, employeeSum = 0;
+                    var companyBudget = parseInt($('input#salary_budget').val());
+                    for (i in nhi) {
+                        if (companyBudget >= companySum) {
+                            companySum = parseInt(nhi[i]['base_salary']);
+                            employeeSum = parseInt(nhi[i]['base_salary']);
+                            if (bli[i] !== undefined) {
+                                currentBliKey = i;
+                                $('span#bli_fee').html(bli[currentBliKey]['fee_orig']);
+                                $('span#bli_cost').html(bli[currentBliKey]['cost_company_orig']);
+                                $('span#bli_addition_fee').html(bli[currentBliKey]['fee_addition']);
+                                $('span#bli_addition_cost').html(bli[currentBliKey]['cost_company_addition']);
+                                $('span#bli_company_cost').html(Math.round(bli[currentBliKey]['base_salary'] * 0.06));
+                                $('span#bli_salary').html(bli[currentBliKey]['base_salary']);
+                            }
+                            $('span#nhi_fee').html(nhi[i]['fee1']);
+                            $('span#nhi_cost').html(nhi[i]['cost_company']);
+
+                            $('span.company').each(function() {
+                                companySum += parseInt($(this).html());
+                            });
+                            $('span.employee').each(function() {
+                                employeeSum -= parseInt($(this).html());
+                            });
+                            $('span#employee_sum').html(employeeSum);
+                            $('span#company_sum').html(companySum);
+                            $('span#nhi_salary').html(nhi[i]['base_salary']);
+                        }
+
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
