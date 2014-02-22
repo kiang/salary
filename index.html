@@ -14,12 +14,12 @@
     <body>
         這個網頁試著解決一個問題，就是當公司設定一個員工薪資的預算時，薪資條細節到底應該怎麼算出來？
 
-        <p>每月預算：<br />
+        <p>老闆每月預算：<br />
             <input type="text" size="40" id="salary_budget" />
             <input type="button" value="開始計算" id="salary_budget_submit" />
         </p>
         
-        <p>員工薪資：<br />
+        <p>員工實領薪資：<br />
             <input type="text" size="40" id="salary_employee" />
             <input type="button" value="開始計算" id="salary_employee_submit" />
         </p>
@@ -58,6 +58,36 @@
                 <td><span id="company_sum"></span></td>
             </tr>
         </table>
+        <p>參考資料：</p>
+        <ul>
+            <li>健保費用是參考 <a href="http://www.nhi.gov.tw/webdata/webdata.aspx?menu=18&menu_id=679&WD_ID=732&webdata_id=4395" target="_blank">全民健康保險保險費負擔金額表(三)</a>
+                <ul>
+                    <li>全民健康保險費率，自中華民國102年1月1日起由5.17%調整為4.91%。 - 衛署健保字第1019001854號</li>
+                    <li><a href="http://www.nhi.gov.tw/webdata/webdata.aspx?menu=18&menu_id=679&WD_ID=732&webdata_id=4292" target="_blank">自付保險費計算公式</a>： 投保金額*保險費率（4.91%）* 負擔比率（積數先四捨五入）* (本人+眷屬人數)</li>
+                    <li><a href="http://www.nhi.gov.tw/webdata/webdata.aspx?menu=18&menu_id=679&WD_ID=732&webdata_id=4294" target="_blank">補充保險費計算公式</a> - 民眾如有下列6項所得或收入時，由扣費單位按費率2%就源扣取並繳納補充保險費。<ul>
+                            <li>全年累計超過當月投保金額4倍部分的獎金</li>
+                            <li>兼職薪資所得 - 單次給付達5,000元</li>
+                            <li>執行業務收入 - 單次給付達5,000元</li>
+                            <li>股利所得 - 單次給付達5,000元</li>
+                            <li>利息所得 - 單次給付達5,000元</li>
+                            <li>租金收入 - 單次給付達5,000元</li>
+                        </ul></li>
+                        <li>負擔比率<ul>
+                            <li>被保險人及眷屬負擔金額﹝負擔比率30%﹞</li>
+                            <li>投保單位負擔金額﹝負擔比率60%﹞</li>
+                            <li>政府補助金額﹝補助比率10%﹞</li>
+                            </ul></li>
+                </ul></li>
+            <li>勞保費用薪資表來自 <a href="http://www.bli.gov.tw/sub.aspx?a=zuVFOXiCG9M%3D" target="_blank">勞工保險投保薪資分級表</a>
+                <ul>
+                    <li>96年2月9日後初次辦理職災醫療期間退保續保人員，於辦理初次加保生效之日起2年內，其保險費由被保險人負擔20%，政府專款負擔80%。2年後則由被保險人及專款各負擔50%。</li>
+                    <li>勞工保險普通事故保險費率，自98年1月1日起，按被保險人當月投保薪資 6.5%計算，自100年1月1日起為7%，自101年1月1日起為7.5%，自102年1月1日起為8%，自103年1月1日起為8.5％；另自92年1月1日起，就業保險費率為1％。</li>
+                </ul>
+            </li>
+            <li><a href="http://www.bli.gov.tw/sub.aspx?a=ZnMHe3vCHio%3D" target="_blank">勞退新制簡介</a><ul>
+                    <li>雇主應為適用勞基法之勞工（含本國籍、外籍配偶、陸港澳地區配偶），按月提繳不低於其每月工資6％勞工退休金，儲存於本局設立之勞工退休金個人專戶</li>
+                </ul></li>
+        </ul>
         <script>
             $(function() {
                 $('input#salary_budget_submit').click(function() {
