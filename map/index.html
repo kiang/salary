@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>台灣101年度所得地圖</title>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <meta property="og:title" content="台灣101年度所得地圖">
+        <meta property="og:description" content="台灣101年度所得地圖依據財政部財政資訊中心的101年度綜稅所得總額各縣市鄉鎮村里統計分析表 繪製">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="http://kiang.github.io/salary/map/og_image.png">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <style>
+            html, body {
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            #map-canvas {
+                height: 100%;
+                width: 100%;
+            }
+            #title {
+                text-align: center;
+                padding: 10px;
+            }
+            .colorBox {
+                width: 1em;
+                height: 1em;
+                border: 1px solid #34495E;
+                display: inline-block;
+                margin: 0 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
+                    return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&appId=1393405437614114&version=v2.3";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, "script", "facebook-jssdk"));
+        </script>
+        <div class="container">
+            <div class="row">
+                <p class="hidden-sm hidden-xs">&nbsp;</p>
+                <div id="map-canvas" class="col-md-12"></div>
+                <div id="detail" class="col-md-12">
+                    <div class="col-md-8 col-sm-12 col-xs-12">
+                        <h3 id="title"></h3>
+                        <div>單位：千元
+                            <span class="colorBox" style="background-color: white;"></span>&nbsp;無資料
+                            <span class="colorBox" style="background-color: green;"></span>&nbsp;500
+                            <span class="colorBox" style="background-color: yellow;"></span>&nbsp;700
+                            <br class="hidden-md hidden-lg">
+                            <span class="colorBox" style="background-color: orange;"></span>&nbsp;900
+                            <span class="colorBox" style="background-color: red;"></span>&nbsp;1100
+                            <span class="colorBox" style="background-color: purple;"></span>&nbsp;1300
+                            <br class="hidden-md hidden-lg">
+                            <span class="colorBox" style="background-color: darkblue;"></span>&nbsp;1500
+                            <span class="colorBox" style="background-color: black;"></span>&nbsp;>1500
+                        </div>
+                        <div style="float: right;">快速定位
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-default" onclick="map.setCenter({lat: 25.053699, lng: 121.507837});
+                                        return false">台北</a>
+                                <a href="#" class="btn btn-default" onclick="map.setCenter({lat: 24.752504, lng: 121.771097});
+                                        return false">宜蘭</a>
+                                <a href="#" class="btn btn-default" onclick="map.setCenter({lat: 24.804498, lng: 120.988528});
+                                        return false">新竹</a>
+                                <a href="#" class="btn btn-default" onclick="map.setCenter({lat: 24.167804, lng: 120.658214});
+                                        return false">台中</a>
+                                <a href="#" class="btn btn-default" onclick="map.setCenter({lat: 23.477332, lng: 120.430085});
+                                        return false">嘉義</a>
+                                <a href="#" class="btn btn-default" onclick="map.setCenter({lat: 22.996169, lng: 120.201330});
+                                        return false">台南</a>
+                                <a href="#" class="btn btn-default" onclick="map.setCenter({lat: 22.643894, lng: 120.317828});
+                                        return false">高雄</a><br />
+                                <a href="#" class="btn btn-default" onclick="map.setCenter({lat: 22.674185, lng: 120.501103});
+                                        return false">屏東</a>
+                                <a href="#" class="btn btn-default" onclick="map.setCenter({lat: 23.999479, lng: 121.606658});
+                                        return false">花蓮</a>
+                                <a href="#" class="btn btn-default" onclick="map.setCenter({lat: 22.793229, lng: 121.124322});
+                                        return false">台東</a>
+                                <a href="#" class="btn btn-default" onclick="map.setCenter({lat: 23.962005, lng: 120.963292});
+                                        return false">南投</a>
+                                <a href="#" class="btn btn-default" onclick="map.setCenter({lat: 23.561951, lng: 119.608123});
+                                        return false">澎湖</a>
+                                <a href="#" class="btn btn-default" onclick="map.setCenter({lat: 24.446522, lng: 118.376170});
+                                        return false">金門</a>
+                                <a href="#" class="btn btn-default" onclick="map.setCenter({lat: 26.149491, lng: 119.936241});
+                                        return false">馬祖</a>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                        <h2 id="content" class="text-muted">在地圖上滑動或點選以顯示數據</h2>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                        <p>&nbsp;</p>
+                        <div id="fb-root"></div>
+                        <div class="fb-page" data-href="https://www.facebook.com/k.olc.tw" data-width="800" data-hide-cover="true" data-show-facepile="true" data-show-posts="false"></div>
+                    </div>
+                </div>
+                <p class="hidden-md hidden-lg">&nbsp;</p>
+            </div>
+            <div id="listNoneCunli"></div>
+            <div style="text-align: center;">
+                <hr />
+                <a target="_blank" href="https://github.com/kiang/salary">網站原始碼</a> | 
+                <a target="_blank" href="http://data.gov.tw/search/site/%E7%B6%9C%E5%90%88%E6%89%80%E5%BE%97%E7%A8%85%E6%89%80%E5%BE%97%E7%B8%BD%E9%A1%8D%E5%90%84%E7%B8%A3%E5%B8%82%E9%84%89%E9%8E%AE%E6%9D%91%E9%87%8C%E7%B5%B1%E8%A8%88%E5%88%86%E6%9E%90%E8%A1%A8">資料來源</a>
+            </div>
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script src="//maps.googleapis.com/maps/api/js?v=3"></script>
+        <script src="../ColorBar.js"></script>
+        <script src="topojson.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
