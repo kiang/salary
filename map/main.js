@@ -21,25 +21,6 @@ function initialize() {
         cunli = map.data.addGeoJson(topojson.feature(data, data.objects.cunli));
     });
 
-    var areas = [];
-    cunli.forEach(function (value) {
-        var key = value.getProperty('VILLAGE_ID'),
-                count = 0;
-        if (cunliSalary[key]) {
-            count = cunliSalary[key]['avg'];
-        }
-        value.setProperty('num', count);
-    });
-
-    map.data.setStyle(function (feature) {
-        color = ColorBar(feature.getProperty('num'));
-        return {
-            fillColor: color,
-            fillOpacity: 0.6,
-            strokeColor: 'gray',
-            strokeWeight: 1
-        }
-    });
 
     map.data.addListener('mouseover', function (event) {
         var Cunli = event.feature.getProperty('C_Name') + event.feature.getProperty('T_Name') + event.feature.getProperty('V_Name');
@@ -52,6 +33,56 @@ function initialize() {
         map.data.revertStyle();
         $('#content').html('在地圖上滑動或點選以顯示數據').addClass('text-muted');
     });
+
+    $('#playButton1').on('click', function () {
+        $(this).addClass('active disabled').find('.glyphicon').show();
+        $('#playButton2').removeClass('active disabled').find('.glyphicon').hide();
+        cunli.forEach(function (value) {
+            var key = value.getProperty('VILLAGE_ID'),
+                    count = 0;
+            if (cunliSalary[key]) {
+                count = cunliSalary[key]['avg'];
+            }
+            value.setProperty('num', count);
+        });
+
+        map.data.setStyle(function (feature) {
+            color = ColorBar(feature.getProperty('num'));
+            return {
+                fillColor: color,
+                fillOpacity: 0.6,
+                strokeColor: 'gray',
+                strokeWeight: 1
+            }
+        });
+        return false;
+    });
+
+    $('#playButton2').on('click', function () {
+        $(this).addClass('active disabled').find('.glyphicon').show();
+        $('#playButton1').removeClass('active disabled').find('.glyphicon').hide();
+        cunli.forEach(function (value) {
+            var key = value.getProperty('VILLAGE_ID'),
+                    count = 0;
+            if (cunliSalary[key]) {
+                count = cunliSalary[key]['mid'];
+            }
+            value.setProperty('num', count);
+        });
+
+        map.data.setStyle(function (feature) {
+            color = ColorBar(feature.getProperty('num'));
+            return {
+                fillColor: color,
+                fillOpacity: 0.6,
+                strokeColor: 'gray',
+                strokeWeight: 1
+            }
+        });
+        return false;
+    });
+    
+    $('#playButton1').trigger('click');
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
