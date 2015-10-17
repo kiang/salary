@@ -35,8 +35,8 @@ function initialize() {
     });
 
     $('#playButton1').on('click', function () {
+        $('.btn-primary').removeClass('active disabled').find('.glyphicon').hide();
         $(this).addClass('active disabled').find('.glyphicon').show();
-        $('#playButton2').removeClass('active disabled').find('.glyphicon').hide();
         cunli.forEach(function (value) {
             var key = value.getProperty('VILLAGE_ID'),
                     count = 0;
@@ -59,13 +59,85 @@ function initialize() {
     });
 
     $('#playButton2').on('click', function () {
+        $('.btn-primary').removeClass('active disabled').find('.glyphicon').hide();
         $(this).addClass('active disabled').find('.glyphicon').show();
-        $('#playButton1').removeClass('active disabled').find('.glyphicon').hide();
         cunli.forEach(function (value) {
             var key = value.getProperty('VILLAGE_ID'),
                     count = 0;
             if (cunliSalary[key]) {
                 count = cunliSalary[key]['mid'];
+            }
+            value.setProperty('num', count);
+        });
+
+        map.data.setStyle(function (feature) {
+            color = ColorBar(feature.getProperty('num'));
+            return {
+                fillColor: color,
+                fillOpacity: 0.6,
+                strokeColor: 'gray',
+                strokeWeight: 1
+            }
+        });
+        return false;
+    });
+    
+    $('#playButton3').on('click', function () {
+        $('.btn-primary').removeClass('active disabled').find('.glyphicon').hide();
+        $(this).addClass('active disabled').find('.glyphicon').show();
+        cunli.forEach(function (value) {
+            var key = value.getProperty('VILLAGE_ID'),
+                    count = 0;
+            if (cunliSalary[key]) {
+                count = cunliSalary[key]['sd'];
+            }
+            value.setProperty('num', count);
+        });
+
+        map.data.setStyle(function (feature) {
+            color = ColorBar(feature.getProperty('num'));
+            return {
+                fillColor: color,
+                fillOpacity: 0.6,
+                strokeColor: 'gray',
+                strokeWeight: 1
+            }
+        });
+        return false;
+    });
+    
+    $('#playButton4').on('click', function () {
+        $('.btn-primary').removeClass('active disabled').find('.glyphicon').hide();
+        $(this).addClass('active disabled').find('.glyphicon').show();
+        cunli.forEach(function (value) {
+            var key = value.getProperty('VILLAGE_ID'),
+                    count = 0;
+            if (cunliSalary[key]) {
+                count = cunliSalary[key]['mid1'];
+            }
+            value.setProperty('num', count);
+        });
+
+        map.data.setStyle(function (feature) {
+            color = ColorBar(feature.getProperty('num'));
+            return {
+                fillColor: color,
+                fillOpacity: 0.6,
+                strokeColor: 'gray',
+                strokeWeight: 1
+            }
+        });
+        return false;
+    });
+    
+    $('#playButton5').on('click', function () {
+        $('.btn-primary').removeClass('active disabled').find('.glyphicon').hide();
+        $(this).addClass('active disabled').find('.glyphicon').show();
+        cunli.forEach(function (value) {
+            var key = value.getProperty('VILLAGE_ID'),
+                    count = 0;
+            if (cunliSalary[key]) {
+                count = cunliSalary[key]['mid3'];
             }
             value.setProperty('num', count);
         });
