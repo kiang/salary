@@ -55,38 +55,38 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="http://code.highcharts.com/highcharts.js"></script>
         <script>
-        $(function () {
-          $.getJSON('data.json', function(c) {
-            var series = [], categories = [];
-            for(k in c) {
-              var pushCategories = false;
-              if(categories.length === 0) {
-                pushCategories = true;
-              }
-              var line = {
-                name: k,
-                data: []
-              }
-              for(j in c[k]) {
-                if(pushCategories) {
-                  categories.push(j);
-                }
-                line.data.push(c[k][j]['平均綜合所得總額']);
-              }
-              series.push(line);
-            }
-            $('#main-canvas').highcharts({
-                title: {
-                    text: '台灣2011~2014所得分配'
-                },
-                xAxis: {
-                    categories: categories
-                },
-                series: series
+            $(function () {
+                $.getJSON('data.json', function (c) {
+                    var series = [], categories = [];
+                    for (k in c) {
+                        var pushCategories = false;
+                        if (categories.length === 0) {
+                            pushCategories = true;
+                        }
+                        var line = {
+                            name: k,
+                            data: []
+                        }
+                        for (j in c[k]) {
+                            if (pushCategories) {
+                                categories.push(j);
+                            }
+                            line.data.push(c[k][j]['平均綜合所得總額']);
+                        }
+                        series.push(line);
+                    }
+                    $('#main-canvas').highcharts({
+                        title: {
+                            text: '台灣2011~2014所得分配'
+                        },
+                        xAxis: {
+                            categories: categories
+                        },
+                        series: series
 
+                    });
+                });
             });
-          });
-});
         </script>
     </body>
 </html>
