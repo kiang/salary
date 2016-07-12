@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>台灣2011~2014所得分配</title>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8" />
+        <meta property="og:title" content="台灣2011~2014所得分配">
+        <meta property="og:description" content="以 2011~2014 所得20分位資料繪製">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="http://kiang.github.io/salary/quintile/og_image.png">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <style>
+            html, body {
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
+                    return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&appId=1393405437614114&version=v2.3";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, "script", "facebook-jssdk"));
+        </script>
+        <div class="container">
+            <div class="row">
+                <p class="hidden-sm hidden-xs">&nbsp;</p>
+                <div id="main-canvas" class="col-md-12" style="height: 800px;"></div>
+                <div id="detail" class="col-md-12">
+                    <div class="col-md-8 col-sm-12 col-xs-12">
+                        &nbsp;
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                        <p>&nbsp;</p>
+                        <div id="fb-root"></div>
+                        <div class="fb-page" data-href="https://www.facebook.com/k.olc.tw" data-width="800" data-hide-cover="true" data-show-facepile="true" data-show-posts="false"></div>
+                    </div>
+                </div>
+                <p class="hidden-md hidden-lg">&nbsp;</p>
+            </div>
+            <div style="text-align: center;">
+                <hr />
+                <a target="_blank" href="https://github.com/kiang/salary">網站原始碼</a> |
+                <a target="_blank" href="http://www.fia.gov.tw/lp.asp?CtNode=236&CtUnit=9&BaseDSD=1&mp=1">資料來源</a>
+            </div>
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+        <script>
+        $(function () {
+          $.getJSON('data.json', function(c) {
+            var series = [], categories = [];
+            for(k in c) {
+              var pushCategories = false;
+              if(categories.length === 0) {
+                pushCategories = true;
+              }
+              var line = {
+                name: k,
+                data: []
+              }
+              for(j in c[k]) {
+                if(pushCategories) {
+                  categories.push(j);
+                }
+                line.data.push(c[k][j]['平均綜合所得總額']);
+              }
+              series.push(line);
+            }
+            $('#main-canvas').highcharts({
+                title: {
+                    text: '台灣2011~2014所得分配'
+                },
+                xAxis: {
+                    categories: categories
+                },
+                series: series
+
+            });
+          });
+});
+        </script>
+    </body>
+</html>

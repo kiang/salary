@@ -1,5 +1,6 @@
 <html>
     <head>
+      <meta charset="utf-8" />
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>
             var bli, nhi;
@@ -18,12 +19,12 @@
             <input type="text" size="40" id="salary_budget" />
             <input type="button" value="開始計算" id="salary_budget_submit" />
         </p>
-        
+
         <p>員工實領薪資：<br />
             <input type="text" size="40" id="salary_employee" />
             <input type="button" value="開始計算" id="salary_employee_submit" />
         </p>
-        
+
         <p>健保投保薪資：<span id="nhi_salary"></span></p>
         <p>勞保投保薪資：<span id="bli_salary"></span></p>
         <table border="1" width="500">
@@ -122,7 +123,7 @@
 
                     }
                 });
-                
+
                 $('input#salary_employee_submit').click(function() {
                     var currentBliKey, companySum = 0, employeeSum = 0;
                     var employeeBudget = parseInt($('input#salary_employee').val());
