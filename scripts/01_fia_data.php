@@ -57,14 +57,14 @@ for ($i = 103; $i > 99; $i--) {
                 $result[$city][$cols[1]][$cols[2]] = array();
             }
             $result[$city][$cols[1]][$cols[2]][$i + 1911] = array(
-                '納稅單位' => $cols[3],
-                '綜合所得總額' => $cols[4],
-                '平均數' => $cols[5],
-                '中位數' => $cols[6],
-                '第一分位數' => $cols[7],
-                '第三分位數' => $cols[8],
-                '標準差' => $cols[9],
-                '變異係數' => $cols[10],
+                '納稅單位' => intval($cols[3]),
+                '綜合所得總額' => intval($cols[4]),
+                '平均數' => floatval($cols[5]),
+                '中位數' => intval($cols[6]),
+                '第一分位數' => intval($cols[7]),
+                '第三分位數' => intval($cols[8]),
+                '標準差' => floatval($cols[9]),
+                '變異係數' => floatval($cols[10]),
             );
             $lastLine = $cols;
         }
