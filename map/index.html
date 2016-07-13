@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>台灣101年度所得地圖</title>
+        <title>台灣所得地圖</title>
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
         <meta charset="utf-8">
-        <meta property="og:title" content="台灣101年度所得地圖">
-        <meta property="og:description" content="台灣101年度所得地圖依據財政部財政資訊中心的101年度綜稅所得總額各縣市鄉鎮村里統計分析表 繪製">
+        <meta property="og:title" content="台灣所得地圖">
+        <meta property="og:description" content="台灣所得地圖依據財政部財政資訊中心公佈資料繪製">
         <meta property="og:type" content="website">
         <meta property="og:image" content="http://kiang.github.io/salary/map/og_image.png">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -64,6 +64,14 @@
                             <span class="colorBox" style="background-color: darkblue;"></span>&nbsp;1500
                             <span class="colorBox" style="background-color: black;"></span>&nbsp;>1500
                         </div>
+                        <div style="float: left;">年度
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-primary btn-year" data-year="2014">2014</a>
+                                <a href="#" class="btn btn-default btn-year" data-year="2013">2013</a>
+                                <a href="#" class="btn btn-default btn-year" data-year="2012">2012</a>
+                                <a href="#" class="btn btn-default btn-year" data-year="2011">2011</a>
+                            </div>
+                        </div>
                         <div style="float: right;">快速定位
                             <div class="btn-group">
                                 <a href="#" class="btn btn-default" onclick="map.setCenter({lat: 25.053699, lng: 121.507837});
@@ -116,6 +124,7 @@
                                 <span class="glyphicon glyphicon-play" style="display: none"></span>&nbsp;第三分位數
                             </a>
                         </div>
+                        <div id="cunliDetail"></div>
                     </div>
                     <div class="col-md-4 col-sm-12 col-xs-12">
                         <p>&nbsp;</p>
@@ -129,7 +138,7 @@
             <div style="text-align: center;">
                 <hr />
                 <a target="_blank" href="https://github.com/kiang/salary">網站原始碼</a> | 
-                <a target="_blank" href="http://data.gov.tw/search/site/%E7%B6%9C%E5%90%88%E6%89%80%E5%BE%97%E7%A8%85%E6%89%80%E5%BE%97%E7%B8%BD%E9%A1%8D%E5%90%84%E7%B8%A3%E5%B8%82%E9%84%89%E9%8E%AE%E6%9D%91%E9%87%8C%E7%B5%B1%E8%A8%88%E5%88%86%E6%9E%90%E8%A1%A8">資料來源</a>
+                <a target="_blank" href="http://www.fia.gov.tw/lp.asp?CtNode=236&CtUnit=9&BaseDSD=1&mp=1">資料來源</a>
             </div>
         </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

@@ -1,10 +1,10 @@
 $.ajaxSetup({async: false});
 
-var map,
+var map, currentYear = '2014', currentButton = 'playButton1',
         currentPlayIndex = false,
         cunli, cunliSalary;
 
-$.getJSON('data.json', function (data) {
+$.getJSON('fia_data.json', function (data) {
     cunliSalary = data;
 });
 function initialize() {
@@ -29,19 +29,42 @@ function initialize() {
         $('#content').html('<div>' + Cunli + ' ：' + event.feature.getProperty('num') + ' </div>').removeClass('text-muted');
     });
 
+    map.data.addListener('click', function (event) {
+        var cunli = event.feature.getProperty('C_Name') + event.feature.getProperty('T_Name') + event.feature.getProperty('V_Name');
+        var cunliKey = event.feature.getProperty('VILLAGE_ID');
+        var headerPrinted = false;
+        var detail = '<h3>' + cunli + '</h3><div style="float:right;">單位：金額(千元)</div><table class="table table-boarded">';
+        if (cunliSalary[cunliKey]) {
+            for (y in cunliSalary[cunliKey]) {
+                var yLine = '<tr><td>' + y + '</td>';
+                for (k in cunliSalary[cunliKey][y]) {
+                    if (false === headerPrinted) {
+                        detail += '<tr><td>年度</td><td>納稅單位</td><td>綜合所得總額</td><td>平均數</td><td>中位數</td><td>第一分位數</td><td>第三分位數</td><td>標準差</td><td>變異係數</td></tr>';
+                        headerPrinted = true;
+                    }
+                    yLine += '<td>' + cunliSalary[cunliKey][y][k] + '</td>';
+                }
+                detail += yLine + '</tr>';
+            }
+        }
+        detail += '</table>';
+        $('#cunliDetail').html(detail);
+    });
+
     map.data.addListener('mouseout', function (event) {
         map.data.revertStyle();
         $('#content').html('在地圖上滑動或點選以顯示數據').addClass('text-muted');
     });
 
     $('#playButton1').on('click', function () {
+        currentButton = 'playButton1';
         $('.btn-primary').removeClass('active disabled').find('.glyphicon').hide();
         $(this).addClass('active disabled').find('.glyphicon').show();
         cunli.forEach(function (value) {
             var key = value.getProperty('VILLAGE_ID'),
                     count = 0;
-            if (cunliSalary[key]) {
-                count = cunliSalary[key]['avg'];
+            if (cunliSalary[key] && cunliSalary[key][currentYear]) {
+                count = cunliSalary[key][currentYear]['avg'];
             }
             value.setProperty('num', count);
         });
@@ -59,13 +82,14 @@ function initialize() {
     });
 
     $('#playButton2').on('click', function () {
+        currentButton = 'playButton2';
         $('.btn-primary').removeClass('active disabled').find('.glyphicon').hide();
         $(this).addClass('active disabled').find('.glyphicon').show();
         cunli.forEach(function (value) {
             var key = value.getProperty('VILLAGE_ID'),
                     count = 0;
-            if (cunliSalary[key]) {
-                count = cunliSalary[key]['mid'];
+            if (cunliSalary[key] && cunliSalary[key][currentYear]) {
+                count = cunliSalary[key][currentYear]['mid'];
             }
             value.setProperty('num', count);
         });
@@ -81,15 +105,16 @@ function initialize() {
         });
         return false;
     });
-    
+
     $('#playButton3').on('click', function () {
+        currentButton = 'playButton3';
         $('.btn-primary').removeClass('active disabled').find('.glyphicon').hide();
         $(this).addClass('active disabled').find('.glyphicon').show();
         cunli.forEach(function (value) {
             var key = value.getProperty('VILLAGE_ID'),
                     count = 0;
-            if (cunliSalary[key]) {
-                count = cunliSalary[key]['sd'];
+            if (cunliSalary[key] && cunliSalary[key][currentYear]) {
+                count = cunliSalary[key][currentYear]['sd'];
             }
             value.setProperty('num', count);
         });
@@ -105,15 +130,16 @@ function initialize() {
         });
         return false;
     });
-    
+
     $('#playButton4').on('click', function () {
+        currentButton = 'playButton4';
         $('.btn-primary').removeClass('active disabled').find('.glyphicon').hide();
         $(this).addClass('active disabled').find('.glyphicon').show();
         cunli.forEach(function (value) {
             var key = value.getProperty('VILLAGE_ID'),
                     count = 0;
-            if (cunliSalary[key]) {
-                count = cunliSalary[key]['mid1'];
+            if (cunliSalary[key] && cunliSalary[key][currentYear]) {
+                count = cunliSalary[key][currentYear]['mid1'];
             }
             value.setProperty('num', count);
         });
@@ -129,15 +155,16 @@ function initialize() {
         });
         return false;
     });
-    
+
     $('#playButton5').on('click', function () {
+        currentButton = 'playButton5';
         $('.btn-primary').removeClass('active disabled').find('.glyphicon').hide();
         $(this).addClass('active disabled').find('.glyphicon').show();
         cunli.forEach(function (value) {
             var key = value.getProperty('VILLAGE_ID'),
                     count = 0;
-            if (cunliSalary[key]) {
-                count = cunliSalary[key]['mid3'];
+            if (cunliSalary[key] && cunliSalary[key][currentYear]) {
+                count = cunliSalary[key][currentYear]['mid3'];
             }
             value.setProperty('num', count);
         });
@@ -153,8 +180,20 @@ function initialize() {
         });
         return false;
     });
-    
-    $('#playButton1').trigger('click');
+
+    $('#' + currentButton).trigger('click');
+
+    $('a.btn-year').click(function () {
+        currentYear = $(this).attr('data-year');
+        $('a.btn-year').each(function () {
+            if ($(this).attr('data-year') === currentYear) {
+                $(this).removeClass('btn-default').addClass('btn-primary');
+            } else {
+                $(this).removeClass('btn-primary').addClass('btn-default');
+            }
+        });
+        $('#' + currentButton).trigger('click');
+    });
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
