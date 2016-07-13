@@ -1,6 +1,6 @@
 $.ajaxSetup({async: false});
 
-var map, currentYear = '2014', currentButton = 'playButton1',
+var map, currentYear = '2014', currentButton = 'playButton2',
         currentPlayIndex = false,
         cunli, cunliSalary;
 
