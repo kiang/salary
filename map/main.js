@@ -72,8 +72,11 @@ function showFeature(feature) {
     if (window.location.hash !== targetHash) {
         window.location.hash = targetHash;
     }
-    map.setCenter(foundFeatureGeo[0]);
-    map.setZoom(15);
+    var bounds = new google.maps.LatLngBounds;
+    for(k in foundFeatureGeo) {
+        bounds.extend(foundFeatureGeo[k]);
+    }
+    map.fitBounds(bounds);
 }
 
 var routes = {
