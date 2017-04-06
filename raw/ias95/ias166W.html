@@ -1,0 +1,2041 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="Generator" content="SAS Software, see www.sas.com" sasversion="9.1">
+<meta http-equiv="Content-type" content="text/html; charset=Big5-HKSCS">
+<title>SAS Output</title>
+<style type="text/css">
+<!--
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: "." }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.ContentTitle
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #002288;
+}
+.Output
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #F0F0F0;
+  border-width: 1px;
+  border-color: #000000;
+}
+.HeaderEmphasis
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.NoteContent
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Graph
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 1px;
+  border-color: #000000;
+}
+.WarnContentFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.NoteBanner
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.FatalContent
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.DataStrong
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Document
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+a:link {
+color:#0066AA
+}
+a:visited {
+color:#004488
+}
+a:active {
+color:#004488
+}
+.BeforeCaption
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #E0E0E0;
+}
+.ContentsDate
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  width: 100%;
+}
+.Pages
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  margin-left: 8px;
+  margin-right: 8px;
+  list-style-type: decimal;
+}
+.TitlesAndFooters
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.IndexProcName
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.ProcTitle
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.IndexAction
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  margin-left: 6pt;
+  list-style-type: NONE;
+}
+.Data
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Table
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #F0F0F0;
+  border-width: 1px;
+  border-color: #000000;
+}
+.FooterEmpty
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.SysTitleAndFooterContainer
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 0;
+  width: 100%;
+}
+.RowFooterEmpty
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.ContentFolder
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: NONE;
+}
+.RowFooterEmphasis
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowFooterStrongFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowFooterFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.Index
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FooterFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.ExtendedPage
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 1pt;
+  text-align: center;
+}
+.Container
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Date
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  width: 100%;
+}
+.Caption
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #E0E0E0;
+}
+.WarnBanner
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Frame
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.HeaderStrongFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.IndexTitle
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #002288;
+}
+.NoteContentFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.DataEmphasisFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Note
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Byline
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FatalBanner
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.ProcTitleFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.ByContentFolder
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: NONE;
+}
+.PagesProcLabel
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.RowHeaderFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowFooterEmphasisFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.WarnContent
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.DataEmpty
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Cell
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Header
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.PageNo
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  text-align: right;
+  vertical-align: top;
+}
+.ContentProcLabel
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.HeaderFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.PagesTitle
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #002288;
+}
+.RowHeaderEmpty
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.PagesProcName
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.Batch
+{
+  font-family: MingLiU, GothicBBB, SAS Monospace, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+  border-width: 1px;
+  border-color: #000000;
+}
+.ContentItem
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  list-style-type: NONE;
+}
+.Body
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.PagesDate
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  width: 100%;
+}
+.HeaderEmpty
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FooterStrong
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FooterEmphasis
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.ErrorContent
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.DataFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.HeaderStrong
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.DataEmphasis
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.TitleAndNoteContainer
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 0;
+  width: 100%;
+}
+.RowFooter
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.IndexItem
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  margin-left: 6pt;
+  list-style-type: NONE;
+}
+.BylineContainer
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 0;
+  width: 100%;
+}
+.FatalContentFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.BodyDate
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  width: 100%;
+  text-align: right;
+  vertical-align: top;
+}
+.Contents
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  margin-left: 8px;
+  margin-right: 8px;
+  list-style-type: decimal;
+}
+.RowFooterStrong
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.UserText
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.HeadersAndFooters
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowHeaderEmphasisFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.ErrorBanner
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.ContentProcName
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.RowHeaderStrong
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.PagesItem
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  list-style-type: NONE;
+}
+.RowHeader
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FooterStrongFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.AfterCaption
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #E0E0E0;
+}
+.RowHeaderStrongFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowHeaderEmphasis
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.DataStrongFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Footer
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FolderAction
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  margin-left: 6pt;
+  list-style-type: NONE;
+}
+.HeaderEmphasisFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.SystemTitle
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.ErrorContentFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.SystemFooter
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.FooterEmphasisFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+<noscript></noscript>
+</head>
+<body onload="startup()" onunload="shutdown()" class="Body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+
+//-->
+</script>
+
+<noscript></noscript>
+<div class="branch">
+<a name="IDX"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                                表 166 (095 年)綜稅各類所得金額各縣市鄉鎮村里統計表  單位：金額(千元)</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 金 門 縣</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" colspan="2" scope="colgroup">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col"> 納稅單位</th>
+<th class=" Header" colspan="13" scope="colgroup">各類所得金額</th>
+<th class=" Header" rowspan="2" scope="col">薪資淨所得</th>
+<th class=" Header" rowspan="2" scope="col">按薪資淨所得計算之綜合所得</th>
+<th class=" Header" rowspan="2" scope="col"> 稿費收入</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 合    計</th>
+<th class=" Header" scope="col"> 營利所得</th>
+<th class=" Header" scope="col">執行業務所得</th>
+<th class=" Header" scope="col"> 薪資所得</th>
+<th class=" Header" scope="col"> 利息所得</th>
+<th class=" Header" scope="col">租賃及權利金</th>
+<th class=" Header" scope="col">財產交易所得</th>
+<th class=" Header" scope="col">機會中獎所得</th>
+<th class=" Header" scope="col"> 股利所得</th>
+<th class=" Header" scope="col"> 退職所得</th>
+<th class=" Header" scope="col"> 其他所得</th>
+<th class=" Header" scope="col"> 稿費所得</th>
+<th class=" Header" scope="col">申報大於歸戶</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" rowspan="10" scope="rowgroup">金城鎮  </th>
+<th class="l RowHeader" scope="row">南門里  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;851</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;719295</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17843</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10062</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;568414</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;60456</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10271</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;634</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;609</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;39638</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1049</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7395</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;407</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2516</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;493325</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;644112</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2247</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">東門里  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;726</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;600810</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24565</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11023</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;470418</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;37624</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6348</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;548</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;552</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;40174</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;181</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5714</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;90</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3574</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;404735</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;535127</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;922</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">西門里  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1714</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;1603600</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24976</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18026</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;1294717</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;149130</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14694</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1697</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1087</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;71344</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2971</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14382</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;872</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9704</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;1137485</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1446220</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4485</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">北門里  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;676</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;620038</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18730</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11878</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;457454</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;53465</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12610</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1942</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;512</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50798</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;751</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4532</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7366</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;399128</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;561563</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1568</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">賢庵里  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;501</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;405140</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14776</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3915</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;329320</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;27275</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2038</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;506</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;276</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20644</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;519</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2520</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3350</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;281822</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;357642</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;799</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">金水里  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;256</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;200037</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2972</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2287</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;166893</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14679</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1305</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;123</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;124</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8772</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;238</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1040</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1603</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;141482</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;174621</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;42</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">古城里  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;502</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;412005</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5180</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1079</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;349312</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;29179</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2144</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;99</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;955</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18318</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;648</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2172</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2919</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;299184</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;361799</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;183</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">珠沙里  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;340</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;278427</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4061</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1849</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;225707</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19669</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2655</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;489</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;124</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19073</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;539</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3345</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;916</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;193808</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;246528</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;154</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">其  他  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17968</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;74</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;94</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14414</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;408</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;26</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;40</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1158</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;170</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1583</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12371</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15847</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合  計</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5590</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;4857320</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;113177</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;60213</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;3876649</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;391885</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;52091</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6078</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4241</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;269919</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6895</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;41271</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1369</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;33531</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;3363339</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4343458</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10407</td>
+</tr>
+<tr>
+<th class="l RowHeader" rowspan="8" scope="rowgroup">金寧鄉  </th>
+<th class="l RowHeader" scope="row">古寧村  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;348</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;241114</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5342</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1107</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;196075</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18291</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1628</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;360</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;227</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14089</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;230</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1991</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1773</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;164673</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;209711</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;165</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">安美村  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;546</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;381428</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8978</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2026</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;323654</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24936</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2102</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;361</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;305</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15740</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;202</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2237</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;888</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;272145</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;329919</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;151</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">湖埔村  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;623</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;570931</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8373</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6754</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;472131</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;43004</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5181</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;513</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;383</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;27611</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;776</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3172</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;109</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2923</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;409365</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;508165</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1197</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">榜林村  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;552</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;413458</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8296</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2785</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;333687</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;35118</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5385</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1005</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;285</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21631</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;718</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3875</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;673</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;282924</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;362695</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;501</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">盤山村  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;557</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;475500</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10587</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2584</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;384259</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;37791</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3611</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;423</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;386</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25052</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1021</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3795</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;224</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5768</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;332365</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;423608</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1333</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">后盤村  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;159</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;114197</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3795</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;783</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;96535</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8545</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;779</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;54</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;70</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2946</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;508</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;182</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;80490</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;98152</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;45</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">其  他  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5780</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;33</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;258</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4786</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;376</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;173</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;26</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;89</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;39</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4180</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5174</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合  計</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2792</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;2202407</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;45404</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16298</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;1811127</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;168061</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18859</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2740</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1656</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;107158</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2947</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15617</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;333</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12207</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;1546144</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1937424</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3397</td>
+</tr>
+<tr>
+<th class="l RowHeader" rowspan="10" scope="rowgroup">金湖鎮  </th>
+<th class="l RowHeader" scope="row">正義里  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;299</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;228832</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5546</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1199</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;186707</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19216</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1790</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;477</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;131</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9564</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;497</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;795</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2911</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;157910</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;199879</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;169</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">瓊林里  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;443</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;310662</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7905</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2666</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;248049</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;30328</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1744</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;168</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;221</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14671</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1184</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2151</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;108</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1467</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;208358</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;270815</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;727</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">新市里  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;771</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;634671</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;26770</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6822</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;480854</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;54261</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14514</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1454</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;420</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;37529</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1343</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5594</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;274</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4838</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;415864</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;569513</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2299</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">山外里  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;481</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;341653</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11910</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;928</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;276039</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24411</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2697</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;282</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;273</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16942</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;739</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2607</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4825</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;233858</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;299316</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;180</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">溪湖里  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;169</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;114706</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2148</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;487</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;94514</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8437</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;696</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;193</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;105</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6864</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;422</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;289</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;552</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;78527</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;98720</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">蓮庵里  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;212</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;159996</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3315</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;239</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;128486</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13026</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2276</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;510</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;133</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8646</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1337</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2028</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;108713</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;140224</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;56</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">料羅里  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;239</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;201272</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1643</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1712</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;178021</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8876</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2869</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;33</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;96</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6878</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;183</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;661</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;300</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;154234</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;177484</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;97</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">新湖里  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;838</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;685310</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20320</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12587</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;545721</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;51515</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8751</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1637</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;786</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;33846</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1163</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3494</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5490</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;469489</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;608738</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1167</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">其  他  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7224</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5518</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1505</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;153</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;43</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4634</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6340</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合  計</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3463</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;2684325</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;79557</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;26641</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;2143908</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;211573</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;35336</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4753</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2172</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;135092</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5530</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16970</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;382</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22411</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;1831587</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2371028</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4712</td>
+</tr>
+<tr>
+<th class="l RowHeader" rowspan="10" scope="rowgroup">金沙鎮  </th>
+<th class="l RowHeader" scope="row">西園里  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;178</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;127509</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5202</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1228</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;97624</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12186</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;465</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;141</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;64</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9171</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;687</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;511</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;229</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;81812</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;111697</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;109</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">三山里  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;186</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;135594</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2245</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;722</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;109997</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13521</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;927</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;113</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;75</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4900</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2315</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;780</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;93733</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;119331</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;27</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">汶沙里  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;725</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;567208</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18212</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7531</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;448934</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;45236</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5943</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;622</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;578</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;27485</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;649</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5180</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;252</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6586</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;382537</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;500532</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1181</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">何斗里  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;256</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;189905</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5778</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2187</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;153683</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15311</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1522</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;145</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6978</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1603</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2664</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;129040</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;165184</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;567</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">浦山里  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;242</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;178182</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4689</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3978</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;142044</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12349</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1086</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;354</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;131</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7568</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;325</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;843</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4816</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;120513</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;156416</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;58</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">官嶼里  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;238</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;184028</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4040</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;822</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;147573</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15350</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3333</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;141</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;107</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10237</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1239</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;91</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1094</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;126029</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;162484</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;506</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">光前里  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;287</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;213442</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5372</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2126</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;176296</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14814</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2837</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;891</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;162</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7168</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;77</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1549</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2134</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;148797</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;185943</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;322</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">大洋里  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;135</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;100973</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2401</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;102</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;84330</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7247</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;625</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;98</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;46</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3886</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;808</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;526</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;905</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;71296</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;87940</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;45</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">其  他  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6325</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4794</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;943</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;86</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;473</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3801</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5333</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合  計</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2258</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;1703167</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;47953</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18695</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;1365275</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;136956</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16824</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2385</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1311</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;77867</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2545</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13771</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;368</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19215</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;1157560</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1494859</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2815</td>
+</tr>
+<tr>
+<th class="l RowHeader" rowspan="7" scope="rowgroup">烈嶼鄉  </th>
+<th class="l RowHeader" scope="row">上林村  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;129</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;88905</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;786</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;107</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;78554</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6300</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;352</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;153</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;60</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2118</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;394</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;80</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;65948</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;76298</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;51</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">林湖村  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;390</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;286254</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7410</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1356</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;236814</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16206</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1855</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;452</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;56</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18658</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2946</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;502</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;199453</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;248893</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;342</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">黃埔村  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;136</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;100214</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5087</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4570</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;73246</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7958</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1296</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1049</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5745</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;378</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;91</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;789</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;60349</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;87318</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;481</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">西口村  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;217</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;170700</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3929</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2527</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;138428</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9984</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;781</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;316</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;92</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13123</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1119</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;401</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;116736</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;149011</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">上岐村  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;260</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;180763</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3033</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1532</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;148728</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11556</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5025</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;382</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8948</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;364</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;706</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;471</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;124607</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;156642</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;53</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">其  他  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3598</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3194</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;86</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;284</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2732</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3136</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;33</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合  計</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1139</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;830434</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20244</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10093</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;678965</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;52035</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9309</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2352</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;231</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;48679</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;364</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5544</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;91</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2527</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;569825</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;721298</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1010</td>
+</tr>
+<tr>
+<th class="l RowHeader" rowspan="4" scope="rowgroup">烏坵鄉  </th>
+<th class="l RowHeader" scope="row">大坵村  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;43</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;33605</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1918</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;139</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23773</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3289</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;745</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2573</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;87</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1070</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19743</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;29575</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;181</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">小坵村  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;61</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;52803</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2782</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;159</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;44120</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4013</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;239</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;143</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1016</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;259</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;48</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;37880</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;46563</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">其  他  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1122</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;304</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;514</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;208</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;73</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;318</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;926</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合  計</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;108</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;87530</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4700</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;602</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;68407</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7509</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;984</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;143</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;42</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3607</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;346</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1190</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;57941</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;77064</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;183</td>
+</tr>
+<tr>
+<th class="l RowHeader" rowspan="2" scope="rowgroup">其他    </th>
+<th class="l RowHeader" scope="row">其  他  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;69</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;51187</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;203</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;788</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;41538</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4151</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;310</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;78</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2567</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;147</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;240</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1161</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;34540</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;44177</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;110</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合  計</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;69</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;51187</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;203</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;788</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;41538</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4151</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;310</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;78</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2567</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;147</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;240</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1161</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;34540</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;44177</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;110</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+</div>
+<br>
+</div>
+</body>
+</html>

@@ -1,0 +1,1636 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="Generator" content="SAS Software, see www.sas.com" sasversion="9.1">
+<meta http-equiv="Content-type" content="text/html; charset=Big5-HKSCS">
+<title>SAS Output</title>
+<style type="text/css">
+<!--
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: "." }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+.ContentTitle
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #002288;
+}
+.Output
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #F0F0F0;
+  border-width: 1px;
+  border-color: #000000;
+}
+.HeaderEmphasis
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.NoteContent
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Graph
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 1px;
+  border-color: #000000;
+}
+.WarnContentFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.NoteBanner
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.FatalContent
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.DataStrong
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Document
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+a:link {
+color:#0066AA
+}
+a:visited {
+color:#004488
+}
+a:active {
+color:#004488
+}
+.BeforeCaption
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #E0E0E0;
+}
+.ContentsDate
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  width: 100%;
+}
+.Pages
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  margin-left: 8px;
+  margin-right: 8px;
+  list-style-type: decimal;
+}
+.TitlesAndFooters
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.IndexProcName
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.ProcTitle
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.IndexAction
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  margin-left: 6pt;
+  list-style-type: NONE;
+}
+.Data
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Table
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #F0F0F0;
+  border-width: 1px;
+  border-color: #000000;
+}
+.top_stacked_value
+{
+  padding-bottom: 1px;
+}
+.middle_stacked_value
+{
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+.bottom_stacked_value
+{
+  padding-top: 1px;
+}
+.FooterEmpty
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.SysTitleAndFooterContainer
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 0;
+  width: 100%;
+}
+.RowFooterEmpty
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.ContentFolder
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: NONE;
+}
+.RowFooterEmphasis
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowFooterStrongFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowFooterFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.Index
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FooterFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.ExtendedPage
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 1pt;
+  text-align: center;
+}
+.Container
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Date
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  width: 100%;
+}
+.Caption
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #E0E0E0;
+}
+.WarnBanner
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Frame
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.HeaderStrongFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.IndexTitle
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #002288;
+}
+.NoteContentFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.DataEmphasisFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Note
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Byline
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FatalBanner
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.ProcTitleFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.ByContentFolder
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: NONE;
+}
+.PagesProcLabel
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.RowHeaderFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowFooterEmphasisFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.WarnContent
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.DataEmpty
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Cell
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Header
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.PageNo
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  text-align: right;
+  vertical-align: top;
+}
+.ContentProcLabel
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.HeaderFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.PagesTitle
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #002288;
+}
+.RowHeaderEmpty
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.PagesProcName
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.Batch
+{
+  font-family: MingLiU, GothicBBB, SAS Monospace, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+  border-width: 1px;
+  border-color: #000000;
+}
+.ContentItem
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  list-style-type: NONE;
+}
+.Body
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.PagesDate
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  width: 100%;
+}
+.HeaderEmpty
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FooterStrong
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FooterEmphasis
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.ErrorContent
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.DataFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.HeaderStrong
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.DataEmphasis
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.TitleAndNoteContainer
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 0;
+  width: 100%;
+}
+.RowFooter
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.IndexItem
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  margin-left: 6pt;
+  list-style-type: NONE;
+}
+.BylineContainer
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 0;
+  width: 100%;
+}
+.FatalContentFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.BodyDate
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  width: 100%;
+  text-align: right;
+  vertical-align: top;
+}
+.Contents
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  margin-left: 8px;
+  margin-right: 8px;
+  list-style-type: decimal;
+}
+.RowFooterStrong
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.UserText
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.HeadersAndFooters
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowHeaderEmphasisFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.ErrorBanner
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.ContentProcName
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.RowHeaderStrong
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.PagesItem
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  list-style-type: NONE;
+}
+.RowHeader
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FooterStrongFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.AfterCaption
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #E0E0E0;
+}
+.RowHeaderStrongFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowHeaderEmphasis
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.DataStrongFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Footer
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FolderAction
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  margin-left: 6pt;
+  list-style-type: NONE;
+}
+.HeaderEmphasisFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.SystemTitle
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.ErrorContentFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.SystemFooter
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.FooterEmphasisFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+<noscript></noscript>
+</head>
+<body onload="startup()" onunload="shutdown()" class="Body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+
+//-->
+</script>
+
+<noscript></noscript>
+<div class="branch">
+<a name="IDX"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="l SystemTitle">                                             表 44-1 (093 年)綜稅列舉扣除細項戶數金額各縣市申報統計表  單位：金額(千元)</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c m Header" rowspan="2" scope="col">&nbsp;</th>
+<th class="c Header" rowspan="2" scope="col">採列舉扣除納稅單位</th>
+<th class="c Header" rowspan="2" scope="col">採列舉扣除綜合所得總額</th>
+<th class="c Header" colspan="2" scope="colgroup">合計</th>
+<th class="c Header" colspan="2" scope="colgroup">捐贈</th>
+<th class="c Header" colspan="2" scope="colgroup">保險費</th>
+<th class="c Header" colspan="2" scope="colgroup">醫藥及生育費</th>
+<th class="c Header" colspan="2" scope="colgroup">災害損失</th>
+<th class="c Header" colspan="2" scope="colgroup">購屋借款利息</th>
+<th class="c Header" colspan="2" scope="colgroup">公職捐贈</th>
+<th class="c Header" colspan="2" scope="colgroup">房屋租金支出</th>
+<th class="c Header" colspan="2" scope="colgroup">土地捐贈</th>
+</tr>
+<tr>
+<th class="c Header" scope="col"> 戶   數</th>
+<th class="c Header" scope="col"> 金   額</th>
+<th class="c Header" scope="col"> 戶   數</th>
+<th class="c Header" scope="col"> 金   額</th>
+<th class="c Header" scope="col"> 戶   數</th>
+<th class="c Header" scope="col"> 金   額</th>
+<th class="c Header" scope="col"> 戶   數</th>
+<th class="c Header" scope="col"> 金   額</th>
+<th class="c Header" scope="col"> 戶   數</th>
+<th class="c Header" scope="col"> 金   額</th>
+<th class="c Header" scope="col"> 戶   數</th>
+<th class="c Header" scope="col"> 金   額</th>
+<th class="c Header" scope="col"> 戶   數</th>
+<th class="c Header" scope="col"> 金   額</th>
+<th class="c Header" scope="col"> 戶   數</th>
+<th class="c Header" scope="col"> 金   額</th>
+<th class="c Header" scope="col"> 戶   數</th>
+<th class="c Header" scope="col"> 金   額</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l t RowHeader" scope="row">縣&nbsp;市&nbsp;別</th>
+<td class="r b Data" rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;279890</td>
+<td class="r b Data" rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;520369964</td>
+<td class="r b Data" rowspan="2">&nbsp;&nbsp;&nbsp;767556</td>
+<td class="r b Data" rowspan="2">&nbsp;46285025</td>
+<td class="r b Data" rowspan="2">&nbsp;&nbsp;&nbsp;158961</td>
+<td class="r b Data" rowspan="2">&nbsp;&nbsp;9622214</td>
+<td class="r b Data" rowspan="2">&nbsp;&nbsp;&nbsp;271133</td>
+<td class="r b Data" rowspan="2">&nbsp;19175629</td>
+<td class="r b Data" rowspan="2">&nbsp;&nbsp;&nbsp;218916</td>
+<td class="r b Data" rowspan="2">&nbsp;&nbsp;6537707</td>
+<td class="r b Data" rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;606</td>
+<td class="r b Data" rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;63632</td>
+<td class="r b Data" rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;98216</td>
+<td class="r b Data" rowspan="2">&nbsp;&nbsp;8316935</td>
+<td class="r b Data" rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4147</td>
+<td class="r b Data" rowspan="2">&nbsp;&nbsp;&nbsp;243084</td>
+<td class="r b Data" rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;15001</td>
+<td class="r b Data" rowspan="2">&nbsp;&nbsp;1454417</td>
+<td class="r b Data" rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;576</td>
+<td class="r b Data" rowspan="2">&nbsp;&nbsp;&nbsp;871409</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">臺 北 市</th>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">高 雄 市</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;121174</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;153531824</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;323006</td>
+<td class="r b Data">&nbsp;15665669</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;63728</td>
+<td class="r b Data">&nbsp;&nbsp;2051002</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;118610</td>
+<td class="r b Data">&nbsp;&nbsp;8847060</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;88563</td>
+<td class="r b Data">&nbsp;&nbsp;1687029</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;76</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;14621</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;44380</td>
+<td class="r b Data">&nbsp;&nbsp;2543446</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1498</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;69274</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5996</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;390449</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;155</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;62787</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">臺 中 市</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;89232</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;118255508</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;242707</td>
+<td class="r b Data">&nbsp;13081760</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;48328</td>
+<td class="r b Data">&nbsp;&nbsp;1939046</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;87419</td>
+<td class="r b Data">&nbsp;&nbsp;6571574</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;64953</td>
+<td class="r b Data">&nbsp;&nbsp;1446619</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;172</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;18547</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;35883</td>
+<td class="r b Data">&nbsp;&nbsp;2245916</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;850</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;40744</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4829</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;398719</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;273</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;420597</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">基 隆 市</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31889</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;34234245</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;84325</td>
+<td class="r b Data">&nbsp;&nbsp;3865441</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;13907</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;320159</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;31185</td>
+<td class="r b Data">&nbsp;&nbsp;2229662</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;22735</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;444610</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;229</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;18215</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;14904</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;758981</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;108</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5130</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1207</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;80858</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7826</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">臺 南 市</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;51938</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;65801769</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;133399</td>
+<td class="r b Data">&nbsp;&nbsp;6881658</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;25352</td>
+<td class="r b Data">&nbsp;&nbsp;1044443</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;50861</td>
+<td class="r b Data">&nbsp;&nbsp;3802107</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;35755</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;690002</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2830</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;18442</td>
+<td class="r b Data">&nbsp;&nbsp;1142210</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;688</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;31306</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2251</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;161351</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7408</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">嘉 義 市</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16932</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21082979</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;42903</td>
+<td class="r b Data">&nbsp;&nbsp;2206823</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8604</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;305132</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;16612</td>
+<td class="r b Data">&nbsp;&nbsp;1297913</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;11592</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;232654</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;30</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2624</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4886</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;268065</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;188</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7538</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;959</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;66639</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;26259</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">新 竹 市</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;38898</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;65042786</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;103686</td>
+<td class="r b Data">&nbsp;&nbsp;5788863</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;19019</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;901932</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;38055</td>
+<td class="r b Data">&nbsp;&nbsp;2915680</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;28660</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;695503</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;69</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6464</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;15939</td>
+<td class="r b Data">&nbsp;&nbsp;1040695</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;424</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;16532</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1467</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;126797</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;53</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;85259</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">臺 北 縣</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;330199</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;376011935</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;866661</td>
+<td class="r b Data">&nbsp;43087308</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;141281</td>
+<td class="r b Data">&nbsp;&nbsp;3853133</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;320347</td>
+<td class="r b Data">&nbsp;22349944</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;224459</td>
+<td class="r b Data">&nbsp;&nbsp;4676596</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1494</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;121002</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;164257</td>
+<td class="r b Data">&nbsp;10682979</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1896</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;94183</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;12476</td>
+<td class="r b Data">&nbsp;&nbsp;1159319</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;451</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;150152</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">宜 蘭 縣</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25709</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;26635643</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;61961</td>
+<td class="r b Data">&nbsp;&nbsp;3164285</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;10498</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;284369</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;25213</td>
+<td class="r b Data">&nbsp;&nbsp;1993250</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;16756</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;358112</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;45</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4121</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7949</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;420443</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;222</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7392</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1224</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;90031</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;54</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6569</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">桃 園 縣</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;164599</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;189865109</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;420402</td>
+<td class="r b Data">&nbsp;20948346</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;63621</td>
+<td class="r b Data">&nbsp;&nbsp;1498010</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;160920</td>
+<td class="r b Data">&nbsp;12110845</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;112101</td>
+<td class="r b Data">&nbsp;&nbsp;2079179</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;265</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;21526</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;76216</td>
+<td class="r b Data">&nbsp;&nbsp;4569121</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1166</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;44685</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5891</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;462576</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;222</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;162405</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">新 竹 縣</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;38269</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;49533217</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;95335</td>
+<td class="r b Data">&nbsp;&nbsp;5040265</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;14659</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;365755</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;37554</td>
+<td class="r b Data">&nbsp;&nbsp;2989395</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;25905</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;571636</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;54</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;13120</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;15623</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;963122</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;248</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7439</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1221</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;98537</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;71</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;31261</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">苗 栗 縣</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32608</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;36439181</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;74745</td>
+<td class="r b Data">&nbsp;&nbsp;3971620</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;11812</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;353242</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;32057</td>
+<td class="r b Data">&nbsp;&nbsp;2597617</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;20059</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;388966</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3588</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9104</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;516698</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;207</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7754</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1437</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;98913</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4842</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">臺 中 縣</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;88928</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;93999349</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;218240</td>
+<td class="r b Data">&nbsp;11196608</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;41374</td>
+<td class="r b Data">&nbsp;&nbsp;1108895</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;87277</td>
+<td class="r b Data">&nbsp;&nbsp;6879971</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;56465</td>
+<td class="r b Data">&nbsp;&nbsp;1066451</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;857</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;125545</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;27499</td>
+<td class="r b Data">&nbsp;&nbsp;1559553</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;590</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;28267</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4049</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;299060</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;129</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;128865</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">南 投 縣</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23467</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25177011</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;57999</td>
+<td class="r b Data">&nbsp;&nbsp;2904428</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;11739</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;277546</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;23056</td>
+<td class="r b Data">&nbsp;&nbsp;1830937</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;14917</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;305382</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;116</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;12636</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6098</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;342271</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;290</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9922</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1716</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;112313</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;67</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;13420</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">彰 化 縣</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;60118</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;67683573</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;140441</td>
+<td class="r b Data">&nbsp;&nbsp;7446988</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;26438</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;826065</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;59181</td>
+<td class="r b Data">&nbsp;&nbsp;4885668</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;38919</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;772216</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;52</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4188</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;12038</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;663557</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;755</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;31782</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2992</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;203850</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;66</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;59662</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">雲 林 縣</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;28039</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;29454686</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;65358</td>
+<td class="r b Data">&nbsp;&nbsp;3377287</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;10775</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;254791</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;27562</td>
+<td class="r b Data">&nbsp;&nbsp;2235178</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;17771</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;357958</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;78</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8491</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6956</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;372648</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;195</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7838</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1970</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;134974</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;51</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5409</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">嘉 義 縣</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20507</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21142746</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;47539</td>
+<td class="r b Data">&nbsp;&nbsp;2400592</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8039</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;192281</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;20182</td>
+<td class="r b Data">&nbsp;&nbsp;1626450</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;13070</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;222358</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;84</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8149</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4729</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;240857</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;138</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8397</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1280</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;87144</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;14956</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">臺 南 縣</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;61824</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;64686889</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;147171</td>
+<td class="r b Data">&nbsp;&nbsp;7411779</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;24657</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;655279</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;60835</td>
+<td class="r b Data">&nbsp;&nbsp;4827239</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;38916</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;668254</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;53</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3233</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;19768</td>
+<td class="r b Data">&nbsp;&nbsp;1037492</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;471</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;20537</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2419</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;159465</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;52</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;40281</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">高 雄 縣</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;74795</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;81389375</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;185807</td>
+<td class="r b Data">&nbsp;&nbsp;9018089</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;33545</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;865447</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;73524</td>
+<td class="r b Data">&nbsp;&nbsp;5722329</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;51018</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;848372</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;43</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4082</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;23688</td>
+<td class="r b Data">&nbsp;&nbsp;1303082</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;528</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;22303</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3411</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;213938</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;38537</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">屏 東 縣</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;37982</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;39871002</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;91549</td>
+<td class="r b Data">&nbsp;&nbsp;4459451</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;16723</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;415278</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;37403</td>
+<td class="r b Data">&nbsp;&nbsp;2989351</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;25110</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;406986</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;505</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9747</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;486327</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;452</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;11437</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2062</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;128321</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;36</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;21246</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">花 蓮 縣</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19786</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20940070</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;51371</td>
+<td class="r b Data">&nbsp;&nbsp;2561852</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8772</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;278128</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;19282</td>
+<td class="r b Data">&nbsp;&nbsp;1429320</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;13753</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;266901</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1603</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8020</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;485118</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;184</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5271</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1304</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;92593</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;40</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2919</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">臺 東 縣</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9563</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10186682</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;23788</td>
+<td class="r b Data">&nbsp;&nbsp;1182213</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4543</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;144067</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9374</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;730218</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6563</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;126104</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;77</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2515</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;130734</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;130</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4394</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;644</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;43930</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2689</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">澎 湖 縣</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4326</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5000084</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;10493</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;541247</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2359</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;75869</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4267</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;344188</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2355</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;44990</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;215</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1169</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;55137</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;47</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2211</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;283</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;18218</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;419</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">金 門 縣</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3924</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4684969</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9006</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;483058</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1788</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;44904</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3860</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;327110</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1975</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;39636</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;264</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;982</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;47355</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;76</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1545</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;313</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;22194</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;49</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">連 江 縣</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;825</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1070894</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1931</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;112342</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;376</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;17292</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;814</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;68106</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;462</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;10163</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;135</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;180</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9790</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1111</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;75</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5730</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">合    計</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;1655421</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;2122091490</td>
+<td class="r b Data">&nbsp;&nbsp;4267379</td>
+<td class="r b Data">223082999</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;770898</td>
+<td class="r b Data">&nbsp;27694278</td>
+<td class="r b Data">&nbsp;&nbsp;1616583</td>
+<td class="r b Data">120776738</td>
+<td class="r b Data">&nbsp;&nbsp;1151748</td>
+<td class="r b Data">&nbsp;24944387</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4451</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;459412</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;629188</td>
+<td class="r b Data">&nbsp;40202531</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;15518</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;730076</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;76477</td>
+<td class="r b Data">&nbsp;&nbsp;6110335</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2516</td>
+<td class="r b Data">&nbsp;&nbsp;2165242</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+</body>
+</html>

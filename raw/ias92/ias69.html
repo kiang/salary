@@ -1,0 +1,1583 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="Generator" content="SAS Software, see www.sas.com" sasversion="9.1">
+<meta http-equiv="Content-type" content="text/html; charset=Big5-HKSCS">
+<title>SAS Output</title>
+<style type="text/css">
+<!--
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: "." }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+.ContentTitle
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #002288;
+}
+.Output
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #F0F0F0;
+  border-width: 1px;
+  border-color: #000000;
+}
+.HeaderEmphasis
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.NoteContent
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Graph
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 1px;
+  border-color: #000000;
+}
+.WarnContentFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.NoteBanner
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.FatalContent
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.DataStrong
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Document
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+a:link {
+color:#0066AA
+}
+a:visited {
+color:#004488
+}
+a:active {
+color:#004488
+}
+.BeforeCaption
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #E0E0E0;
+}
+.ContentsDate
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  width: 100%;
+}
+.Pages
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  margin-left: 8px;
+  margin-right: 8px;
+  list-style-type: decimal;
+}
+.TitlesAndFooters
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.IndexProcName
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.ProcTitle
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.IndexAction
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  margin-left: 6pt;
+  list-style-type: NONE;
+}
+.Data
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Table
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #F0F0F0;
+  border-width: 1px;
+  border-color: #000000;
+}
+.top_stacked_value
+{
+  padding-bottom: 1px;
+}
+.middle_stacked_value
+{
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+.bottom_stacked_value
+{
+  padding-top: 1px;
+}
+.FooterEmpty
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.SysTitleAndFooterContainer
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 0;
+  width: 100%;
+}
+.RowFooterEmpty
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.ContentFolder
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: NONE;
+}
+.RowFooterEmphasis
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowFooterStrongFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowFooterFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.Index
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FooterFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.ExtendedPage
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 1pt;
+  text-align: center;
+}
+.Container
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Date
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  width: 100%;
+}
+.Caption
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #E0E0E0;
+}
+.WarnBanner
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Frame
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.HeaderStrongFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.IndexTitle
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #002288;
+}
+.NoteContentFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.DataEmphasisFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Note
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Byline
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FatalBanner
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.ProcTitleFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.ByContentFolder
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: NONE;
+}
+.PagesProcLabel
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.RowHeaderFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowFooterEmphasisFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.WarnContent
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.DataEmpty
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Cell
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Header
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.PageNo
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  text-align: right;
+  vertical-align: top;
+}
+.ContentProcLabel
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.HeaderFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.PagesTitle
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #002288;
+}
+.RowHeaderEmpty
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.PagesProcName
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.Batch
+{
+  font-family: MingLiU, GothicBBB, SAS Monospace, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+  border-width: 1px;
+  border-color: #000000;
+}
+.ContentItem
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  list-style-type: NONE;
+}
+.Body
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.PagesDate
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  width: 100%;
+}
+.HeaderEmpty
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FooterStrong
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FooterEmphasis
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.ErrorContent
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.DataFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.HeaderStrong
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.DataEmphasis
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.TitleAndNoteContainer
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 0;
+  width: 100%;
+}
+.RowFooter
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.IndexItem
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  margin-left: 6pt;
+  list-style-type: NONE;
+}
+.BylineContainer
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 0;
+  width: 100%;
+}
+.FatalContentFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.BodyDate
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  width: 100%;
+  text-align: right;
+  vertical-align: top;
+}
+.Contents
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  margin-left: 8px;
+  margin-right: 8px;
+  list-style-type: decimal;
+}
+.RowFooterStrong
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.UserText
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.HeadersAndFooters
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowHeaderEmphasisFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.ErrorBanner
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.ContentProcName
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.RowHeaderStrong
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.PagesItem
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  list-style-type: NONE;
+}
+.RowHeader
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FooterStrongFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.AfterCaption
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #E0E0E0;
+}
+.RowHeaderStrongFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowHeaderEmphasis
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.DataStrongFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Footer
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FolderAction
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  margin-left: 6pt;
+  list-style-type: NONE;
+}
+.HeaderEmphasisFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.SystemTitle
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.ErrorContentFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.SystemFooter
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.FooterEmphasisFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+<noscript></noscript>
+</head>
+<body onload="startup()" onunload="shutdown()" class="Body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+
+//-->
+</script>
+
+<noscript></noscript>
+<div class="branch">
+<a name="IDX"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="l SystemTitle">     表 69 (092 年)綜稅依所得淨額級距之綜合所得總額應納稅額及稅率申報統計表  單位：金額(千元)</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c m Header" scope="col">&nbsp;</th>
+<th class="c Header" scope="col">納 稅 單 位</th>
+<th class="c Header" scope="col">綜合所得總額</th>
+<th class="c Header" scope="col">總 扣 除 額</th>
+<th class="c Header" scope="col">所 得 淨 額</th>
+<th class="c Header" scope="col">應 納 稅 額</th>
+<th class="c Header" scope="col">平 均 稅 率</th>
+<th class="c Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l t RowHeader" scope="row">所得淨額級距：萬元</th>
+<td class="r b Data" rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;1479023</td>
+<td class="r b Data" rowspan="2">&nbsp;&nbsp;&nbsp;469319513</td>
+<td class="r b Data" rowspan="2">&nbsp;&nbsp;621543302</td>
+<td class="r b Data" rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data" rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.00</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">NET=0   </th>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">0-2     </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;230103</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;87593642</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;85423519</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2170123</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;130138</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.00</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.15</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">2-4     </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;189062</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;78385569</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;72753113</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;5632456</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;337876</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.00</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.43</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">4-6     </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;176905</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;76430523</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;67594559</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;8835964</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;530128</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.00</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.69</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">6-8     </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;158762</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;72935526</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;61838947</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;11096578</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;665770</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.00</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.91</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">8-10    </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;148207</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;71416610</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;58090834</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;13325775</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;799557</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.00</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.12</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">10-12   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;141957</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;71155236</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;55554088</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;15601148</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;936032</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.00</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.32</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">12-14   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;130906</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;68846262</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;51836740</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;17009521</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;1020544</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.00</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.48</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">14-16   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;125833</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;68851121</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;49985602</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;18865519</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;1131934</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.00</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.64</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">16-18   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;119353</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;67923337</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;47645719</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;20277618</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;1216644</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.00</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.79</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">18-20   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;111765</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;66347750</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;45123394</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;21224356</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;1273451</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.00</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.92</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">20-23   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;155896</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;97264384</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;63775509</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;33488875</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2009326</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.00</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.07</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">23-26   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;142383</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;94068751</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;59216629</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;34852122</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2091184</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.00</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.22</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">26-29   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;131043</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;91822047</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;55804903</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;36017144</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2161230</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.00</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.35</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">29-32   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;121303</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;89732252</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;52755343</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;36976909</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2218811</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.00</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.47</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">32-35   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;112109</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;87213825</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;49673675</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;37540150</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2252648</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.00</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.58</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">35-38   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;102398</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;83535704</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;46189721</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;37345983</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2249646</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.02</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.69</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">38-41   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;87651</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;75638225</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;41046638</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;34591587</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2188814</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.33</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.89</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">41-44   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;77958</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;70570702</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;37463049</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;33107653</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2205990</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.66</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.13</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">44-47   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;70230</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;66376911</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;34437572</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;31939339</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2220790</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.95</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.35</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">47-50   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;63604</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;62742948</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;31912742</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;30830206</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2219986</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.20</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.54</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">50-53   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;57454</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;58664769</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;29089569</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;29575200</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2194175</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.42</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.74</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">53-57   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;69583</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;74531717</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;36289567</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;38242150</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2917661</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.63</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.91</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">57-61   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;61512</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;68868822</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;32601208</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;36267613</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2847258</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.85</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.13</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">61-65   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;54690</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;64163089</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;29727154</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;34435934</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2771889</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.05</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.32</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">65-69   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;49918</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;61116248</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;27684656</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;33431592</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2745214</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.21</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.49</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">69-73   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;44907</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;57274610</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;25404332</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;31870277</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2671228</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.38</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.66</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">73-77   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;40103</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;53495733</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;23431627</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;30064107</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2561284</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.52</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.79</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">77-81   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;36893</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;50734954</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;21595728</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;29139225</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2526014</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.67</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.98</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">81-85   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;33468</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;48162063</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;20393071</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;27768992</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2445815</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.81</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.08</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">85-90   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;37923</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;56460857</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;23288698</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;33172159</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2973296</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.96</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.27</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">90-95   </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;34273</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;53262214</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;21574005</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;31688209</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2888222</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9.11</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.42</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">95-100  </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;30757</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;49910948</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;19933540</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;29977408</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2777606</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9.27</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.57</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">100- 105</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;27098</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;45477929</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;17717024</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;27760905</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2638328</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9.50</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.80</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">105- 110</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24304</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;42207587</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;16093626</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;26113961</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2553895</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9.78</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.05</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">110- 115</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22500</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;40475595</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;15172266</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;25303329</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2539957</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.04</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.28</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">115- 120</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20211</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;37706381</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;13966314</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;23740066</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2442185</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.29</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.48</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">120- 130</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;35117</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;68496015</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;24658457</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;43837558</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;4658184</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.63</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.80</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">130- 140</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;29136</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;60573877</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;21275149</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;39298728</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;4337480</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.04</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.16</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">140- 150</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24446</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;53760564</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;18345260</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;35415305</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;4038588</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.40</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.51</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">150- 160</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20733</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;48023777</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;15913481</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;32110296</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;3766693</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.73</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.84</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">160- 180</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;33018</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;82680059</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;26733905</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;55946154</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;6838994</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.22</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.27</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">180- 200</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24169</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;66123446</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;20333070</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;45790377</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;5874053</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.83</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.88</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">200- 220</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18038</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;53490164</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;15686771</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;37803394</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;5141100</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13.60</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9.61</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">220- 250</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19032</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;62007264</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;17483428</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;44523836</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;6499705</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14.60</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.48</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">250- 280</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12800</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;46497141</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;12699909</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;33797233</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;5327657</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15.76</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.46</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">280- 310</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9131</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;36161186</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;9309190</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;26851996</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;4521708</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16.84</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.50</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">310- 350</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8575</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;37216589</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;9033661</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;28182928</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;5047182</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17.91</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13.56</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">350- 390</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5773</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;28309508</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;7035117</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;21274390</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;4036420</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18.97</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14.26</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">390- 440</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4663</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;25825475</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;6560806</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;19264669</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;3922285</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20.36</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15.19</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">440- 500</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3615</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;22300704</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;5404529</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;16896175</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;3684777</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21.81</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16.52</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">500- 600</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3414</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;25145453</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;6552679</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;18592773</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;4403110</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23.68</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17.51</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">600- 700</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1834</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;15824985</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;3984507</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;11840479</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;3056723</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25.82</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19.32</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">700- 800</th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1182</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;11736413</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2913595</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;8822818</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;2435580</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;27.61</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20.75</td>
+</tr>
+<tr>
+<th class="l t RowHeader" scope="row">800以上 </th>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4074</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;137891817</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;20051788</td>
+<td class="r b Data">&nbsp;&nbsp;117840029</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;43125029</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;36.60</td>
+<td class="r b Data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31.27</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="l SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class="l SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class="l SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class="l SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class="l SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class="l SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class="l SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class="l SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class="l SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class="l SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+</div>
+</body>
+</html>

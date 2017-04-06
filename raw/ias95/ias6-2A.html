@@ -1,0 +1,6297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="Generator" content="SAS Software, see www.sas.com" sasversion="9.1">
+<meta http-equiv="Content-type" content="text/html; charset=Big5-HKSCS">
+<title>SAS Output</title>
+<style type="text/css">
+<!--
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: "." }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.ContentTitle
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #002288;
+}
+.Output
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #F0F0F0;
+  border-width: 1px;
+  border-color: #000000;
+}
+.HeaderEmphasis
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.NoteContent
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Graph
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 1px;
+  border-color: #000000;
+}
+.WarnContentFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.NoteBanner
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.FatalContent
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.DataStrong
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Document
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+a:link {
+color:#0066AA
+}
+a:visited {
+color:#004488
+}
+a:active {
+color:#004488
+}
+.BeforeCaption
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #E0E0E0;
+}
+.ContentsDate
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  width: 100%;
+}
+.Pages
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  margin-left: 8px;
+  margin-right: 8px;
+  list-style-type: decimal;
+}
+.TitlesAndFooters
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.IndexProcName
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.ProcTitle
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.IndexAction
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  margin-left: 6pt;
+  list-style-type: NONE;
+}
+.Data
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Table
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #F0F0F0;
+  border-width: 1px;
+  border-color: #000000;
+}
+.FooterEmpty
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.SysTitleAndFooterContainer
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 0;
+  width: 100%;
+}
+.RowFooterEmpty
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.ContentFolder
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: NONE;
+}
+.RowFooterEmphasis
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowFooterStrongFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowFooterFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.Index
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FooterFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.ExtendedPage
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 1pt;
+  text-align: center;
+}
+.Container
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Date
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  width: 100%;
+}
+.Caption
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #E0E0E0;
+}
+.WarnBanner
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Frame
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.HeaderStrongFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.IndexTitle
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #002288;
+}
+.NoteContentFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.DataEmphasisFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Note
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Byline
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FatalBanner
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.ProcTitleFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.ByContentFolder
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: NONE;
+}
+.PagesProcLabel
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.RowHeaderFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowFooterEmphasisFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.WarnContent
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.DataEmpty
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Cell
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Header
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.PageNo
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  text-align: right;
+  vertical-align: top;
+}
+.ContentProcLabel
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.HeaderFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.PagesTitle
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #002288;
+}
+.RowHeaderEmpty
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.PagesProcName
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.Batch
+{
+  font-family: MingLiU, GothicBBB, SAS Monospace, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+  border-width: 1px;
+  border-color: #000000;
+}
+.ContentItem
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  list-style-type: NONE;
+}
+.Body
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.PagesDate
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  width: 100%;
+}
+.HeaderEmpty
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FooterStrong
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FooterEmphasis
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.ErrorContent
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.DataFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.HeaderStrong
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.DataEmphasis
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.TitleAndNoteContainer
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 0;
+  width: 100%;
+}
+.RowFooter
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.IndexItem
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  margin-left: 6pt;
+  list-style-type: NONE;
+}
+.BylineContainer
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 0;
+  width: 100%;
+}
+.FatalContentFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.BodyDate
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  width: 100%;
+  text-align: right;
+  vertical-align: top;
+}
+.Contents
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  margin-left: 8px;
+  margin-right: 8px;
+  list-style-type: decimal;
+}
+.RowFooterStrong
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.UserText
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.HeadersAndFooters
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowHeaderEmphasisFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.ErrorBanner
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.ContentProcName
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.RowHeaderStrong
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.PagesItem
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  list-style-type: NONE;
+}
+.RowHeader
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FooterStrongFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.AfterCaption
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #E0E0E0;
+}
+.RowHeaderStrongFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowHeaderEmphasis
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.DataStrongFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Footer
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FolderAction
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  margin-left: 6pt;
+  list-style-type: NONE;
+}
+.HeaderEmphasisFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.SystemTitle
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.ErrorContentFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.SystemFooter
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.FooterEmphasisFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+<noscript></noscript>
+</head>
+<body onload="startup()" onunload="shutdown()" class="Body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+
+//-->
+</script>
+
+<noscript></noscript>
+<div class="branch">
+<a name="IDX"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                 表 6-2A (095 年)綜稅各類所得應納稅額及稅率各級距申報統計表                        單位：金額(千元)</td>
+</tr>
+<tr>
+<td class=" SystemTitle">程式代號:IAS901L</td>
+</tr>
+<tr>
+<td class=" SystemTitle">列印日期： 98年04月02日</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 臺 北 市</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" rowspan="2" scope="col">綜合所得總額</th>
+<th class=" Header" colspan="2" scope="colgroup">所 得 淨 額</th>
+<th class=" Header" colspan="2" scope="colgroup">應 納 稅 額</th>
+<th class=" Header" colspan="2" scope="colgroup">稅 後 所 得</th>
+<th class=" Header" scope="col">&nbsp;</th>
+<th class=" Header" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">平 均 稅 率</th>
+<th class=" Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">級距：萬元</th>
+<td class="r b Data" rowspan="2">     166370</td>
+<td class="r b Data" rowspan="2">    49207998</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">    49207998</td>
+<td class="r b Data" rowspan="2">      100.00</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">       0.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> NET= 0  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">   0- 37 </th>
+<td class="r b Data">     301904</td>
+<td class="r b Data">   167925050</td>
+<td class="r b Data">    49908986</td>
+<td class="r b Data">       29.72</td>
+<td class="r b Data">     3006116</td>
+<td class="r b Data">        1.79</td>
+<td class="r b Data">   164918934</td>
+<td class="r b Data">       98.21</td>
+<td class="r b Data">       6.02</td>
+<td class="r b Data">       1.79</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 37- 99  </th>
+<td class="r b Data">     180757</td>
+<td class="r b Data">   205232342</td>
+<td class="r b Data">   111824487</td>
+<td class="r b Data">       54.49</td>
+<td class="r b Data">     9332597</td>
+<td class="r b Data">        4.55</td>
+<td class="r b Data">   195899745</td>
+<td class="r b Data">       95.45</td>
+<td class="r b Data">       8.35</td>
+<td class="r b Data">       4.55</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 99- 198 </th>
+<td class="r b Data">      85607</td>
+<td class="r b Data">   176022723</td>
+<td class="r b Data">   118442876</td>
+<td class="r b Data">       67.29</td>
+<td class="r b Data">    13916671</td>
+<td class="r b Data">        7.91</td>
+<td class="r b Data">   162106052</td>
+<td class="r b Data">       92.09</td>
+<td class="r b Data">      11.75</td>
+<td class="r b Data">       7.91</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 198- 372</th>
+<td class="r b Data">      35868</td>
+<td class="r b Data">   122512889</td>
+<td class="r b Data">    94229068</td>
+<td class="r b Data">       76.91</td>
+<td class="r b Data">    15488289</td>
+<td class="r b Data">       12.64</td>
+<td class="r b Data">   107024600</td>
+<td class="r b Data">       87.36</td>
+<td class="r b Data">      16.44</td>
+<td class="r b Data">      12.64</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">372- 500 </th>
+<td class="r b Data">       7561</td>
+<td class="r b Data">    38685776</td>
+<td class="r b Data">    32220246</td>
+<td class="r b Data">       83.29</td>
+<td class="r b Data">     6912183</td>
+<td class="r b Data">       17.87</td>
+<td class="r b Data">    31773593</td>
+<td class="r b Data">       82.13</td>
+<td class="r b Data">      21.45</td>
+<td class="r b Data">      17.87</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">500- 1000</th>
+<td class="r b Data">       7250</td>
+<td class="r b Data">    55308288</td>
+<td class="r b Data">    48635990</td>
+<td class="r b Data">       87.94</td>
+<td class="r b Data">    13301300</td>
+<td class="r b Data">       24.05</td>
+<td class="r b Data">    42006988</td>
+<td class="r b Data">       75.95</td>
+<td class="r b Data">      27.35</td>
+<td class="r b Data">      24.05</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">1000 以上</th>
+<td class="r b Data">       3786</td>
+<td class="r b Data">   123634235</td>
+<td class="r b Data">   117525112</td>
+<td class="r b Data">       95.06</td>
+<td class="r b Data">    43666098</td>
+<td class="r b Data">       35.32</td>
+<td class="r b Data">    79968137</td>
+<td class="r b Data">       64.68</td>
+<td class="r b Data">      37.15</td>
+<td class="r b Data">      35.32</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合      計</th>
+<td class="r b Data">     789103</td>
+<td class="r b Data">   938529301</td>
+<td class="r b Data">   572786765</td>
+<td class="r b Data">       61.03</td>
+<td class="r b Data">   105623254</td>
+<td class="r b Data">       11.25</td>
+<td class="r b Data">   832906047</td>
+<td class="r b Data">       88.75</td>
+<td class="r b Data">      18.44</td>
+<td class="r b Data">      11.25</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：（一）各項金額百分比是指該項金額與綜合所得總額之比值。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （二）核定所得淨額係由該戶核定所得總額扣除各項免稅額暨扣除額後求得。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （三）各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX1"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                 表 6-2A (095 年)綜稅各類所得應納稅額及稅率各級距申報統計表                        單位：金額(千元)</td>
+</tr>
+<tr>
+<td class=" SystemTitle">程式代號:IAS901L</td>
+</tr>
+<tr>
+<td class=" SystemTitle">列印日期： 98年04月02日</td>
+</tr>
+</table><br>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 高 雄 市</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" rowspan="2" scope="col">綜合所得總額</th>
+<th class=" Header" colspan="2" scope="colgroup">所 得 淨 額</th>
+<th class=" Header" colspan="2" scope="colgroup">應 納 稅 額</th>
+<th class=" Header" colspan="2" scope="colgroup">稅 後 所 得</th>
+<th class=" Header" scope="col">&nbsp;</th>
+<th class=" Header" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">平 均 稅 率</th>
+<th class=" Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">級距：萬元</th>
+<td class="r b Data" rowspan="2">      91505</td>
+<td class="r b Data" rowspan="2">    28269320</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">    28269320</td>
+<td class="r b Data" rowspan="2">      100.00</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">       0.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> NET= 0  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">   0- 37 </th>
+<td class="r b Data">     149944</td>
+<td class="r b Data">    84222506</td>
+<td class="r b Data">    23421037</td>
+<td class="r b Data">       27.81</td>
+<td class="r b Data">     1412949</td>
+<td class="r b Data">        1.68</td>
+<td class="r b Data">    82809557</td>
+<td class="r b Data">       98.32</td>
+<td class="r b Data">       6.03</td>
+<td class="r b Data">       1.68</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 37- 99  </th>
+<td class="r b Data">      71146</td>
+<td class="r b Data">    80787299</td>
+<td class="r b Data">    42926579</td>
+<td class="r b Data">       53.14</td>
+<td class="r b Data">     3561302</td>
+<td class="r b Data">        4.41</td>
+<td class="r b Data">    77225998</td>
+<td class="r b Data">       95.59</td>
+<td class="r b Data">       8.30</td>
+<td class="r b Data">       4.41</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 99- 198 </th>
+<td class="r b Data">      25437</td>
+<td class="r b Data">    52369673</td>
+<td class="r b Data">    34791081</td>
+<td class="r b Data">       66.43</td>
+<td class="r b Data">     4113918</td>
+<td class="r b Data">        7.86</td>
+<td class="r b Data">    48255755</td>
+<td class="r b Data">       92.14</td>
+<td class="r b Data">      11.82</td>
+<td class="r b Data">       7.86</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 198- 372</th>
+<td class="r b Data">       8495</td>
+<td class="r b Data">    28637516</td>
+<td class="r b Data">    21963859</td>
+<td class="r b Data">       76.70</td>
+<td class="r b Data">     3643724</td>
+<td class="r b Data">       12.72</td>
+<td class="r b Data">    24993791</td>
+<td class="r b Data">       87.28</td>
+<td class="r b Data">      16.59</td>
+<td class="r b Data">      12.72</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">372- 500 </th>
+<td class="r b Data">       1346</td>
+<td class="r b Data">     6855745</td>
+<td class="r b Data">     5718671</td>
+<td class="r b Data">       83.41</td>
+<td class="r b Data">     1234281</td>
+<td class="r b Data">       18.00</td>
+<td class="r b Data">     5621464</td>
+<td class="r b Data">       82.00</td>
+<td class="r b Data">      21.58</td>
+<td class="r b Data">      18.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">500- 1000</th>
+<td class="r b Data">       1030</td>
+<td class="r b Data">     7583757</td>
+<td class="r b Data">     6693194</td>
+<td class="r b Data">       88.26</td>
+<td class="r b Data">     1827156</td>
+<td class="r b Data">       24.09</td>
+<td class="r b Data">     5756601</td>
+<td class="r b Data">       75.91</td>
+<td class="r b Data">      27.30</td>
+<td class="r b Data">      24.09</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">1000 以上</th>
+<td class="r b Data">        330</td>
+<td class="r b Data">     7853409</td>
+<td class="r b Data">     7448320</td>
+<td class="r b Data">       94.84</td>
+<td class="r b Data">     2700615</td>
+<td class="r b Data">       34.39</td>
+<td class="r b Data">     5152794</td>
+<td class="r b Data">       65.61</td>
+<td class="r b Data">      36.26</td>
+<td class="r b Data">      34.39</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合      計</th>
+<td class="r b Data">     349233</td>
+<td class="r b Data">   296579225</td>
+<td class="r b Data">   142962742</td>
+<td class="r b Data">       48.20</td>
+<td class="r b Data">    18493945</td>
+<td class="r b Data">        6.24</td>
+<td class="r b Data">   278085280</td>
+<td class="r b Data">       93.76</td>
+<td class="r b Data">      12.94</td>
+<td class="r b Data">       6.24</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：（一）各項金額百分比是指該項金額與綜合所得總額之比值。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （二）核定所得淨額係由該戶核定所得總額扣除各項免稅額暨扣除額後求得。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （三）各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX2"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                 表 6-2A (095 年)綜稅各類所得應納稅額及稅率各級距申報統計表                        單位：金額(千元)</td>
+</tr>
+<tr>
+<td class=" SystemTitle">程式代號:IAS901L</td>
+</tr>
+<tr>
+<td class=" SystemTitle">列印日期： 98年04月02日</td>
+</tr>
+</table><br>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 臺 中 市</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" rowspan="2" scope="col">綜合所得總額</th>
+<th class=" Header" colspan="2" scope="colgroup">所 得 淨 額</th>
+<th class=" Header" colspan="2" scope="colgroup">應 納 稅 額</th>
+<th class=" Header" colspan="2" scope="colgroup">稅 後 所 得</th>
+<th class=" Header" scope="col">&nbsp;</th>
+<th class=" Header" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">平 均 稅 率</th>
+<th class=" Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">級距：萬元</th>
+<td class="r b Data" rowspan="2">      71290</td>
+<td class="r b Data" rowspan="2">    22729551</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">    22729551</td>
+<td class="r b Data" rowspan="2">      100.00</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">       0.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> NET= 0  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">   0- 37 </th>
+<td class="r b Data">     100012</td>
+<td class="r b Data">    57784671</td>
+<td class="r b Data">    15306710</td>
+<td class="r b Data">       26.49</td>
+<td class="r b Data">      923445</td>
+<td class="r b Data">        1.60</td>
+<td class="r b Data">    56861225</td>
+<td class="r b Data">       98.40</td>
+<td class="r b Data">       6.03</td>
+<td class="r b Data">       1.60</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 37- 99  </th>
+<td class="r b Data">      47895</td>
+<td class="r b Data">    56153362</td>
+<td class="r b Data">    29241751</td>
+<td class="r b Data">       52.07</td>
+<td class="r b Data">     2425653</td>
+<td class="r b Data">        4.32</td>
+<td class="r b Data">    53727709</td>
+<td class="r b Data">       95.68</td>
+<td class="r b Data">       8.30</td>
+<td class="r b Data">       4.32</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 99- 198 </th>
+<td class="r b Data">      18385</td>
+<td class="r b Data">    38252499</td>
+<td class="r b Data">    25104811</td>
+<td class="r b Data">       65.63</td>
+<td class="r b Data">     2936038</td>
+<td class="r b Data">        7.68</td>
+<td class="r b Data">    35316461</td>
+<td class="r b Data">       92.32</td>
+<td class="r b Data">      11.70</td>
+<td class="r b Data">       7.68</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 198- 372</th>
+<td class="r b Data">       6257</td>
+<td class="r b Data">    21417708</td>
+<td class="r b Data">    16305727</td>
+<td class="r b Data">       76.13</td>
+<td class="r b Data">     2707805</td>
+<td class="r b Data">       12.64</td>
+<td class="r b Data">    18709903</td>
+<td class="r b Data">       87.36</td>
+<td class="r b Data">      16.61</td>
+<td class="r b Data">      12.64</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">372- 500 </th>
+<td class="r b Data">       1064</td>
+<td class="r b Data">     5481567</td>
+<td class="r b Data">     4536653</td>
+<td class="r b Data">       82.76</td>
+<td class="r b Data">     1004845</td>
+<td class="r b Data">       18.33</td>
+<td class="r b Data">     4476722</td>
+<td class="r b Data">       81.67</td>
+<td class="r b Data">      22.15</td>
+<td class="r b Data">      18.33</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">500- 1000</th>
+<td class="r b Data">        848</td>
+<td class="r b Data">     6432089</td>
+<td class="r b Data">     5607134</td>
+<td class="r b Data">       87.17</td>
+<td class="r b Data">     1547249</td>
+<td class="r b Data">       24.06</td>
+<td class="r b Data">     4884841</td>
+<td class="r b Data">       75.94</td>
+<td class="r b Data">      27.59</td>
+<td class="r b Data">      24.06</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">1000 以上</th>
+<td class="r b Data">        358</td>
+<td class="r b Data">     9516000</td>
+<td class="r b Data">     8998864</td>
+<td class="r b Data">       94.57</td>
+<td class="r b Data">     3283038</td>
+<td class="r b Data">       34.50</td>
+<td class="r b Data">     6232962</td>
+<td class="r b Data">       65.50</td>
+<td class="r b Data">      36.48</td>
+<td class="r b Data">      34.50</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合      計</th>
+<td class="r b Data">     246109</td>
+<td class="r b Data">   217767447</td>
+<td class="r b Data">   105101648</td>
+<td class="r b Data">       48.26</td>
+<td class="r b Data">    14828073</td>
+<td class="r b Data">        6.81</td>
+<td class="r b Data">   202939374</td>
+<td class="r b Data">       93.19</td>
+<td class="r b Data">      14.11</td>
+<td class="r b Data">       6.81</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：（一）各項金額百分比是指該項金額與綜合所得總額之比值。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （二）核定所得淨額係由該戶核定所得總額扣除各項免稅額暨扣除額後求得。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （三）各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX3"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                 表 6-2A (095 年)綜稅各類所得應納稅額及稅率各級距申報統計表                        單位：金額(千元)</td>
+</tr>
+<tr>
+<td class=" SystemTitle">程式代號:IAS901L</td>
+</tr>
+<tr>
+<td class=" SystemTitle">列印日期： 98年04月02日</td>
+</tr>
+</table><br>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 基 隆 市</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" rowspan="2" scope="col">綜合所得總額</th>
+<th class=" Header" colspan="2" scope="colgroup">所 得 淨 額</th>
+<th class=" Header" colspan="2" scope="colgroup">應 納 稅 額</th>
+<th class=" Header" colspan="2" scope="colgroup">稅 後 所 得</th>
+<th class=" Header" scope="col">&nbsp;</th>
+<th class=" Header" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">平 均 稅 率</th>
+<th class=" Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">級距：萬元</th>
+<td class="r b Data" rowspan="2">      25824</td>
+<td class="r b Data" rowspan="2">     8091255</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">     8091255</td>
+<td class="r b Data" rowspan="2">      100.00</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">       0.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> NET= 0  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">   0- 37 </th>
+<td class="r b Data">      48384</td>
+<td class="r b Data">    26914436</td>
+<td class="r b Data">     7606694</td>
+<td class="r b Data">       28.26</td>
+<td class="r b Data">      458844</td>
+<td class="r b Data">        1.70</td>
+<td class="r b Data">    26455592</td>
+<td class="r b Data">       98.30</td>
+<td class="r b Data">       6.03</td>
+<td class="r b Data">       1.70</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 37- 99  </th>
+<td class="r b Data">      19657</td>
+<td class="r b Data">    22064511</td>
+<td class="r b Data">    11656093</td>
+<td class="r b Data">       52.83</td>
+<td class="r b Data">      947660</td>
+<td class="r b Data">        4.29</td>
+<td class="r b Data">    21116851</td>
+<td class="r b Data">       95.71</td>
+<td class="r b Data">       8.13</td>
+<td class="r b Data">       4.29</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 99- 198 </th>
+<td class="r b Data">       4949</td>
+<td class="r b Data">    10018857</td>
+<td class="r b Data">     6618980</td>
+<td class="r b Data">       66.07</td>
+<td class="r b Data">      749127</td>
+<td class="r b Data">        7.48</td>
+<td class="r b Data">     9269730</td>
+<td class="r b Data">       92.52</td>
+<td class="r b Data">      11.32</td>
+<td class="r b Data">       7.48</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 198- 372</th>
+<td class="r b Data">       1015</td>
+<td class="r b Data">     3397057</td>
+<td class="r b Data">     2579259</td>
+<td class="r b Data">       75.93</td>
+<td class="r b Data">      410438</td>
+<td class="r b Data">       12.08</td>
+<td class="r b Data">     2986619</td>
+<td class="r b Data">       87.92</td>
+<td class="r b Data">      15.91</td>
+<td class="r b Data">      12.08</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">372- 500 </th>
+<td class="r b Data">        111</td>
+<td class="r b Data">      560895</td>
+<td class="r b Data">      468784</td>
+<td class="r b Data">       83.58</td>
+<td class="r b Data">      103516</td>
+<td class="r b Data">       18.46</td>
+<td class="r b Data">      457380</td>
+<td class="r b Data">       81.54</td>
+<td class="r b Data">      22.08</td>
+<td class="r b Data">      18.46</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">500- 1000</th>
+<td class="r b Data">         90</td>
+<td class="r b Data">      699340</td>
+<td class="r b Data">      622261</td>
+<td class="r b Data">       88.98</td>
+<td class="r b Data">      175386</td>
+<td class="r b Data">       25.08</td>
+<td class="r b Data">      523954</td>
+<td class="r b Data">       74.92</td>
+<td class="r b Data">      28.19</td>
+<td class="r b Data">      25.08</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">1000 以上</th>
+<td class="r b Data">         33</td>
+<td class="r b Data">      726704</td>
+<td class="r b Data">      690317</td>
+<td class="r b Data">       94.99</td>
+<td class="r b Data">      247838</td>
+<td class="r b Data">       34.10</td>
+<td class="r b Data">      478866</td>
+<td class="r b Data">       65.90</td>
+<td class="r b Data">      35.90</td>
+<td class="r b Data">      34.10</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合      計</th>
+<td class="r b Data">     100063</td>
+<td class="r b Data">    72473055</td>
+<td class="r b Data">    30242388</td>
+<td class="r b Data">       41.73</td>
+<td class="r b Data">     3092808</td>
+<td class="r b Data">        4.27</td>
+<td class="r b Data">    69380247</td>
+<td class="r b Data">       95.73</td>
+<td class="r b Data">      10.23</td>
+<td class="r b Data">       4.27</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：（一）各項金額百分比是指該項金額與綜合所得總額之比值。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （二）核定所得淨額係由該戶核定所得總額扣除各項免稅額暨扣除額後求得。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （三）各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX4"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                 表 6-2A (095 年)綜稅各類所得應納稅額及稅率各級距申報統計表                        單位：金額(千元)</td>
+</tr>
+<tr>
+<td class=" SystemTitle">程式代號:IAS901L</td>
+</tr>
+<tr>
+<td class=" SystemTitle">列印日期： 98年04月02日</td>
+</tr>
+</table><br>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 臺 南 市</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" rowspan="2" scope="col">綜合所得總額</th>
+<th class=" Header" colspan="2" scope="colgroup">所 得 淨 額</th>
+<th class=" Header" colspan="2" scope="colgroup">應 納 稅 額</th>
+<th class=" Header" colspan="2" scope="colgroup">稅 後 所 得</th>
+<th class=" Header" scope="col">&nbsp;</th>
+<th class=" Header" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">平 均 稅 率</th>
+<th class=" Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">級距：萬元</th>
+<td class="r b Data" rowspan="2">      48707</td>
+<td class="r b Data" rowspan="2">    15384438</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">    15384438</td>
+<td class="r b Data" rowspan="2">      100.00</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">       0.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> NET= 0  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">   0- 37 </th>
+<td class="r b Data">      69947</td>
+<td class="r b Data">    38753364</td>
+<td class="r b Data">    10412750</td>
+<td class="r b Data">       26.87</td>
+<td class="r b Data">      627692</td>
+<td class="r b Data">        1.62</td>
+<td class="r b Data">    38125673</td>
+<td class="r b Data">       98.38</td>
+<td class="r b Data">       6.03</td>
+<td class="r b Data">       1.62</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 37- 99  </th>
+<td class="r b Data">      28839</td>
+<td class="r b Data">    33007549</td>
+<td class="r b Data">    17471340</td>
+<td class="r b Data">       52.93</td>
+<td class="r b Data">     1454003</td>
+<td class="r b Data">        4.41</td>
+<td class="r b Data">    31553546</td>
+<td class="r b Data">       95.59</td>
+<td class="r b Data">       8.32</td>
+<td class="r b Data">       4.41</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 99- 198 </th>
+<td class="r b Data">      10432</td>
+<td class="r b Data">    21412654</td>
+<td class="r b Data">    14189807</td>
+<td class="r b Data">       66.27</td>
+<td class="r b Data">     1669880</td>
+<td class="r b Data">        7.80</td>
+<td class="r b Data">    19742774</td>
+<td class="r b Data">       92.20</td>
+<td class="r b Data">      11.77</td>
+<td class="r b Data">       7.80</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 198- 372</th>
+<td class="r b Data">       3477</td>
+<td class="r b Data">    11781482</td>
+<td class="r b Data">     9027862</td>
+<td class="r b Data">       76.63</td>
+<td class="r b Data">     1506170</td>
+<td class="r b Data">       12.78</td>
+<td class="r b Data">    10275312</td>
+<td class="r b Data">       87.22</td>
+<td class="r b Data">      16.68</td>
+<td class="r b Data">      12.78</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">372- 500 </th>
+<td class="r b Data">        550</td>
+<td class="r b Data">     2803835</td>
+<td class="r b Data">     2320885</td>
+<td class="r b Data">       82.78</td>
+<td class="r b Data">      505152</td>
+<td class="r b Data">       18.02</td>
+<td class="r b Data">     2298683</td>
+<td class="r b Data">       81.98</td>
+<td class="r b Data">      21.77</td>
+<td class="r b Data">      18.02</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">500- 1000</th>
+<td class="r b Data">        487</td>
+<td class="r b Data">     3675655</td>
+<td class="r b Data">     3210388</td>
+<td class="r b Data">       87.34</td>
+<td class="r b Data">      883111</td>
+<td class="r b Data">       24.03</td>
+<td class="r b Data">     2792544</td>
+<td class="r b Data">       75.97</td>
+<td class="r b Data">      27.51</td>
+<td class="r b Data">      24.03</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">1000 以上</th>
+<td class="r b Data">        188</td>
+<td class="r b Data">     4808992</td>
+<td class="r b Data">     4516343</td>
+<td class="r b Data">       93.91</td>
+<td class="r b Data">     1643387</td>
+<td class="r b Data">       34.17</td>
+<td class="r b Data">     3165605</td>
+<td class="r b Data">       65.83</td>
+<td class="r b Data">      36.39</td>
+<td class="r b Data">      34.17</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合      計</th>
+<td class="r b Data">     162627</td>
+<td class="r b Data">   131627970</td>
+<td class="r b Data">    61149375</td>
+<td class="r b Data">       46.46</td>
+<td class="r b Data">     8289394</td>
+<td class="r b Data">        6.30</td>
+<td class="r b Data">   123338576</td>
+<td class="r b Data">       93.70</td>
+<td class="r b Data">      13.56</td>
+<td class="r b Data">       6.30</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：（一）各項金額百分比是指該項金額與綜合所得總額之比值。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （二）核定所得淨額係由該戶核定所得總額扣除各項免稅額暨扣除額後求得。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （三）各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX5"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                 表 6-2A (095 年)綜稅各類所得應納稅額及稅率各級距申報統計表                        單位：金額(千元)</td>
+</tr>
+<tr>
+<td class=" SystemTitle">程式代號:IAS901L</td>
+</tr>
+<tr>
+<td class=" SystemTitle">列印日期： 98年04月02日</td>
+</tr>
+</table><br>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 嘉 義 市</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" rowspan="2" scope="col">綜合所得總額</th>
+<th class=" Header" colspan="2" scope="colgroup">所 得 淨 額</th>
+<th class=" Header" colspan="2" scope="colgroup">應 納 稅 額</th>
+<th class=" Header" colspan="2" scope="colgroup">稅 後 所 得</th>
+<th class=" Header" scope="col">&nbsp;</th>
+<th class=" Header" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">平 均 稅 率</th>
+<th class=" Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">級距：萬元</th>
+<td class="r b Data" rowspan="2">      16768</td>
+<td class="r b Data" rowspan="2">     5184371</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">     5184371</td>
+<td class="r b Data" rowspan="2">      100.00</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">       0.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> NET= 0  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">   0- 37 </th>
+<td class="r b Data">      23433</td>
+<td class="r b Data">    13566343</td>
+<td class="r b Data">     3686092</td>
+<td class="r b Data">       27.17</td>
+<td class="r b Data">      222164</td>
+<td class="r b Data">        1.64</td>
+<td class="r b Data">    13344179</td>
+<td class="r b Data">       98.36</td>
+<td class="r b Data">       6.03</td>
+<td class="r b Data">       1.64</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 37- 99  </th>
+<td class="r b Data">      11081</td>
+<td class="r b Data">    12737741</td>
+<td class="r b Data">     6660510</td>
+<td class="r b Data">       52.29</td>
+<td class="r b Data">      553345</td>
+<td class="r b Data">        4.34</td>
+<td class="r b Data">    12184396</td>
+<td class="r b Data">       95.66</td>
+<td class="r b Data">       8.31</td>
+<td class="r b Data">       4.34</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 99- 198 </th>
+<td class="r b Data">       3485</td>
+<td class="r b Data">     7191105</td>
+<td class="r b Data">     4728414</td>
+<td class="r b Data">       65.75</td>
+<td class="r b Data">      549130</td>
+<td class="r b Data">        7.64</td>
+<td class="r b Data">     6641975</td>
+<td class="r b Data">       92.36</td>
+<td class="r b Data">      11.61</td>
+<td class="r b Data">       7.64</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 198- 372</th>
+<td class="r b Data">        994</td>
+<td class="r b Data">     3353643</td>
+<td class="r b Data">     2554952</td>
+<td class="r b Data">       76.18</td>
+<td class="r b Data">      419499</td>
+<td class="r b Data">       12.51</td>
+<td class="r b Data">     2934144</td>
+<td class="r b Data">       87.49</td>
+<td class="r b Data">      16.42</td>
+<td class="r b Data">      12.51</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">372- 500 </th>
+<td class="r b Data">        165</td>
+<td class="r b Data">      842559</td>
+<td class="r b Data">      697857</td>
+<td class="r b Data">       82.83</td>
+<td class="r b Data">      152907</td>
+<td class="r b Data">       18.15</td>
+<td class="r b Data">      689652</td>
+<td class="r b Data">       81.85</td>
+<td class="r b Data">      21.91</td>
+<td class="r b Data">      18.15</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">500- 1000</th>
+<td class="r b Data">         99</td>
+<td class="r b Data">      731774</td>
+<td class="r b Data">      635976</td>
+<td class="r b Data">       86.91</td>
+<td class="r b Data">      174756</td>
+<td class="r b Data">       23.88</td>
+<td class="r b Data">      557017</td>
+<td class="r b Data">       76.12</td>
+<td class="r b Data">      27.48</td>
+<td class="r b Data">      23.88</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">1000 以上</th>
+<td class="r b Data">         25</td>
+<td class="r b Data">      524623</td>
+<td class="r b Data">      497409</td>
+<td class="r b Data">       94.81</td>
+<td class="r b Data">      180487</td>
+<td class="r b Data">       34.40</td>
+<td class="r b Data">      344136</td>
+<td class="r b Data">       65.60</td>
+<td class="r b Data">      36.29</td>
+<td class="r b Data">      34.40</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合      計</th>
+<td class="r b Data">      56050</td>
+<td class="r b Data">    44132159</td>
+<td class="r b Data">    19461210</td>
+<td class="r b Data">       44.10</td>
+<td class="r b Data">     2252288</td>
+<td class="r b Data">        5.10</td>
+<td class="r b Data">    41879871</td>
+<td class="r b Data">       94.90</td>
+<td class="r b Data">      11.57</td>
+<td class="r b Data">       5.10</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：（一）各項金額百分比是指該項金額與綜合所得總額之比值。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （二）核定所得淨額係由該戶核定所得總額扣除各項免稅額暨扣除額後求得。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （三）各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX6"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                 表 6-2A (095 年)綜稅各類所得應納稅額及稅率各級距申報統計表                        單位：金額(千元)</td>
+</tr>
+<tr>
+<td class=" SystemTitle">程式代號:IAS901L</td>
+</tr>
+<tr>
+<td class=" SystemTitle">列印日期： 98年04月02日</td>
+</tr>
+</table><br>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 新 竹 市</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" rowspan="2" scope="col">綜合所得總額</th>
+<th class=" Header" colspan="2" scope="colgroup">所 得 淨 額</th>
+<th class=" Header" colspan="2" scope="colgroup">應 納 稅 額</th>
+<th class=" Header" colspan="2" scope="colgroup">稅 後 所 得</th>
+<th class=" Header" scope="col">&nbsp;</th>
+<th class=" Header" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">平 均 稅 率</th>
+<th class=" Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">級距：萬元</th>
+<td class="r b Data" rowspan="2">      23862</td>
+<td class="r b Data" rowspan="2">     7504679</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">     7504679</td>
+<td class="r b Data" rowspan="2">      100.00</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">       0.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> NET= 0  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">   0- 37 </th>
+<td class="r b Data">      42288</td>
+<td class="r b Data">    24080245</td>
+<td class="r b Data">     6787925</td>
+<td class="r b Data">       28.19</td>
+<td class="r b Data">      409723</td>
+<td class="r b Data">        1.70</td>
+<td class="r b Data">    23670522</td>
+<td class="r b Data">       98.30</td>
+<td class="r b Data">       6.04</td>
+<td class="r b Data">       1.70</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 37- 99  </th>
+<td class="r b Data">      22087</td>
+<td class="r b Data">    25902502</td>
+<td class="r b Data">    13612725</td>
+<td class="r b Data">       52.55</td>
+<td class="r b Data">     1125383</td>
+<td class="r b Data">        4.34</td>
+<td class="r b Data">    24777119</td>
+<td class="r b Data">       95.66</td>
+<td class="r b Data">       8.27</td>
+<td class="r b Data">       4.34</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 99- 198 </th>
+<td class="r b Data">      10390</td>
+<td class="r b Data">    21823145</td>
+<td class="r b Data">    14350920</td>
+<td class="r b Data">       65.76</td>
+<td class="r b Data">     1668003</td>
+<td class="r b Data">        7.64</td>
+<td class="r b Data">    20155142</td>
+<td class="r b Data">       92.36</td>
+<td class="r b Data">      11.62</td>
+<td class="r b Data">       7.64</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 198- 372</th>
+<td class="r b Data">       4305</td>
+<td class="r b Data">    14857768</td>
+<td class="r b Data">    11261812</td>
+<td class="r b Data">       75.80</td>
+<td class="r b Data">     1821554</td>
+<td class="r b Data">       12.26</td>
+<td class="r b Data">    13036215</td>
+<td class="r b Data">       87.74</td>
+<td class="r b Data">      16.17</td>
+<td class="r b Data">      12.26</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">372- 500 </th>
+<td class="r b Data">        859</td>
+<td class="r b Data">     4456669</td>
+<td class="r b Data">     3672845</td>
+<td class="r b Data">       82.41</td>
+<td class="r b Data">      777579</td>
+<td class="r b Data">       17.45</td>
+<td class="r b Data">     3679090</td>
+<td class="r b Data">       82.55</td>
+<td class="r b Data">      21.17</td>
+<td class="r b Data">      17.45</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">500- 1000</th>
+<td class="r b Data">        669</td>
+<td class="r b Data">     5054907</td>
+<td class="r b Data">     4405181</td>
+<td class="r b Data">       87.15</td>
+<td class="r b Data">     1183532</td>
+<td class="r b Data">       23.41</td>
+<td class="r b Data">     3871376</td>
+<td class="r b Data">       76.59</td>
+<td class="r b Data">      26.87</td>
+<td class="r b Data">      23.41</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">1000 以上</th>
+<td class="r b Data">        294</td>
+<td class="r b Data">     9802236</td>
+<td class="r b Data">     9365439</td>
+<td class="r b Data">       95.54</td>
+<td class="r b Data">     3478575</td>
+<td class="r b Data">       35.49</td>
+<td class="r b Data">     6323661</td>
+<td class="r b Data">       64.51</td>
+<td class="r b Data">      37.14</td>
+<td class="r b Data">      35.49</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合      計</th>
+<td class="r b Data">     104754</td>
+<td class="r b Data">   113482151</td>
+<td class="r b Data">    63456848</td>
+<td class="r b Data">       55.92</td>
+<td class="r b Data">    10464348</td>
+<td class="r b Data">        9.22</td>
+<td class="r b Data">   103017803</td>
+<td class="r b Data">       90.78</td>
+<td class="r b Data">      16.49</td>
+<td class="r b Data">       9.22</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：（一）各項金額百分比是指該項金額與綜合所得總額之比值。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （二）核定所得淨額係由該戶核定所得總額扣除各項免稅額暨扣除額後求得。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （三）各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX7"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                 表 6-2A (095 年)綜稅各類所得應納稅額及稅率各級距申報統計表                        單位：金額(千元)</td>
+</tr>
+<tr>
+<td class=" SystemTitle">程式代號:IAS901L</td>
+</tr>
+<tr>
+<td class=" SystemTitle">列印日期： 98年04月02日</td>
+</tr>
+</table><br>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 臺 北 縣</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" rowspan="2" scope="col">綜合所得總額</th>
+<th class=" Header" colspan="2" scope="colgroup">所 得 淨 額</th>
+<th class=" Header" colspan="2" scope="colgroup">應 納 稅 額</th>
+<th class=" Header" colspan="2" scope="colgroup">稅 後 所 得</th>
+<th class=" Header" scope="col">&nbsp;</th>
+<th class=" Header" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">平 均 稅 率</th>
+<th class=" Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">級距：萬元</th>
+<td class="r b Data" rowspan="2">     266355</td>
+<td class="r b Data" rowspan="2">    86205488</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">    86205488</td>
+<td class="r b Data" rowspan="2">      100.00</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">       0.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> NET= 0  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">   0- 37 </th>
+<td class="r b Data">     461725</td>
+<td class="r b Data">   255365737</td>
+<td class="r b Data">    71258830</td>
+<td class="r b Data">       27.90</td>
+<td class="r b Data">     4294985</td>
+<td class="r b Data">        1.68</td>
+<td class="r b Data">   251070752</td>
+<td class="r b Data">       98.32</td>
+<td class="r b Data">       6.03</td>
+<td class="r b Data">       1.68</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 37- 99  </th>
+<td class="r b Data">     186424</td>
+<td class="r b Data">   210453211</td>
+<td class="r b Data">   111331593</td>
+<td class="r b Data">       52.90</td>
+<td class="r b Data">     9036635</td>
+<td class="r b Data">        4.29</td>
+<td class="r b Data">   201416576</td>
+<td class="r b Data">       95.71</td>
+<td class="r b Data">       8.12</td>
+<td class="r b Data">       4.29</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 99- 198 </th>
+<td class="r b Data">      56686</td>
+<td class="r b Data">   115694743</td>
+<td class="r b Data">    76435468</td>
+<td class="r b Data">       66.07</td>
+<td class="r b Data">     8735378</td>
+<td class="r b Data">        7.55</td>
+<td class="r b Data">   106959365</td>
+<td class="r b Data">       92.45</td>
+<td class="r b Data">      11.43</td>
+<td class="r b Data">       7.55</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 198- 372</th>
+<td class="r b Data">      15603</td>
+<td class="r b Data">    52543208</td>
+<td class="r b Data">    40105349</td>
+<td class="r b Data">       76.33</td>
+<td class="r b Data">     6530621</td>
+<td class="r b Data">       12.43</td>
+<td class="r b Data">    46012587</td>
+<td class="r b Data">       87.57</td>
+<td class="r b Data">      16.28</td>
+<td class="r b Data">      12.43</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">372- 500 </th>
+<td class="r b Data">       2464</td>
+<td class="r b Data">    12630152</td>
+<td class="r b Data">    10461557</td>
+<td class="r b Data">       82.83</td>
+<td class="r b Data">     2265496</td>
+<td class="r b Data">       17.94</td>
+<td class="r b Data">    10364657</td>
+<td class="r b Data">       82.06</td>
+<td class="r b Data">      21.66</td>
+<td class="r b Data">      17.94</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">500- 1000</th>
+<td class="r b Data">       1935</td>
+<td class="r b Data">    14631454</td>
+<td class="r b Data">    12845769</td>
+<td class="r b Data">       87.80</td>
+<td class="r b Data">     3540220</td>
+<td class="r b Data">       24.20</td>
+<td class="r b Data">    11091234</td>
+<td class="r b Data">       75.80</td>
+<td class="r b Data">      27.56</td>
+<td class="r b Data">      24.20</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">1000 以上</th>
+<td class="r b Data">        682</td>
+<td class="r b Data">    16196907</td>
+<td class="r b Data">    15360780</td>
+<td class="r b Data">       94.84</td>
+<td class="r b Data">     5549000</td>
+<td class="r b Data">       34.26</td>
+<td class="r b Data">    10647907</td>
+<td class="r b Data">       65.74</td>
+<td class="r b Data">      36.12</td>
+<td class="r b Data">      34.26</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合      計</th>
+<td class="r b Data">     991874</td>
+<td class="r b Data">   763720901</td>
+<td class="r b Data">   337799346</td>
+<td class="r b Data">       44.23</td>
+<td class="r b Data">    39952334</td>
+<td class="r b Data">        5.23</td>
+<td class="r b Data">   723768566</td>
+<td class="r b Data">       94.77</td>
+<td class="r b Data">      11.83</td>
+<td class="r b Data">       5.23</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：（一）各項金額百分比是指該項金額與綜合所得總額之比值。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （二）核定所得淨額係由該戶核定所得總額扣除各項免稅額暨扣除額後求得。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （三）各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX8"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                 表 6-2A (095 年)綜稅各類所得應納稅額及稅率各級距申報統計表                        單位：金額(千元)</td>
+</tr>
+<tr>
+<td class=" SystemTitle">程式代號:IAS901L</td>
+</tr>
+<tr>
+<td class=" SystemTitle">列印日期： 98年04月02日</td>
+</tr>
+</table><br>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 宜 蘭 縣</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" rowspan="2" scope="col">綜合所得總額</th>
+<th class=" Header" colspan="2" scope="colgroup">所 得 淨 額</th>
+<th class=" Header" colspan="2" scope="colgroup">應 納 稅 額</th>
+<th class=" Header" colspan="2" scope="colgroup">稅 後 所 得</th>
+<th class=" Header" scope="col">&nbsp;</th>
+<th class=" Header" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">平 均 稅 率</th>
+<th class=" Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">級距：萬元</th>
+<td class="r b Data" rowspan="2">      33805</td>
+<td class="r b Data" rowspan="2">    11265847</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">    11265847</td>
+<td class="r b Data" rowspan="2">      100.00</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">       0.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> NET= 0  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">   0- 37 </th>
+<td class="r b Data">      41494</td>
+<td class="r b Data">    23863413</td>
+<td class="r b Data">     6004556</td>
+<td class="r b Data">       25.16</td>
+<td class="r b Data">      362244</td>
+<td class="r b Data">        1.52</td>
+<td class="r b Data">    23501169</td>
+<td class="r b Data">       98.48</td>
+<td class="r b Data">       6.03</td>
+<td class="r b Data">       1.52</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 37- 99  </th>
+<td class="r b Data">      13221</td>
+<td class="r b Data">    15295921</td>
+<td class="r b Data">     7739473</td>
+<td class="r b Data">       50.60</td>
+<td class="r b Data">      632172</td>
+<td class="r b Data">        4.13</td>
+<td class="r b Data">    14663749</td>
+<td class="r b Data">       95.87</td>
+<td class="r b Data">       8.17</td>
+<td class="r b Data">       4.13</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 99- 198 </th>
+<td class="r b Data">       3091</td>
+<td class="r b Data">     6366227</td>
+<td class="r b Data">     4096768</td>
+<td class="r b Data">       64.35</td>
+<td class="r b Data">      464369</td>
+<td class="r b Data">        7.29</td>
+<td class="r b Data">     5901857</td>
+<td class="r b Data">       92.71</td>
+<td class="r b Data">      11.34</td>
+<td class="r b Data">       7.29</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 198- 372</th>
+<td class="r b Data">        699</td>
+<td class="r b Data">     2362017</td>
+<td class="r b Data">     1773694</td>
+<td class="r b Data">       75.09</td>
+<td class="r b Data">      292294</td>
+<td class="r b Data">       12.37</td>
+<td class="r b Data">     2069724</td>
+<td class="r b Data">       87.63</td>
+<td class="r b Data">      16.48</td>
+<td class="r b Data">      12.37</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">372- 500 </th>
+<td class="r b Data">         78</td>
+<td class="r b Data">      411245</td>
+<td class="r b Data">      336029</td>
+<td class="r b Data">       81.71</td>
+<td class="r b Data">       74377</td>
+<td class="r b Data">       18.09</td>
+<td class="r b Data">      336868</td>
+<td class="r b Data">       81.91</td>
+<td class="r b Data">      22.13</td>
+<td class="r b Data">      18.09</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">500- 1000</th>
+<td class="r b Data">         64</td>
+<td class="r b Data">      488899</td>
+<td class="r b Data">      425697</td>
+<td class="r b Data">       87.07</td>
+<td class="r b Data">      117990</td>
+<td class="r b Data">       24.13</td>
+<td class="r b Data">      370908</td>
+<td class="r b Data">       75.87</td>
+<td class="r b Data">      27.72</td>
+<td class="r b Data">      24.13</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">1000 以上</th>
+<td class="r b Data">         22</td>
+<td class="r b Data">      353964</td>
+<td class="r b Data">      329154</td>
+<td class="r b Data">       92.99</td>
+<td class="r b Data">      115224</td>
+<td class="r b Data">       32.55</td>
+<td class="r b Data">      238740</td>
+<td class="r b Data">       67.45</td>
+<td class="r b Data">      35.01</td>
+<td class="r b Data">      32.55</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合      計</th>
+<td class="r b Data">      92474</td>
+<td class="r b Data">    60407534</td>
+<td class="r b Data">    20705371</td>
+<td class="r b Data">       34.28</td>
+<td class="r b Data">     2058672</td>
+<td class="r b Data">        3.41</td>
+<td class="r b Data">    58348862</td>
+<td class="r b Data">       96.59</td>
+<td class="r b Data">       9.94</td>
+<td class="r b Data">       3.41</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：（一）各項金額百分比是指該項金額與綜合所得總額之比值。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （二）核定所得淨額係由該戶核定所得總額扣除各項免稅額暨扣除額後求得。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （三）各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX9"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                 表 6-2A (095 年)綜稅各類所得應納稅額及稅率各級距申報統計表                        單位：金額(千元)</td>
+</tr>
+<tr>
+<td class=" SystemTitle">程式代號:IAS901L</td>
+</tr>
+<tr>
+<td class=" SystemTitle">列印日期： 98年04月02日</td>
+</tr>
+</table><br>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 桃 園 縣</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" rowspan="2" scope="col">綜合所得總額</th>
+<th class=" Header" colspan="2" scope="colgroup">所 得 淨 額</th>
+<th class=" Header" colspan="2" scope="colgroup">應 納 稅 額</th>
+<th class=" Header" colspan="2" scope="colgroup">稅 後 所 得</th>
+<th class=" Header" scope="col">&nbsp;</th>
+<th class=" Header" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">平 均 稅 率</th>
+<th class=" Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">級距：萬元</th>
+<td class="r b Data" rowspan="2">     122762</td>
+<td class="r b Data" rowspan="2">    41958100</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">    41958100</td>
+<td class="r b Data" rowspan="2">      100.00</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">       0.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> NET= 0  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">   0- 37 </th>
+<td class="r b Data">     223538</td>
+<td class="r b Data">   130579083</td>
+<td class="r b Data">    34953163</td>
+<td class="r b Data">       26.77</td>
+<td class="r b Data">     2111857</td>
+<td class="r b Data">        1.62</td>
+<td class="r b Data">   128467225</td>
+<td class="r b Data">       98.38</td>
+<td class="r b Data">       6.04</td>
+<td class="r b Data">       1.62</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 37- 99  </th>
+<td class="r b Data">      91089</td>
+<td class="r b Data">   105820545</td>
+<td class="r b Data">    54043785</td>
+<td class="r b Data">       51.07</td>
+<td class="r b Data">     4329720</td>
+<td class="r b Data">        4.09</td>
+<td class="r b Data">   101490825</td>
+<td class="r b Data">       95.91</td>
+<td class="r b Data">       8.01</td>
+<td class="r b Data">       4.09</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 99- 198 </th>
+<td class="r b Data">      26020</td>
+<td class="r b Data">    53689967</td>
+<td class="r b Data">    34975972</td>
+<td class="r b Data">       65.14</td>
+<td class="r b Data">     3984744</td>
+<td class="r b Data">        7.42</td>
+<td class="r b Data">    49705223</td>
+<td class="r b Data">       92.58</td>
+<td class="r b Data">      11.39</td>
+<td class="r b Data">       7.42</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 198- 372</th>
+<td class="r b Data">       7168</td>
+<td class="r b Data">    24305977</td>
+<td class="r b Data">    18427442</td>
+<td class="r b Data">       75.81</td>
+<td class="r b Data">     3026092</td>
+<td class="r b Data">       12.45</td>
+<td class="r b Data">    21279885</td>
+<td class="r b Data">       87.55</td>
+<td class="r b Data">      16.42</td>
+<td class="r b Data">      12.45</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">372- 500 </th>
+<td class="r b Data">       1086</td>
+<td class="r b Data">     5585783</td>
+<td class="r b Data">     4612703</td>
+<td class="r b Data">       82.58</td>
+<td class="r b Data">     1006348</td>
+<td class="r b Data">       18.02</td>
+<td class="r b Data">     4579435</td>
+<td class="r b Data">       81.98</td>
+<td class="r b Data">      21.82</td>
+<td class="r b Data">      18.02</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">500- 1000</th>
+<td class="r b Data">        927</td>
+<td class="r b Data">     6985248</td>
+<td class="r b Data">     6139729</td>
+<td class="r b Data">       87.90</td>
+<td class="r b Data">     1686745</td>
+<td class="r b Data">       24.15</td>
+<td class="r b Data">     5298502</td>
+<td class="r b Data">       75.85</td>
+<td class="r b Data">      27.47</td>
+<td class="r b Data">      24.15</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">1000 以上</th>
+<td class="r b Data">        288</td>
+<td class="r b Data">     6213097</td>
+<td class="r b Data">     5838281</td>
+<td class="r b Data">       93.97</td>
+<td class="r b Data">     2081333</td>
+<td class="r b Data">       33.50</td>
+<td class="r b Data">     4131764</td>
+<td class="r b Data">       66.50</td>
+<td class="r b Data">      35.65</td>
+<td class="r b Data">      33.50</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合      計</th>
+<td class="r b Data">     472878</td>
+<td class="r b Data">   375137798</td>
+<td class="r b Data">   158991074</td>
+<td class="r b Data">       42.38</td>
+<td class="r b Data">    18226840</td>
+<td class="r b Data">        4.86</td>
+<td class="r b Data">   356910958</td>
+<td class="r b Data">       95.14</td>
+<td class="r b Data">      11.46</td>
+<td class="r b Data">       4.86</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：（一）各項金額百分比是指該項金額與綜合所得總額之比值。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （二）核定所得淨額係由該戶核定所得總額扣除各項免稅額暨扣除額後求得。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （三）各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX10"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                 表 6-2A (095 年)綜稅各類所得應納稅額及稅率各級距申報統計表                        單位：金額(千元)</td>
+</tr>
+<tr>
+<td class=" SystemTitle">程式代號:IAS901L</td>
+</tr>
+<tr>
+<td class=" SystemTitle">列印日期： 98年04月02日</td>
+</tr>
+</table><br>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 新 竹 縣</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" rowspan="2" scope="col">綜合所得總額</th>
+<th class=" Header" colspan="2" scope="colgroup">所 得 淨 額</th>
+<th class=" Header" colspan="2" scope="colgroup">應 納 稅 額</th>
+<th class=" Header" colspan="2" scope="colgroup">稅 後 所 得</th>
+<th class=" Header" scope="col">&nbsp;</th>
+<th class=" Header" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">平 均 稅 率</th>
+<th class=" Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">級距：萬元</th>
+<td class="r b Data" rowspan="2">      30254</td>
+<td class="r b Data" rowspan="2">    10206005</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">    10206005</td>
+<td class="r b Data" rowspan="2">      100.00</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">       0.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> NET= 0  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">   0- 37 </th>
+<td class="r b Data">      55057</td>
+<td class="r b Data">    32664484</td>
+<td class="r b Data">     8728653</td>
+<td class="r b Data">       26.72</td>
+<td class="r b Data">      527850</td>
+<td class="r b Data">        1.62</td>
+<td class="r b Data">    32136634</td>
+<td class="r b Data">       98.38</td>
+<td class="r b Data">       6.05</td>
+<td class="r b Data">       1.62</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 37- 99  </th>
+<td class="r b Data">      25054</td>
+<td class="r b Data">    29837428</td>
+<td class="r b Data">    15070946</td>
+<td class="r b Data">       50.51</td>
+<td class="r b Data">     1209514</td>
+<td class="r b Data">        4.05</td>
+<td class="r b Data">    28627914</td>
+<td class="r b Data">       95.95</td>
+<td class="r b Data">       8.03</td>
+<td class="r b Data">       4.05</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 99- 198 </th>
+<td class="r b Data">       8283</td>
+<td class="r b Data">    17288752</td>
+<td class="r b Data">    11189928</td>
+<td class="r b Data">       64.72</td>
+<td class="r b Data">     1269662</td>
+<td class="r b Data">        7.34</td>
+<td class="r b Data">    16019090</td>
+<td class="r b Data">       92.66</td>
+<td class="r b Data">      11.35</td>
+<td class="r b Data">       7.34</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 198- 372</th>
+<td class="r b Data">       2680</td>
+<td class="r b Data">     9185031</td>
+<td class="r b Data">     6920124</td>
+<td class="r b Data">       75.34</td>
+<td class="r b Data">     1118272</td>
+<td class="r b Data">       12.17</td>
+<td class="r b Data">     8066759</td>
+<td class="r b Data">       87.83</td>
+<td class="r b Data">      16.16</td>
+<td class="r b Data">      12.17</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">372- 500 </th>
+<td class="r b Data">        423</td>
+<td class="r b Data">     2204741</td>
+<td class="r b Data">     1798327</td>
+<td class="r b Data">       81.57</td>
+<td class="r b Data">      381957</td>
+<td class="r b Data">       17.32</td>
+<td class="r b Data">     1822784</td>
+<td class="r b Data">       82.68</td>
+<td class="r b Data">      21.24</td>
+<td class="r b Data">      17.32</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">500- 1000</th>
+<td class="r b Data">        345</td>
+<td class="r b Data">     2603224</td>
+<td class="r b Data">     2259698</td>
+<td class="r b Data">       86.80</td>
+<td class="r b Data">      608454</td>
+<td class="r b Data">       23.37</td>
+<td class="r b Data">     1994770</td>
+<td class="r b Data">       76.63</td>
+<td class="r b Data">      26.93</td>
+<td class="r b Data">      23.37</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">1000 以上</th>
+<td class="r b Data">         93</td>
+<td class="r b Data">     2374952</td>
+<td class="r b Data">     2264584</td>
+<td class="r b Data">       95.35</td>
+<td class="r b Data">      822931</td>
+<td class="r b Data">       34.65</td>
+<td class="r b Data">     1552021</td>
+<td class="r b Data">       65.35</td>
+<td class="r b Data">      36.34</td>
+<td class="r b Data">      34.65</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合      計</th>
+<td class="r b Data">     122189</td>
+<td class="r b Data">   106364617</td>
+<td class="r b Data">    48232260</td>
+<td class="r b Data">       45.35</td>
+<td class="r b Data">     5938640</td>
+<td class="r b Data">        5.58</td>
+<td class="r b Data">   100425977</td>
+<td class="r b Data">       94.42</td>
+<td class="r b Data">      12.31</td>
+<td class="r b Data">       5.58</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：（一）各項金額百分比是指該項金額與綜合所得總額之比值。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （二）核定所得淨額係由該戶核定所得總額扣除各項免稅額暨扣除額後求得。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （三）各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX11"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                 表 6-2A (095 年)綜稅各類所得應納稅額及稅率各級距申報統計表                        單位：金額(千元)</td>
+</tr>
+<tr>
+<td class=" SystemTitle">程式代號:IAS901L</td>
+</tr>
+<tr>
+<td class=" SystemTitle">列印日期： 98年04月02日</td>
+</tr>
+</table><br>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 苗 栗 縣</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" rowspan="2" scope="col">綜合所得總額</th>
+<th class=" Header" colspan="2" scope="colgroup">所 得 淨 額</th>
+<th class=" Header" colspan="2" scope="colgroup">應 納 稅 額</th>
+<th class=" Header" colspan="2" scope="colgroup">稅 後 所 得</th>
+<th class=" Header" scope="col">&nbsp;</th>
+<th class=" Header" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">平 均 稅 率</th>
+<th class=" Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">級距：萬元</th>
+<td class="r b Data" rowspan="2">      40212</td>
+<td class="r b Data" rowspan="2">    13085667</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">    13085667</td>
+<td class="r b Data" rowspan="2">      100.00</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">       0.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> NET= 0  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">   0- 37 </th>
+<td class="r b Data">      59491</td>
+<td class="r b Data">    33907288</td>
+<td class="r b Data">     9023318</td>
+<td class="r b Data">       26.61</td>
+<td class="r b Data">      545405</td>
+<td class="r b Data">        1.61</td>
+<td class="r b Data">    33361883</td>
+<td class="r b Data">       98.39</td>
+<td class="r b Data">       6.04</td>
+<td class="r b Data">       1.61</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 37- 99  </th>
+<td class="r b Data">      21897</td>
+<td class="r b Data">    25162297</td>
+<td class="r b Data">    12852112</td>
+<td class="r b Data">       51.08</td>
+<td class="r b Data">     1035893</td>
+<td class="r b Data">        4.12</td>
+<td class="r b Data">    24126404</td>
+<td class="r b Data">       95.88</td>
+<td class="r b Data">       8.06</td>
+<td class="r b Data">       4.12</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 99- 198 </th>
+<td class="r b Data">       4915</td>
+<td class="r b Data">    10033814</td>
+<td class="r b Data">     6553781</td>
+<td class="r b Data">       65.32</td>
+<td class="r b Data">      738169</td>
+<td class="r b Data">        7.36</td>
+<td class="r b Data">     9295645</td>
+<td class="r b Data">       92.64</td>
+<td class="r b Data">      11.26</td>
+<td class="r b Data">       7.36</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 198- 372</th>
+<td class="r b Data">       1071</td>
+<td class="r b Data">     3591619</td>
+<td class="r b Data">     2729644</td>
+<td class="r b Data">       76.00</td>
+<td class="r b Data">      439242</td>
+<td class="r b Data">       12.23</td>
+<td class="r b Data">     3152376</td>
+<td class="r b Data">       87.77</td>
+<td class="r b Data">      16.09</td>
+<td class="r b Data">      12.23</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">372- 500 </th>
+<td class="r b Data">        162</td>
+<td class="r b Data">      823716</td>
+<td class="r b Data">      681758</td>
+<td class="r b Data">       82.77</td>
+<td class="r b Data">      148541</td>
+<td class="r b Data">       18.03</td>
+<td class="r b Data">      675175</td>
+<td class="r b Data">       81.97</td>
+<td class="r b Data">      21.79</td>
+<td class="r b Data">      18.03</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">500- 1000</th>
+<td class="r b Data">         89</td>
+<td class="r b Data">      649834</td>
+<td class="r b Data">      573920</td>
+<td class="r b Data">       88.32</td>
+<td class="r b Data">      154110</td>
+<td class="r b Data">       23.72</td>
+<td class="r b Data">      495724</td>
+<td class="r b Data">       76.28</td>
+<td class="r b Data">      26.85</td>
+<td class="r b Data">      23.72</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">1000 以上</th>
+<td class="r b Data">         29</td>
+<td class="r b Data">      935395</td>
+<td class="r b Data">      837588</td>
+<td class="r b Data">       89.54</td>
+<td class="r b Data">      308550</td>
+<td class="r b Data">       32.99</td>
+<td class="r b Data">      626845</td>
+<td class="r b Data">       67.01</td>
+<td class="r b Data">      36.84</td>
+<td class="r b Data">      32.99</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合      計</th>
+<td class="r b Data">     127866</td>
+<td class="r b Data">    88189628</td>
+<td class="r b Data">    33252121</td>
+<td class="r b Data">       37.71</td>
+<td class="r b Data">     3369910</td>
+<td class="r b Data">        3.82</td>
+<td class="r b Data">    84819718</td>
+<td class="r b Data">       96.18</td>
+<td class="r b Data">      10.13</td>
+<td class="r b Data">       3.82</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：（一）各項金額百分比是指該項金額與綜合所得總額之比值。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （二）核定所得淨額係由該戶核定所得總額扣除各項免稅額暨扣除額後求得。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （三）各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX12"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                 表 6-2A (095 年)綜稅各類所得應納稅額及稅率各級距申報統計表                        單位：金額(千元)</td>
+</tr>
+<tr>
+<td class=" SystemTitle">程式代號:IAS901L</td>
+</tr>
+<tr>
+<td class=" SystemTitle">列印日期： 98年04月02日</td>
+</tr>
+</table><br>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 臺 中 縣</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" rowspan="2" scope="col">綜合所得總額</th>
+<th class=" Header" colspan="2" scope="colgroup">所 得 淨 額</th>
+<th class=" Header" colspan="2" scope="colgroup">應 納 稅 額</th>
+<th class=" Header" colspan="2" scope="colgroup">稅 後 所 得</th>
+<th class=" Header" scope="col">&nbsp;</th>
+<th class=" Header" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">平 均 稅 率</th>
+<th class=" Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">級距：萬元</th>
+<td class="r b Data" rowspan="2">     126134</td>
+<td class="r b Data" rowspan="2">    41989838</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">    41989838</td>
+<td class="r b Data" rowspan="2">      100.00</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">       0.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> NET= 0  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">   0- 37 </th>
+<td class="r b Data">     148657</td>
+<td class="r b Data">    83232975</td>
+<td class="r b Data">    20688829</td>
+<td class="r b Data">       24.86</td>
+<td class="r b Data">     1248763</td>
+<td class="r b Data">        1.50</td>
+<td class="r b Data">    81984213</td>
+<td class="r b Data">       98.50</td>
+<td class="r b Data">       6.04</td>
+<td class="r b Data">       1.50</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 37- 99  </th>
+<td class="r b Data">      44298</td>
+<td class="r b Data">    51078065</td>
+<td class="r b Data">    26040951</td>
+<td class="r b Data">       50.98</td>
+<td class="r b Data">     2116113</td>
+<td class="r b Data">        4.14</td>
+<td class="r b Data">    48961952</td>
+<td class="r b Data">       95.86</td>
+<td class="r b Data">       8.13</td>
+<td class="r b Data">       4.14</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 99- 198 </th>
+<td class="r b Data">      11472</td>
+<td class="r b Data">    23570175</td>
+<td class="r b Data">    15406559</td>
+<td class="r b Data">       65.36</td>
+<td class="r b Data">     1794906</td>
+<td class="r b Data">        7.62</td>
+<td class="r b Data">    21775269</td>
+<td class="r b Data">       92.38</td>
+<td class="r b Data">      11.65</td>
+<td class="r b Data">       7.62</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 198- 372</th>
+<td class="r b Data">       3011</td>
+<td class="r b Data">    10136615</td>
+<td class="r b Data">     7719881</td>
+<td class="r b Data">       76.16</td>
+<td class="r b Data">     1299984</td>
+<td class="r b Data">       12.82</td>
+<td class="r b Data">     8836631</td>
+<td class="r b Data">       87.18</td>
+<td class="r b Data">      16.84</td>
+<td class="r b Data">      12.82</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">372- 500 </th>
+<td class="r b Data">        475</td>
+<td class="r b Data">     2445274</td>
+<td class="r b Data">     2029939</td>
+<td class="r b Data">       83.01</td>
+<td class="r b Data">      460151</td>
+<td class="r b Data">       18.82</td>
+<td class="r b Data">     1985123</td>
+<td class="r b Data">       81.18</td>
+<td class="r b Data">      22.67</td>
+<td class="r b Data">      18.82</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">500- 1000</th>
+<td class="r b Data">        367</td>
+<td class="r b Data">     2762334</td>
+<td class="r b Data">     2431439</td>
+<td class="r b Data">       88.02</td>
+<td class="r b Data">      681613</td>
+<td class="r b Data">       24.68</td>
+<td class="r b Data">     2080721</td>
+<td class="r b Data">       75.32</td>
+<td class="r b Data">      28.03</td>
+<td class="r b Data">      24.68</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">1000 以上</th>
+<td class="r b Data">        140</td>
+<td class="r b Data">     4740375</td>
+<td class="r b Data">     4546100</td>
+<td class="r b Data">       95.90</td>
+<td class="r b Data">     1698158</td>
+<td class="r b Data">       35.82</td>
+<td class="r b Data">     3042217</td>
+<td class="r b Data">       64.18</td>
+<td class="r b Data">      37.35</td>
+<td class="r b Data">      35.82</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合      計</th>
+<td class="r b Data">     334554</td>
+<td class="r b Data">   219955652</td>
+<td class="r b Data">    78863697</td>
+<td class="r b Data">       35.85</td>
+<td class="r b Data">     9299688</td>
+<td class="r b Data">        4.23</td>
+<td class="r b Data">   210655964</td>
+<td class="r b Data">       95.77</td>
+<td class="r b Data">      11.79</td>
+<td class="r b Data">       4.23</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：（一）各項金額百分比是指該項金額與綜合所得總額之比值。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （二）核定所得淨額係由該戶核定所得總額扣除各項免稅額暨扣除額後求得。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （三）各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX13"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                 表 6-2A (095 年)綜稅各類所得應納稅額及稅率各級距申報統計表                        單位：金額(千元)</td>
+</tr>
+<tr>
+<td class=" SystemTitle">程式代號:IAS901L</td>
+</tr>
+<tr>
+<td class=" SystemTitle">列印日期： 98年04月02日</td>
+</tr>
+</table><br>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 南 投 縣</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" rowspan="2" scope="col">綜合所得總額</th>
+<th class=" Header" colspan="2" scope="colgroup">所 得 淨 額</th>
+<th class=" Header" colspan="2" scope="colgroup">應 納 稅 額</th>
+<th class=" Header" colspan="2" scope="colgroup">稅 後 所 得</th>
+<th class=" Header" scope="col">&nbsp;</th>
+<th class=" Header" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">平 均 稅 率</th>
+<th class=" Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">級距：萬元</th>
+<td class="r b Data" rowspan="2">      32576</td>
+<td class="r b Data" rowspan="2">    10529021</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">    10529021</td>
+<td class="r b Data" rowspan="2">      100.00</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">       0.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> NET= 0  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">   0- 37 </th>
+<td class="r b Data">      39053</td>
+<td class="r b Data">    22375996</td>
+<td class="r b Data">     5652646</td>
+<td class="r b Data">       25.26</td>
+<td class="r b Data">      341501</td>
+<td class="r b Data">        1.53</td>
+<td class="r b Data">    22034495</td>
+<td class="r b Data">       98.47</td>
+<td class="r b Data">       6.04</td>
+<td class="r b Data">       1.53</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 37- 99  </th>
+<td class="r b Data">      13117</td>
+<td class="r b Data">    15171023</td>
+<td class="r b Data">     7700725</td>
+<td class="r b Data">       50.76</td>
+<td class="r b Data">      629143</td>
+<td class="r b Data">        4.15</td>
+<td class="r b Data">    14541880</td>
+<td class="r b Data">       95.85</td>
+<td class="r b Data">       8.17</td>
+<td class="r b Data">       4.15</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 99- 198 </th>
+<td class="r b Data">       3335</td>
+<td class="r b Data">     6858438</td>
+<td class="r b Data">     4431150</td>
+<td class="r b Data">       64.61</td>
+<td class="r b Data">      494587</td>
+<td class="r b Data">        7.21</td>
+<td class="r b Data">     6363851</td>
+<td class="r b Data">       92.79</td>
+<td class="r b Data">      11.16</td>
+<td class="r b Data">       7.21</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 198- 372</th>
+<td class="r b Data">        700</td>
+<td class="r b Data">     2349175</td>
+<td class="r b Data">     1784516</td>
+<td class="r b Data">       75.96</td>
+<td class="r b Data">      293011</td>
+<td class="r b Data">       12.47</td>
+<td class="r b Data">     2056164</td>
+<td class="r b Data">       87.53</td>
+<td class="r b Data">      16.42</td>
+<td class="r b Data">      12.47</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">372- 500 </th>
+<td class="r b Data">         84</td>
+<td class="r b Data">      433786</td>
+<td class="r b Data">      357758</td>
+<td class="r b Data">       82.47</td>
+<td class="r b Data">       79154</td>
+<td class="r b Data">       18.25</td>
+<td class="r b Data">      354632</td>
+<td class="r b Data">       81.75</td>
+<td class="r b Data">      22.13</td>
+<td class="r b Data">      18.25</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">500- 1000</th>
+<td class="r b Data">         71</td>
+<td class="r b Data">      519959</td>
+<td class="r b Data">      464635</td>
+<td class="r b Data">       89.36</td>
+<td class="r b Data">      128806</td>
+<td class="r b Data">       24.77</td>
+<td class="r b Data">      391154</td>
+<td class="r b Data">       75.23</td>
+<td class="r b Data">      27.72</td>
+<td class="r b Data">      24.77</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">1000 以上</th>
+<td class="r b Data">         27</td>
+<td class="r b Data">      493858</td>
+<td class="r b Data">      459876</td>
+<td class="r b Data">       93.12</td>
+<td class="r b Data">      164467</td>
+<td class="r b Data">       33.30</td>
+<td class="r b Data">      329391</td>
+<td class="r b Data">       66.70</td>
+<td class="r b Data">      35.76</td>
+<td class="r b Data">      33.30</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合      計</th>
+<td class="r b Data">      88963</td>
+<td class="r b Data">    58731257</td>
+<td class="r b Data">    20851305</td>
+<td class="r b Data">       35.50</td>
+<td class="r b Data">     2130669</td>
+<td class="r b Data">        3.63</td>
+<td class="r b Data">    56600588</td>
+<td class="r b Data">       96.37</td>
+<td class="r b Data">      10.22</td>
+<td class="r b Data">       3.63</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：（一）各項金額百分比是指該項金額與綜合所得總額之比值。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （二）核定所得淨額係由該戶核定所得總額扣除各項免稅額暨扣除額後求得。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （三）各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX14"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                 表 6-2A (095 年)綜稅各類所得應納稅額及稅率各級距申報統計表                        單位：金額(千元)</td>
+</tr>
+<tr>
+<td class=" SystemTitle">程式代號:IAS901L</td>
+</tr>
+<tr>
+<td class=" SystemTitle">列印日期： 98年04月02日</td>
+</tr>
+</table><br>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 彰 化 縣</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" rowspan="2" scope="col">綜合所得總額</th>
+<th class=" Header" colspan="2" scope="colgroup">所 得 淨 額</th>
+<th class=" Header" colspan="2" scope="colgroup">應 納 稅 額</th>
+<th class=" Header" colspan="2" scope="colgroup">稅 後 所 得</th>
+<th class=" Header" scope="col">&nbsp;</th>
+<th class=" Header" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">平 均 稅 率</th>
+<th class=" Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">級距：萬元</th>
+<td class="r b Data" rowspan="2">     105865</td>
+<td class="r b Data" rowspan="2">    34757480</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">    34757480</td>
+<td class="r b Data" rowspan="2">      100.00</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">       0.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> NET= 0  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">   0- 37 </th>
+<td class="r b Data">     112467</td>
+<td class="r b Data">    62794199</td>
+<td class="r b Data">    15529633</td>
+<td class="r b Data">       24.73</td>
+<td class="r b Data">      936386</td>
+<td class="r b Data">        1.49</td>
+<td class="r b Data">    61857813</td>
+<td class="r b Data">       98.51</td>
+<td class="r b Data">       6.03</td>
+<td class="r b Data">       1.49</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 37- 99  </th>
+<td class="r b Data">      33816</td>
+<td class="r b Data">    38849287</td>
+<td class="r b Data">    19919331</td>
+<td class="r b Data">       51.27</td>
+<td class="r b Data">     1627769</td>
+<td class="r b Data">        4.19</td>
+<td class="r b Data">    37221518</td>
+<td class="r b Data">       95.81</td>
+<td class="r b Data">       8.17</td>
+<td class="r b Data">       4.19</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 99- 198 </th>
+<td class="r b Data">       8623</td>
+<td class="r b Data">    17838485</td>
+<td class="r b Data">    11654841</td>
+<td class="r b Data">       65.34</td>
+<td class="r b Data">     1361747</td>
+<td class="r b Data">        7.63</td>
+<td class="r b Data">    16476738</td>
+<td class="r b Data">       92.37</td>
+<td class="r b Data">      11.68</td>
+<td class="r b Data">       7.63</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 198- 372</th>
+<td class="r b Data">       2420</td>
+<td class="r b Data">     8178140</td>
+<td class="r b Data">     6250213</td>
+<td class="r b Data">       76.43</td>
+<td class="r b Data">     1060762</td>
+<td class="r b Data">       12.97</td>
+<td class="r b Data">     7117378</td>
+<td class="r b Data">       87.03</td>
+<td class="r b Data">      16.97</td>
+<td class="r b Data">      12.97</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">372- 500 </th>
+<td class="r b Data">        367</td>
+<td class="r b Data">     1856400</td>
+<td class="r b Data">     1554494</td>
+<td class="r b Data">       83.74</td>
+<td class="r b Data">      345764</td>
+<td class="r b Data">       18.63</td>
+<td class="r b Data">     1510636</td>
+<td class="r b Data">       81.37</td>
+<td class="r b Data">      22.24</td>
+<td class="r b Data">      18.63</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">500- 1000</th>
+<td class="r b Data">        275</td>
+<td class="r b Data">     2105298</td>
+<td class="r b Data">     1852299</td>
+<td class="r b Data">       87.98</td>
+<td class="r b Data">      523964</td>
+<td class="r b Data">       24.89</td>
+<td class="r b Data">     1581333</td>
+<td class="r b Data">       75.11</td>
+<td class="r b Data">      28.29</td>
+<td class="r b Data">      24.89</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">1000 以上</th>
+<td class="r b Data">        163</td>
+<td class="r b Data">     5726372</td>
+<td class="r b Data">     5430087</td>
+<td class="r b Data">       94.83</td>
+<td class="r b Data">     2037774</td>
+<td class="r b Data">       35.59</td>
+<td class="r b Data">     3688598</td>
+<td class="r b Data">       64.41</td>
+<td class="r b Data">      37.53</td>
+<td class="r b Data">      35.59</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合      計</th>
+<td class="r b Data">     263996</td>
+<td class="r b Data">   172105661</td>
+<td class="r b Data">    62190898</td>
+<td class="r b Data">       36.14</td>
+<td class="r b Data">     7894165</td>
+<td class="r b Data">        4.59</td>
+<td class="r b Data">   164211496</td>
+<td class="r b Data">       95.41</td>
+<td class="r b Data">      12.69</td>
+<td class="r b Data">       4.59</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：（一）各項金額百分比是指該項金額與綜合所得總額之比值。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （二）核定所得淨額係由該戶核定所得總額扣除各項免稅額暨扣除額後求得。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （三）各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX15"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                 表 6-2A (095 年)綜稅各類所得應納稅額及稅率各級距申報統計表                        單位：金額(千元)</td>
+</tr>
+<tr>
+<td class=" SystemTitle">程式代號:IAS901L</td>
+</tr>
+<tr>
+<td class=" SystemTitle">列印日期： 98年04月02日</td>
+</tr>
+</table><br>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 雲 林 縣</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" rowspan="2" scope="col">綜合所得總額</th>
+<th class=" Header" colspan="2" scope="colgroup">所 得 淨 額</th>
+<th class=" Header" colspan="2" scope="colgroup">應 納 稅 額</th>
+<th class=" Header" colspan="2" scope="colgroup">稅 後 所 得</th>
+<th class=" Header" scope="col">&nbsp;</th>
+<th class=" Header" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">平 均 稅 率</th>
+<th class=" Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">級距：萬元</th>
+<td class="r b Data" rowspan="2">      42063</td>
+<td class="r b Data" rowspan="2">    13782599</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">    13782599</td>
+<td class="r b Data" rowspan="2">      100.00</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">       0.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> NET= 0  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">   0- 37 </th>
+<td class="r b Data">      51714</td>
+<td class="r b Data">    30036888</td>
+<td class="r b Data">     7651490</td>
+<td class="r b Data">       25.47</td>
+<td class="r b Data">      462241</td>
+<td class="r b Data">        1.54</td>
+<td class="r b Data">    29574647</td>
+<td class="r b Data">       98.46</td>
+<td class="r b Data">       6.04</td>
+<td class="r b Data">       1.54</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 37- 99  </th>
+<td class="r b Data">      17368</td>
+<td class="r b Data">    19687326</td>
+<td class="r b Data">    10062201</td>
+<td class="r b Data">       51.11</td>
+<td class="r b Data">      820859</td>
+<td class="r b Data">        4.17</td>
+<td class="r b Data">    18866467</td>
+<td class="r b Data">       95.83</td>
+<td class="r b Data">       8.16</td>
+<td class="r b Data">       4.17</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 99- 198 </th>
+<td class="r b Data">       3742</td>
+<td class="r b Data">     7651524</td>
+<td class="r b Data">     5004243</td>
+<td class="r b Data">       65.40</td>
+<td class="r b Data">      575937</td>
+<td class="r b Data">        7.53</td>
+<td class="r b Data">     7075586</td>
+<td class="r b Data">       92.47</td>
+<td class="r b Data">      11.51</td>
+<td class="r b Data">       7.53</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 198- 372</th>
+<td class="r b Data">        845</td>
+<td class="r b Data">     2806308</td>
+<td class="r b Data">     2138398</td>
+<td class="r b Data">       76.20</td>
+<td class="r b Data">      354511</td>
+<td class="r b Data">       12.63</td>
+<td class="r b Data">     2451797</td>
+<td class="r b Data">       87.37</td>
+<td class="r b Data">      16.58</td>
+<td class="r b Data">      12.63</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">372- 500 </th>
+<td class="r b Data">         87</td>
+<td class="r b Data">      457618</td>
+<td class="r b Data">      375899</td>
+<td class="r b Data">       82.14</td>
+<td class="r b Data">       82732</td>
+<td class="r b Data">       18.08</td>
+<td class="r b Data">      374886</td>
+<td class="r b Data">       81.92</td>
+<td class="r b Data">      22.01</td>
+<td class="r b Data">      18.08</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">500- 1000</th>
+<td class="r b Data">         71</td>
+<td class="r b Data">      548072</td>
+<td class="r b Data">      480615</td>
+<td class="r b Data">       87.69</td>
+<td class="r b Data">      139046</td>
+<td class="r b Data">       25.37</td>
+<td class="r b Data">      409026</td>
+<td class="r b Data">       74.63</td>
+<td class="r b Data">      28.93</td>
+<td class="r b Data">      25.37</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">1000 以上</th>
+<td class="r b Data">         15</td>
+<td class="r b Data">      521847</td>
+<td class="r b Data">      501571</td>
+<td class="r b Data">       96.11</td>
+<td class="r b Data">      187864</td>
+<td class="r b Data">       36.00</td>
+<td class="r b Data">      333983</td>
+<td class="r b Data">       64.00</td>
+<td class="r b Data">      37.46</td>
+<td class="r b Data">      36.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合      計</th>
+<td class="r b Data">     115905</td>
+<td class="r b Data">    75492180</td>
+<td class="r b Data">    26214418</td>
+<td class="r b Data">       34.72</td>
+<td class="r b Data">     2623189</td>
+<td class="r b Data">        3.47</td>
+<td class="r b Data">    72868992</td>
+<td class="r b Data">       96.53</td>
+<td class="r b Data">      10.01</td>
+<td class="r b Data">       3.47</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：（一）各項金額百分比是指該項金額與綜合所得總額之比值。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （二）核定所得淨額係由該戶核定所得總額扣除各項免稅額暨扣除額後求得。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （三）各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX16"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                 表 6-2A (095 年)綜稅各類所得應納稅額及稅率各級距申報統計表                        單位：金額(千元)</td>
+</tr>
+<tr>
+<td class=" SystemTitle">程式代號:IAS901L</td>
+</tr>
+<tr>
+<td class=" SystemTitle">列印日期： 98年04月02日</td>
+</tr>
+</table><br>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 嘉 義 縣</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" rowspan="2" scope="col">綜合所得總額</th>
+<th class=" Header" colspan="2" scope="colgroup">所 得 淨 額</th>
+<th class=" Header" colspan="2" scope="colgroup">應 納 稅 額</th>
+<th class=" Header" colspan="2" scope="colgroup">稅 後 所 得</th>
+<th class=" Header" scope="col">&nbsp;</th>
+<th class=" Header" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">平 均 稅 率</th>
+<th class=" Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">級距：萬元</th>
+<td class="r b Data" rowspan="2">      31188</td>
+<td class="r b Data" rowspan="2">    10129264</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">    10129264</td>
+<td class="r b Data" rowspan="2">      100.00</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">       0.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> NET= 0  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">   0- 37 </th>
+<td class="r b Data">      38121</td>
+<td class="r b Data">    22005946</td>
+<td class="r b Data">     5653449</td>
+<td class="r b Data">       25.69</td>
+<td class="r b Data">      340963</td>
+<td class="r b Data">        1.55</td>
+<td class="r b Data">    21664984</td>
+<td class="r b Data">       98.45</td>
+<td class="r b Data">       6.03</td>
+<td class="r b Data">       1.55</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 37- 99  </th>
+<td class="r b Data">      12605</td>
+<td class="r b Data">    14282427</td>
+<td class="r b Data">     7260536</td>
+<td class="r b Data">       50.84</td>
+<td class="r b Data">      586909</td>
+<td class="r b Data">        4.11</td>
+<td class="r b Data">    13695518</td>
+<td class="r b Data">       95.89</td>
+<td class="r b Data">       8.08</td>
+<td class="r b Data">       4.11</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 99- 198 </th>
+<td class="r b Data">       2549</td>
+<td class="r b Data">     5176486</td>
+<td class="r b Data">     3381573</td>
+<td class="r b Data">       65.33</td>
+<td class="r b Data">      387227</td>
+<td class="r b Data">        7.48</td>
+<td class="r b Data">     4789259</td>
+<td class="r b Data">       92.52</td>
+<td class="r b Data">      11.45</td>
+<td class="r b Data">       7.48</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 198- 372</th>
+<td class="r b Data">        568</td>
+<td class="r b Data">     1912163</td>
+<td class="r b Data">     1452533</td>
+<td class="r b Data">       75.96</td>
+<td class="r b Data">      244256</td>
+<td class="r b Data">       12.77</td>
+<td class="r b Data">     1667907</td>
+<td class="r b Data">       87.23</td>
+<td class="r b Data">      16.82</td>
+<td class="r b Data">      12.77</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">372- 500 </th>
+<td class="r b Data">         72</td>
+<td class="r b Data">      369827</td>
+<td class="r b Data">      301520</td>
+<td class="r b Data">       81.53</td>
+<td class="r b Data">       68124</td>
+<td class="r b Data">       18.42</td>
+<td class="r b Data">      301703</td>
+<td class="r b Data">       81.58</td>
+<td class="r b Data">      22.59</td>
+<td class="r b Data">      18.42</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">500- 1000</th>
+<td class="r b Data">         55</td>
+<td class="r b Data">      411746</td>
+<td class="r b Data">      341989</td>
+<td class="r b Data">       83.06</td>
+<td class="r b Data">       96894</td>
+<td class="r b Data">       23.53</td>
+<td class="r b Data">      314852</td>
+<td class="r b Data">       76.47</td>
+<td class="r b Data">      28.33</td>
+<td class="r b Data">      23.53</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">1000 以上</th>
+<td class="r b Data">         14</td>
+<td class="r b Data">      377446</td>
+<td class="r b Data">      342919</td>
+<td class="r b Data">       90.85</td>
+<td class="r b Data">      125456</td>
+<td class="r b Data">       33.24</td>
+<td class="r b Data">      251989</td>
+<td class="r b Data">       66.76</td>
+<td class="r b Data">      36.58</td>
+<td class="r b Data">      33.24</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合      計</th>
+<td class="r b Data">      85172</td>
+<td class="r b Data">    54665305</td>
+<td class="r b Data">    18734519</td>
+<td class="r b Data">       34.27</td>
+<td class="r b Data">     1849829</td>
+<td class="r b Data">        3.38</td>
+<td class="r b Data">    52815476</td>
+<td class="r b Data">       96.62</td>
+<td class="r b Data">       9.87</td>
+<td class="r b Data">       3.38</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：（一）各項金額百分比是指該項金額與綜合所得總額之比值。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （二）核定所得淨額係由該戶核定所得總額扣除各項免稅額暨扣除額後求得。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （三）各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX17"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                 表 6-2A (095 年)綜稅各類所得應納稅額及稅率各級距申報統計表                        單位：金額(千元)</td>
+</tr>
+<tr>
+<td class=" SystemTitle">程式代號:IAS901L</td>
+</tr>
+<tr>
+<td class=" SystemTitle">列印日期： 98年04月02日</td>
+</tr>
+</table><br>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 臺 南 縣</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" rowspan="2" scope="col">綜合所得總額</th>
+<th class=" Header" colspan="2" scope="colgroup">所 得 淨 額</th>
+<th class=" Header" colspan="2" scope="colgroup">應 納 稅 額</th>
+<th class=" Header" colspan="2" scope="colgroup">稅 後 所 得</th>
+<th class=" Header" scope="col">&nbsp;</th>
+<th class=" Header" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">平 均 稅 率</th>
+<th class=" Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">級距：萬元</th>
+<td class="r b Data" rowspan="2">      71874</td>
+<td class="r b Data" rowspan="2">    24455309</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">    24455309</td>
+<td class="r b Data" rowspan="2">      100.00</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">       0.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> NET= 0  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">   0- 37 </th>
+<td class="r b Data">     103893</td>
+<td class="r b Data">    58572892</td>
+<td class="r b Data">    14899250</td>
+<td class="r b Data">       25.44</td>
+<td class="r b Data">      898315</td>
+<td class="r b Data">        1.53</td>
+<td class="r b Data">    57674577</td>
+<td class="r b Data">       98.47</td>
+<td class="r b Data">       6.03</td>
+<td class="r b Data">       1.53</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 37- 99  </th>
+<td class="r b Data">      32848</td>
+<td class="r b Data">    37427842</td>
+<td class="r b Data">    19222769</td>
+<td class="r b Data">       51.36</td>
+<td class="r b Data">     1558855</td>
+<td class="r b Data">        4.16</td>
+<td class="r b Data">    35868988</td>
+<td class="r b Data">       95.84</td>
+<td class="r b Data">       8.11</td>
+<td class="r b Data">       4.16</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 99- 198 </th>
+<td class="r b Data">       8138</td>
+<td class="r b Data">    16663900</td>
+<td class="r b Data">    10903223</td>
+<td class="r b Data">       65.43</td>
+<td class="r b Data">     1255664</td>
+<td class="r b Data">        7.54</td>
+<td class="r b Data">    15408236</td>
+<td class="r b Data">       92.46</td>
+<td class="r b Data">      11.52</td>
+<td class="r b Data">       7.54</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 198- 372</th>
+<td class="r b Data">       1889</td>
+<td class="r b Data">     6301582</td>
+<td class="r b Data">     4825533</td>
+<td class="r b Data">       76.58</td>
+<td class="r b Data">      802238</td>
+<td class="r b Data">       12.73</td>
+<td class="r b Data">     5499344</td>
+<td class="r b Data">       87.27</td>
+<td class="r b Data">      16.62</td>
+<td class="r b Data">      12.73</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">372- 500 </th>
+<td class="r b Data">        259</td>
+<td class="r b Data">     1324255</td>
+<td class="r b Data">     1107853</td>
+<td class="r b Data">       83.66</td>
+<td class="r b Data">      250250</td>
+<td class="r b Data">       18.90</td>
+<td class="r b Data">     1074006</td>
+<td class="r b Data">       81.10</td>
+<td class="r b Data">      22.59</td>
+<td class="r b Data">      18.90</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">500- 1000</th>
+<td class="r b Data">        196</td>
+<td class="r b Data">     1451180</td>
+<td class="r b Data">     1281529</td>
+<td class="r b Data">       88.31</td>
+<td class="r b Data">      358103</td>
+<td class="r b Data">       24.68</td>
+<td class="r b Data">     1093077</td>
+<td class="r b Data">       75.32</td>
+<td class="r b Data">      27.94</td>
+<td class="r b Data">      24.68</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">1000 以上</th>
+<td class="r b Data">         74</td>
+<td class="r b Data">     1983934</td>
+<td class="r b Data">     1773392</td>
+<td class="r b Data">       89.39</td>
+<td class="r b Data">      644132</td>
+<td class="r b Data">       32.47</td>
+<td class="r b Data">     1339801</td>
+<td class="r b Data">       67.53</td>
+<td class="r b Data">      36.32</td>
+<td class="r b Data">      32.47</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合      計</th>
+<td class="r b Data">     219171</td>
+<td class="r b Data">   148180895</td>
+<td class="r b Data">    54013548</td>
+<td class="r b Data">       36.45</td>
+<td class="r b Data">     5767556</td>
+<td class="r b Data">        3.89</td>
+<td class="r b Data">   142413339</td>
+<td class="r b Data">       96.11</td>
+<td class="r b Data">      10.68</td>
+<td class="r b Data">       3.89</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：（一）各項金額百分比是指該項金額與綜合所得總額之比值。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （二）核定所得淨額係由該戶核定所得總額扣除各項免稅額暨扣除額後求得。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （三）各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX18"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                 表 6-2A (095 年)綜稅各類所得應納稅額及稅率各級距申報統計表                        單位：金額(千元)</td>
+</tr>
+<tr>
+<td class=" SystemTitle">程式代號:IAS901L</td>
+</tr>
+<tr>
+<td class=" SystemTitle">列印日期： 98年04月02日</td>
+</tr>
+</table><br>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 高 雄 縣</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" rowspan="2" scope="col">綜合所得總額</th>
+<th class=" Header" colspan="2" scope="colgroup">所 得 淨 額</th>
+<th class=" Header" colspan="2" scope="colgroup">應 納 稅 額</th>
+<th class=" Header" colspan="2" scope="colgroup">稅 後 所 得</th>
+<th class=" Header" scope="col">&nbsp;</th>
+<th class=" Header" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">平 均 稅 率</th>
+<th class=" Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">級距：萬元</th>
+<td class="r b Data" rowspan="2">      77480</td>
+<td class="r b Data" rowspan="2">    25745061</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">    25745061</td>
+<td class="r b Data" rowspan="2">      100.00</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">       0.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> NET= 0  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">   0- 37 </th>
+<td class="r b Data">     116509</td>
+<td class="r b Data">    65888064</td>
+<td class="r b Data">    17168963</td>
+<td class="r b Data">       26.06</td>
+<td class="r b Data">     1036377</td>
+<td class="r b Data">        1.57</td>
+<td class="r b Data">    64851687</td>
+<td class="r b Data">       98.43</td>
+<td class="r b Data">       6.04</td>
+<td class="r b Data">       1.57</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 37- 99  </th>
+<td class="r b Data">      41907</td>
+<td class="r b Data">    47595386</td>
+<td class="r b Data">    24667709</td>
+<td class="r b Data">       51.83</td>
+<td class="r b Data">     2015721</td>
+<td class="r b Data">        4.24</td>
+<td class="r b Data">    45579666</td>
+<td class="r b Data">       95.76</td>
+<td class="r b Data">       8.17</td>
+<td class="r b Data">       4.24</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 99- 198 </th>
+<td class="r b Data">      11379</td>
+<td class="r b Data">    23359398</td>
+<td class="r b Data">    15438382</td>
+<td class="r b Data">       66.09</td>
+<td class="r b Data">     1821524</td>
+<td class="r b Data">        7.80</td>
+<td class="r b Data">    21537874</td>
+<td class="r b Data">       92.20</td>
+<td class="r b Data">      11.80</td>
+<td class="r b Data">       7.80</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 198- 372</th>
+<td class="r b Data">       2994</td>
+<td class="r b Data">     9935834</td>
+<td class="r b Data">     7611086</td>
+<td class="r b Data">       76.60</td>
+<td class="r b Data">     1263050</td>
+<td class="r b Data">       12.71</td>
+<td class="r b Data">     8672785</td>
+<td class="r b Data">       87.29</td>
+<td class="r b Data">      16.59</td>
+<td class="r b Data">      12.71</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">372- 500 </th>
+<td class="r b Data">        413</td>
+<td class="r b Data">     2111755</td>
+<td class="r b Data">     1755880</td>
+<td class="r b Data">       83.15</td>
+<td class="r b Data">      386584</td>
+<td class="r b Data">       18.31</td>
+<td class="r b Data">     1725171</td>
+<td class="r b Data">       81.69</td>
+<td class="r b Data">      22.02</td>
+<td class="r b Data">      18.31</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">500- 1000</th>
+<td class="r b Data">        325</td>
+<td class="r b Data">     2474089</td>
+<td class="r b Data">     2166031</td>
+<td class="r b Data">       87.55</td>
+<td class="r b Data">      607657</td>
+<td class="r b Data">       24.56</td>
+<td class="r b Data">     1866433</td>
+<td class="r b Data">       75.44</td>
+<td class="r b Data">      28.05</td>
+<td class="r b Data">      24.56</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">1000 以上</th>
+<td class="r b Data">        108</td>
+<td class="r b Data">     2459327</td>
+<td class="r b Data">     2325466</td>
+<td class="r b Data">       94.56</td>
+<td class="r b Data">      839389</td>
+<td class="r b Data">       34.13</td>
+<td class="r b Data">     1619938</td>
+<td class="r b Data">       65.87</td>
+<td class="r b Data">      36.10</td>
+<td class="r b Data">      34.13</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合      計</th>
+<td class="r b Data">     251115</td>
+<td class="r b Data">   179568915</td>
+<td class="r b Data">    71133515</td>
+<td class="r b Data">       39.61</td>
+<td class="r b Data">     7970302</td>
+<td class="r b Data">        4.44</td>
+<td class="r b Data">   171598613</td>
+<td class="r b Data">       95.56</td>
+<td class="r b Data">      11.20</td>
+<td class="r b Data">       4.44</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：（一）各項金額百分比是指該項金額與綜合所得總額之比值。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （二）核定所得淨額係由該戶核定所得總額扣除各項免稅額暨扣除額後求得。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （三）各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX19"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                 表 6-2A (095 年)綜稅各類所得應納稅額及稅率各級距申報統計表                        單位：金額(千元)</td>
+</tr>
+<tr>
+<td class=" SystemTitle">程式代號:IAS901L</td>
+</tr>
+<tr>
+<td class=" SystemTitle">列印日期： 98年04月02日</td>
+</tr>
+</table><br>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 屏 東 縣</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" rowspan="2" scope="col">綜合所得總額</th>
+<th class=" Header" colspan="2" scope="colgroup">所 得 淨 額</th>
+<th class=" Header" colspan="2" scope="colgroup">應 納 稅 額</th>
+<th class=" Header" colspan="2" scope="colgroup">稅 後 所 得</th>
+<th class=" Header" scope="col">&nbsp;</th>
+<th class=" Header" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">平 均 稅 率</th>
+<th class=" Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">級距：萬元</th>
+<td class="r b Data" rowspan="2">      47618</td>
+<td class="r b Data" rowspan="2">    15273365</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">    15273365</td>
+<td class="r b Data" rowspan="2">      100.00</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">       0.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> NET= 0  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">   0- 37 </th>
+<td class="r b Data">      59720</td>
+<td class="r b Data">    34389090</td>
+<td class="r b Data">     8846914</td>
+<td class="r b Data">       25.73</td>
+<td class="r b Data">      533672</td>
+<td class="r b Data">        1.55</td>
+<td class="r b Data">    33855417</td>
+<td class="r b Data">       98.45</td>
+<td class="r b Data">       6.03</td>
+<td class="r b Data">       1.55</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 37- 99  </th>
+<td class="r b Data">      21322</td>
+<td class="r b Data">    24176282</td>
+<td class="r b Data">    12448714</td>
+<td class="r b Data">       51.49</td>
+<td class="r b Data">     1021949</td>
+<td class="r b Data">        4.23</td>
+<td class="r b Data">    23154333</td>
+<td class="r b Data">       95.77</td>
+<td class="r b Data">       8.21</td>
+<td class="r b Data">       4.23</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 99- 198 </th>
+<td class="r b Data">       5035</td>
+<td class="r b Data">    10312228</td>
+<td class="r b Data">     6739410</td>
+<td class="r b Data">       65.35</td>
+<td class="r b Data">      779308</td>
+<td class="r b Data">        7.56</td>
+<td class="r b Data">     9532920</td>
+<td class="r b Data">       92.44</td>
+<td class="r b Data">      11.56</td>
+<td class="r b Data">       7.56</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 198- 372</th>
+<td class="r b Data">       1059</td>
+<td class="r b Data">     3526655</td>
+<td class="r b Data">     2676178</td>
+<td class="r b Data">       75.88</td>
+<td class="r b Data">      433361</td>
+<td class="r b Data">       12.29</td>
+<td class="r b Data">     3093294</td>
+<td class="r b Data">       87.71</td>
+<td class="r b Data">      16.19</td>
+<td class="r b Data">      12.29</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">372- 500 </th>
+<td class="r b Data">        119</td>
+<td class="r b Data">      613651</td>
+<td class="r b Data">      504440</td>
+<td class="r b Data">       82.20</td>
+<td class="r b Data">      109325</td>
+<td class="r b Data">       17.82</td>
+<td class="r b Data">      504326</td>
+<td class="r b Data">       82.18</td>
+<td class="r b Data">      21.67</td>
+<td class="r b Data">      17.82</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">500- 1000</th>
+<td class="r b Data">         95</td>
+<td class="r b Data">      684191</td>
+<td class="r b Data">      611113</td>
+<td class="r b Data">       89.32</td>
+<td class="r b Data">      169716</td>
+<td class="r b Data">       24.81</td>
+<td class="r b Data">      514475</td>
+<td class="r b Data">       75.19</td>
+<td class="r b Data">      27.77</td>
+<td class="r b Data">      24.81</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">1000 以上</th>
+<td class="r b Data">         20</td>
+<td class="r b Data">      460947</td>
+<td class="r b Data">      440235</td>
+<td class="r b Data">       95.51</td>
+<td class="r b Data">      159790</td>
+<td class="r b Data">       34.67</td>
+<td class="r b Data">      301157</td>
+<td class="r b Data">       65.33</td>
+<td class="r b Data">      36.30</td>
+<td class="r b Data">      34.67</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合      計</th>
+<td class="r b Data">     134988</td>
+<td class="r b Data">    89436409</td>
+<td class="r b Data">    32267004</td>
+<td class="r b Data">       36.08</td>
+<td class="r b Data">     3207121</td>
+<td class="r b Data">        3.59</td>
+<td class="r b Data">    86229288</td>
+<td class="r b Data">       96.41</td>
+<td class="r b Data">       9.94</td>
+<td class="r b Data">       3.59</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：（一）各項金額百分比是指該項金額與綜合所得總額之比值。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （二）核定所得淨額係由該戶核定所得總額扣除各項免稅額暨扣除額後求得。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （三）各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX20"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                 表 6-2A (095 年)綜稅各類所得應納稅額及稅率各級距申報統計表                        單位：金額(千元)</td>
+</tr>
+<tr>
+<td class=" SystemTitle">程式代號:IAS901L</td>
+</tr>
+<tr>
+<td class=" SystemTitle">列印日期： 98年04月02日</td>
+</tr>
+</table><br>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 花 蓮 縣</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" rowspan="2" scope="col">綜合所得總額</th>
+<th class=" Header" colspan="2" scope="colgroup">所 得 淨 額</th>
+<th class=" Header" colspan="2" scope="colgroup">應 納 稅 額</th>
+<th class=" Header" colspan="2" scope="colgroup">稅 後 所 得</th>
+<th class=" Header" scope="col">&nbsp;</th>
+<th class=" Header" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">平 均 稅 率</th>
+<th class=" Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">級距：萬元</th>
+<td class="r b Data" rowspan="2">      22786</td>
+<td class="r b Data" rowspan="2">     6891766</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">     6891766</td>
+<td class="r b Data" rowspan="2">      100.00</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">       0.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> NET= 0  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">   0- 37 </th>
+<td class="r b Data">      29156</td>
+<td class="r b Data">    16340822</td>
+<td class="r b Data">     4336954</td>
+<td class="r b Data">       26.54</td>
+<td class="r b Data">      261825</td>
+<td class="r b Data">        1.60</td>
+<td class="r b Data">    16078998</td>
+<td class="r b Data">       98.40</td>
+<td class="r b Data">       6.04</td>
+<td class="r b Data">       1.60</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 37- 99  </th>
+<td class="r b Data">      10922</td>
+<td class="r b Data">    12422696</td>
+<td class="r b Data">     6453071</td>
+<td class="r b Data">       51.95</td>
+<td class="r b Data">      529130</td>
+<td class="r b Data">        4.26</td>
+<td class="r b Data">    11893565</td>
+<td class="r b Data">       95.74</td>
+<td class="r b Data">       8.20</td>
+<td class="r b Data">       4.26</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 99- 198 </th>
+<td class="r b Data">       2712</td>
+<td class="r b Data">     5555437</td>
+<td class="r b Data">     3614370</td>
+<td class="r b Data">       65.06</td>
+<td class="r b Data">      406525</td>
+<td class="r b Data">        7.32</td>
+<td class="r b Data">     5148912</td>
+<td class="r b Data">       92.68</td>
+<td class="r b Data">      11.25</td>
+<td class="r b Data">       7.32</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 198- 372</th>
+<td class="r b Data">        635</td>
+<td class="r b Data">     2157332</td>
+<td class="r b Data">     1616055</td>
+<td class="r b Data">       74.91</td>
+<td class="r b Data">      262918</td>
+<td class="r b Data">       12.19</td>
+<td class="r b Data">     1894414</td>
+<td class="r b Data">       87.81</td>
+<td class="r b Data">      16.27</td>
+<td class="r b Data">      12.19</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">372- 500 </th>
+<td class="r b Data">         77</td>
+<td class="r b Data">      399377</td>
+<td class="r b Data">      326952</td>
+<td class="r b Data">       81.87</td>
+<td class="r b Data">       72427</td>
+<td class="r b Data">       18.13</td>
+<td class="r b Data">      326950</td>
+<td class="r b Data">       81.87</td>
+<td class="r b Data">      22.15</td>
+<td class="r b Data">      18.13</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">500- 1000</th>
+<td class="r b Data">         49</td>
+<td class="r b Data">      348505</td>
+<td class="r b Data">      304168</td>
+<td class="r b Data">       87.28</td>
+<td class="r b Data">       82797</td>
+<td class="r b Data">       23.76</td>
+<td class="r b Data">      265709</td>
+<td class="r b Data">       76.24</td>
+<td class="r b Data">      27.22</td>
+<td class="r b Data">      23.76</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">1000 以上</th>
+<td class="r b Data">          7</td>
+<td class="r b Data">      115498</td>
+<td class="r b Data">      111013</td>
+<td class="r b Data">       96.12</td>
+<td class="r b Data">       39742</td>
+<td class="r b Data">       34.41</td>
+<td class="r b Data">       75756</td>
+<td class="r b Data">       65.59</td>
+<td class="r b Data">      35.80</td>
+<td class="r b Data">      34.41</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合      計</th>
+<td class="r b Data">      66344</td>
+<td class="r b Data">    44231433</td>
+<td class="r b Data">    16762585</td>
+<td class="r b Data">       37.90</td>
+<td class="r b Data">     1655364</td>
+<td class="r b Data">        3.74</td>
+<td class="r b Data">    42576069</td>
+<td class="r b Data">       96.26</td>
+<td class="r b Data">       9.88</td>
+<td class="r b Data">       3.74</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：（一）各項金額百分比是指該項金額與綜合所得總額之比值。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （二）核定所得淨額係由該戶核定所得總額扣除各項免稅額暨扣除額後求得。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （三）各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX21"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                 表 6-2A (095 年)綜稅各類所得應納稅額及稅率各級距申報統計表                        單位：金額(千元)</td>
+</tr>
+<tr>
+<td class=" SystemTitle">程式代號:IAS901L</td>
+</tr>
+<tr>
+<td class=" SystemTitle">列印日期： 98年04月02日</td>
+</tr>
+</table><br>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 臺 東 縣</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" rowspan="2" scope="col">綜合所得總額</th>
+<th class=" Header" colspan="2" scope="colgroup">所 得 淨 額</th>
+<th class=" Header" colspan="2" scope="colgroup">應 納 稅 額</th>
+<th class=" Header" colspan="2" scope="colgroup">稅 後 所 得</th>
+<th class=" Header" scope="col">&nbsp;</th>
+<th class=" Header" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">平 均 稅 率</th>
+<th class=" Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">級距：萬元</th>
+<td class="r b Data" rowspan="2">      12117</td>
+<td class="r b Data" rowspan="2">     3756638</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">     3756638</td>
+<td class="r b Data" rowspan="2">      100.00</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">       0.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> NET= 0  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">   0- 37 </th>
+<td class="r b Data">      15598</td>
+<td class="r b Data">     8826337</td>
+<td class="r b Data">     2331601</td>
+<td class="r b Data">       26.42</td>
+<td class="r b Data">      140745</td>
+<td class="r b Data">        1.59</td>
+<td class="r b Data">     8685592</td>
+<td class="r b Data">       98.41</td>
+<td class="r b Data">       6.04</td>
+<td class="r b Data">       1.59</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 37- 99  </th>
+<td class="r b Data">       5534</td>
+<td class="r b Data">     6327444</td>
+<td class="r b Data">     3241330</td>
+<td class="r b Data">       51.23</td>
+<td class="r b Data">      266539</td>
+<td class="r b Data">        4.21</td>
+<td class="r b Data">     6060905</td>
+<td class="r b Data">       95.79</td>
+<td class="r b Data">       8.22</td>
+<td class="r b Data">       4.21</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 99- 198 </th>
+<td class="r b Data">       1243</td>
+<td class="r b Data">     2554116</td>
+<td class="r b Data">     1646352</td>
+<td class="r b Data">       64.46</td>
+<td class="r b Data">      183172</td>
+<td class="r b Data">        7.17</td>
+<td class="r b Data">     2370944</td>
+<td class="r b Data">       92.83</td>
+<td class="r b Data">      11.13</td>
+<td class="r b Data">       7.17</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 198- 372</th>
+<td class="r b Data">        211</td>
+<td class="r b Data">      692957</td>
+<td class="r b Data">      525386</td>
+<td class="r b Data">       75.82</td>
+<td class="r b Data">       83450</td>
+<td class="r b Data">       12.04</td>
+<td class="r b Data">      609506</td>
+<td class="r b Data">       87.96</td>
+<td class="r b Data">      15.88</td>
+<td class="r b Data">      12.04</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">372- 500 </th>
+<td class="r b Data">         27</td>
+<td class="r b Data">      143688</td>
+<td class="r b Data">      116071</td>
+<td class="r b Data">       80.78</td>
+<td class="r b Data">       26626</td>
+<td class="r b Data">       18.53</td>
+<td class="r b Data">      117062</td>
+<td class="r b Data">       81.47</td>
+<td class="r b Data">      22.94</td>
+<td class="r b Data">      18.53</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">500- 1000</th>
+<td class="r b Data">         16</td>
+<td class="r b Data">      121283</td>
+<td class="r b Data">      106369</td>
+<td class="r b Data">       87.70</td>
+<td class="r b Data">       28633</td>
+<td class="r b Data">       23.61</td>
+<td class="r b Data">       92649</td>
+<td class="r b Data">       76.39</td>
+<td class="r b Data">      26.92</td>
+<td class="r b Data">      23.61</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">1000 以上</th>
+<td class="r b Data">          6</td>
+<td class="r b Data">      180538</td>
+<td class="r b Data">      173538</td>
+<td class="r b Data">       96.12</td>
+<td class="r b Data">       64682</td>
+<td class="r b Data">       35.83</td>
+<td class="r b Data">      115856</td>
+<td class="r b Data">       64.17</td>
+<td class="r b Data">      37.27</td>
+<td class="r b Data">      35.83</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合      計</th>
+<td class="r b Data">      34752</td>
+<td class="r b Data">    22603000</td>
+<td class="r b Data">     8140648</td>
+<td class="r b Data">       36.02</td>
+<td class="r b Data">      793847</td>
+<td class="r b Data">        3.51</td>
+<td class="r b Data">    21809154</td>
+<td class="r b Data">       96.49</td>
+<td class="r b Data">       9.75</td>
+<td class="r b Data">       3.51</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：（一）各項金額百分比是指該項金額與綜合所得總額之比值。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （二）核定所得淨額係由該戶核定所得總額扣除各項免稅額暨扣除額後求得。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （三）各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX22"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                 表 6-2A (095 年)綜稅各類所得應納稅額及稅率各級距申報統計表                        單位：金額(千元)</td>
+</tr>
+<tr>
+<td class=" SystemTitle">程式代號:IAS901L</td>
+</tr>
+<tr>
+<td class=" SystemTitle">列印日期： 98年04月02日</td>
+</tr>
+</table><br>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 澎 湖 縣</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" rowspan="2" scope="col">綜合所得總額</th>
+<th class=" Header" colspan="2" scope="colgroup">所 得 淨 額</th>
+<th class=" Header" colspan="2" scope="colgroup">應 納 稅 額</th>
+<th class=" Header" colspan="2" scope="colgroup">稅 後 所 得</th>
+<th class=" Header" scope="col">&nbsp;</th>
+<th class=" Header" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">平 均 稅 率</th>
+<th class=" Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">級距：萬元</th>
+<td class="r b Data" rowspan="2">       4766</td>
+<td class="r b Data" rowspan="2">     1445953</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">     1445953</td>
+<td class="r b Data" rowspan="2">      100.00</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">       0.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> NET= 0  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">   0- 37 </th>
+<td class="r b Data">       6293</td>
+<td class="r b Data">     3733235</td>
+<td class="r b Data">      995790</td>
+<td class="r b Data">       26.67</td>
+<td class="r b Data">       59964</td>
+<td class="r b Data">        1.61</td>
+<td class="r b Data">     3673271</td>
+<td class="r b Data">       98.39</td>
+<td class="r b Data">       6.02</td>
+<td class="r b Data">       1.61</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 37- 99  </th>
+<td class="r b Data">       3182</td>
+<td class="r b Data">     3678513</td>
+<td class="r b Data">     1893213</td>
+<td class="r b Data">       51.47</td>
+<td class="r b Data">      157039</td>
+<td class="r b Data">        4.27</td>
+<td class="r b Data">     3521474</td>
+<td class="r b Data">       95.73</td>
+<td class="r b Data">       8.29</td>
+<td class="r b Data">       4.27</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 99- 198 </th>
+<td class="r b Data">        742</td>
+<td class="r b Data">     1512854</td>
+<td class="r b Data">      972787</td>
+<td class="r b Data">       64.30</td>
+<td class="r b Data">      104981</td>
+<td class="r b Data">        6.94</td>
+<td class="r b Data">     1407873</td>
+<td class="r b Data">       93.06</td>
+<td class="r b Data">      10.79</td>
+<td class="r b Data">       6.94</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 198- 372</th>
+<td class="r b Data">        107</td>
+<td class="r b Data">      355719</td>
+<td class="r b Data">      266478</td>
+<td class="r b Data">       74.91</td>
+<td class="r b Data">       40525</td>
+<td class="r b Data">       11.39</td>
+<td class="r b Data">      315194</td>
+<td class="r b Data">       88.61</td>
+<td class="r b Data">      15.21</td>
+<td class="r b Data">      11.39</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">372- 500 </th>
+<td class="r b Data">         14</td>
+<td class="r b Data">       75094</td>
+<td class="r b Data">       59448</td>
+<td class="r b Data">       79.16</td>
+<td class="r b Data">       12757</td>
+<td class="r b Data">       16.99</td>
+<td class="r b Data">       62337</td>
+<td class="r b Data">       83.01</td>
+<td class="r b Data">      21.46</td>
+<td class="r b Data">      16.99</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">500- 1000</th>
+<td class="r b Data">          7</td>
+<td class="r b Data">       49082</td>
+<td class="r b Data">       43440</td>
+<td class="r b Data">       88.51</td>
+<td class="r b Data">       11434</td>
+<td class="r b Data">       23.30</td>
+<td class="r b Data">       37648</td>
+<td class="r b Data">       76.70</td>
+<td class="r b Data">      26.32</td>
+<td class="r b Data">      23.30</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">1000 以上</th>
+<td class="r b Data">          1</td>
+<td class="r b Data">       38673</td>
+<td class="r b Data">       34958</td>
+<td class="r b Data">       90.39</td>
+<td class="r b Data">       13167</td>
+<td class="r b Data">       34.05</td>
+<td class="r b Data">       25506</td>
+<td class="r b Data">       65.95</td>
+<td class="r b Data">      37.67</td>
+<td class="r b Data">      34.05</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合      計</th>
+<td class="r b Data">      15112</td>
+<td class="r b Data">    10889123</td>
+<td class="r b Data">     4266114</td>
+<td class="r b Data">       39.18</td>
+<td class="r b Data">      399867</td>
+<td class="r b Data">        3.67</td>
+<td class="r b Data">    10489255</td>
+<td class="r b Data">       96.33</td>
+<td class="r b Data">       9.37</td>
+<td class="r b Data">       3.67</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：（一）各項金額百分比是指該項金額與綜合所得總額之比值。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （二）核定所得淨額係由該戶核定所得總額扣除各項免稅額暨扣除額後求得。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （三）各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX23"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                 表 6-2A (095 年)綜稅各類所得應納稅額及稅率各級距申報統計表                        單位：金額(千元)</td>
+</tr>
+<tr>
+<td class=" SystemTitle">程式代號:IAS901L</td>
+</tr>
+<tr>
+<td class=" SystemTitle">列印日期： 98年04月02日</td>
+</tr>
+</table><br>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 金 門 縣</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" rowspan="2" scope="col">綜合所得總額</th>
+<th class=" Header" colspan="2" scope="colgroup">所 得 淨 額</th>
+<th class=" Header" colspan="2" scope="colgroup">應 納 稅 額</th>
+<th class=" Header" colspan="2" scope="colgroup">稅 後 所 得</th>
+<th class=" Header" scope="col">&nbsp;</th>
+<th class=" Header" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">平 均 稅 率</th>
+<th class=" Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">級距：萬元</th>
+<td class="r b Data" rowspan="2">       3522</td>
+<td class="r b Data" rowspan="2">     1220409</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">     1220409</td>
+<td class="r b Data" rowspan="2">      100.00</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">       0.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> NET= 0  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">   0- 37 </th>
+<td class="r b Data">       7181</td>
+<td class="r b Data">     4333514</td>
+<td class="r b Data">     1196313</td>
+<td class="r b Data">       27.61</td>
+<td class="r b Data">       72119</td>
+<td class="r b Data">        1.66</td>
+<td class="r b Data">     4261395</td>
+<td class="r b Data">       98.34</td>
+<td class="r b Data">       6.03</td>
+<td class="r b Data">       1.66</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 37- 99  </th>
+<td class="r b Data">       3552</td>
+<td class="r b Data">     4126729</td>
+<td class="r b Data">     2111725</td>
+<td class="r b Data">       51.17</td>
+<td class="r b Data">      173181</td>
+<td class="r b Data">        4.20</td>
+<td class="r b Data">     3953548</td>
+<td class="r b Data">       95.80</td>
+<td class="r b Data">       8.20</td>
+<td class="r b Data">       4.20</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 99- 198 </th>
+<td class="r b Data">        969</td>
+<td class="r b Data">     2002407</td>
+<td class="r b Data">     1282773</td>
+<td class="r b Data">       64.06</td>
+<td class="r b Data">      142089</td>
+<td class="r b Data">        7.10</td>
+<td class="r b Data">     1860317</td>
+<td class="r b Data">       92.90</td>
+<td class="r b Data">      11.08</td>
+<td class="r b Data">       7.10</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 198- 372</th>
+<td class="r b Data">        171</td>
+<td class="r b Data">      578570</td>
+<td class="r b Data">      425611</td>
+<td class="r b Data">       73.56</td>
+<td class="r b Data">       66071</td>
+<td class="r b Data">       11.42</td>
+<td class="r b Data">      512499</td>
+<td class="r b Data">       88.58</td>
+<td class="r b Data">      15.52</td>
+<td class="r b Data">      11.42</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">372- 500 </th>
+<td class="r b Data">         18</td>
+<td class="r b Data">       94271</td>
+<td class="r b Data">       76116</td>
+<td class="r b Data">       80.74</td>
+<td class="r b Data">       15945</td>
+<td class="r b Data">       16.91</td>
+<td class="r b Data">       78326</td>
+<td class="r b Data">       83.09</td>
+<td class="r b Data">      20.95</td>
+<td class="r b Data">      16.91</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">500- 1000</th>
+<td class="r b Data">          5</td>
+<td class="r b Data">       37075</td>
+<td class="r b Data">       27183</td>
+<td class="r b Data">       73.32</td>
+<td class="r b Data">        6234</td>
+<td class="r b Data">       16.82</td>
+<td class="r b Data">       30840</td>
+<td class="r b Data">       83.18</td>
+<td class="r b Data">      22.93</td>
+<td class="r b Data">      16.82</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">1000 以上</th>
+<td class="r b Data">          1</td>
+<td class="r b Data">       23395</td>
+<td class="r b Data">       22701</td>
+<td class="r b Data">       97.03</td>
+<td class="r b Data">        7996</td>
+<td class="r b Data">       34.18</td>
+<td class="r b Data">       15398</td>
+<td class="r b Data">       65.82</td>
+<td class="r b Data">      35.23</td>
+<td class="r b Data">      34.18</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合      計</th>
+<td class="r b Data">      15419</td>
+<td class="r b Data">    12416369</td>
+<td class="r b Data">     5142422</td>
+<td class="r b Data">       41.42</td>
+<td class="r b Data">      483637</td>
+<td class="r b Data">        3.90</td>
+<td class="r b Data">    11932733</td>
+<td class="r b Data">       96.10</td>
+<td class="r b Data">       9.40</td>
+<td class="r b Data">       3.90</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：（一）各項金額百分比是指該項金額與綜合所得總額之比值。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （二）核定所得淨額係由該戶核定所得總額扣除各項免稅額暨扣除額後求得。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （三）各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX24"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                 表 6-2A (095 年)綜稅各類所得應納稅額及稅率各級距申報統計表                        單位：金額(千元)</td>
+</tr>
+<tr>
+<td class=" SystemTitle">程式代號:IAS901L</td>
+</tr>
+<tr>
+<td class=" SystemTitle">列印日期： 98年04月02日</td>
+</tr>
+</table><br>
+<div align="left">
+<table  summary="Page Layout"><tr>
+<td class=" BeforeCaption">縣市別： 連 江 縣</td>
+</tr><tr><td><div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" rowspan="2" scope="col">綜合所得總額</th>
+<th class=" Header" colspan="2" scope="colgroup">所 得 淨 額</th>
+<th class=" Header" colspan="2" scope="colgroup">應 納 稅 額</th>
+<th class=" Header" colspan="2" scope="colgroup">稅 後 所 得</th>
+<th class=" Header" scope="col">&nbsp;</th>
+<th class=" Header" scope="col">&nbsp;</th>
+</tr>
+<tr>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col"> 金      額</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">平 均 稅 率</th>
+<th class=" Header" scope="col">有 效 稅 率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">級距：萬元</th>
+<td class="r b Data" rowspan="2">        394</td>
+<td class="r b Data" rowspan="2">      129306</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">           0</td>
+<td class="r b Data" rowspan="2">        0.00</td>
+<td class="r b Data" rowspan="2">      129306</td>
+<td class="r b Data" rowspan="2">      100.00</td>
+<td class="r b Data" rowspan="2">0</td>
+<td class="r b Data" rowspan="2">       0.00</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> NET= 0  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">   0- 37 </th>
+<td class="r b Data">        949</td>
+<td class="r b Data">      588609</td>
+<td class="r b Data">      166106</td>
+<td class="r b Data">       28.22</td>
+<td class="r b Data">        9989</td>
+<td class="r b Data">        1.70</td>
+<td class="r b Data">      578620</td>
+<td class="r b Data">       98.30</td>
+<td class="r b Data">       6.01</td>
+<td class="r b Data">       1.70</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 37- 99  </th>
+<td class="r b Data">        708</td>
+<td class="r b Data">      833886</td>
+<td class="r b Data">      424070</td>
+<td class="r b Data">       50.85</td>
+<td class="r b Data">       34957</td>
+<td class="r b Data">        4.19</td>
+<td class="r b Data">      798929</td>
+<td class="r b Data">       95.81</td>
+<td class="r b Data">       8.24</td>
+<td class="r b Data">       4.19</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 99- 198 </th>
+<td class="r b Data">        176</td>
+<td class="r b Data">      373603</td>
+<td class="r b Data">      231711</td>
+<td class="r b Data">       62.02</td>
+<td class="r b Data">       25938</td>
+<td class="r b Data">        6.94</td>
+<td class="r b Data">      347664</td>
+<td class="r b Data">       93.06</td>
+<td class="r b Data">      11.19</td>
+<td class="r b Data">       6.94</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row"> 198- 372</th>
+<td class="r b Data">         29</td>
+<td class="r b Data">       96387</td>
+<td class="r b Data">       70621</td>
+<td class="r b Data">       73.27</td>
+<td class="r b Data">       10486</td>
+<td class="r b Data">       10.88</td>
+<td class="r b Data">       85901</td>
+<td class="r b Data">       89.12</td>
+<td class="r b Data">      14.85</td>
+<td class="r b Data">      10.88</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">372- 500 </th>
+<td class="r b Data">          2</td>
+<td class="r b Data">       10426</td>
+<td class="r b Data">        8161</td>
+<td class="r b Data">       78.28</td>
+<td class="r b Data">        1501</td>
+<td class="r b Data">       14.40</td>
+<td class="r b Data">        8924</td>
+<td class="r b Data">       85.60</td>
+<td class="r b Data">      18.40</td>
+<td class="r b Data">      14.40</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">500- 1000</th>
+<td class="r b Data">0</td>
+<td class="r b Data">0</td>
+<td class="r b Data">0</td>
+<td class="r b Data">0</td>
+<td class="r b Data">0</td>
+<td class="r b Data">0</td>
+<td class="r b Data">0</td>
+<td class="r b Data">0</td>
+<td class="r b Data">0</td>
+<td class="r b Data">0</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">1000 以上</th>
+<td class="r b Data">0</td>
+<td class="r b Data">0</td>
+<td class="r b Data">0</td>
+<td class="r b Data">0</td>
+<td class="r b Data">0</td>
+<td class="r b Data">0</td>
+<td class="r b Data">0</td>
+<td class="r b Data">0</td>
+<td class="r b Data">0</td>
+<td class="r b Data">0</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合      計</th>
+<td class="r b Data">       2258</td>
+<td class="r b Data">     2032216</td>
+<td class="r b Data">      900669</td>
+<td class="r b Data">       44.32</td>
+<td class="r b Data">       82871</td>
+<td class="r b Data">        4.08</td>
+<td class="r b Data">     1949345</td>
+<td class="r b Data">       95.92</td>
+<td class="r b Data">       9.20</td>
+<td class="r b Data">       4.08</td>
+</tr>
+</tbody>
+</table>
+</div>
+</tr>
+</table>
+</div>
+</div>
+<br>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：（一）各項金額百分比是指該項金額與綜合所得總額之比值。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （二）核定所得淨額係由該戶核定所得總額扣除各項免稅額暨扣除額後求得。</td>
+</tr>
+<tr>
+<td class=" SystemFooter">          （三）各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+</div>
+</body>
+</html>

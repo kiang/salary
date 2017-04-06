@@ -1,0 +1,1630 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="Generator" content="SAS Software, see www.sas.com" sasversion="9.1">
+<meta http-equiv="Content-type" content="text/html; charset=Big5-HKSCS">
+<title>SAS Output</title>
+<style type="text/css">
+<!--
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: "." }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.ContentTitle
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #002288;
+}
+.Output
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #F0F0F0;
+  border-width: 1px;
+  border-color: #000000;
+}
+.HeaderEmphasis
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.NoteContent
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Graph
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 1px;
+  border-color: #000000;
+}
+.WarnContentFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.NoteBanner
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.FatalContent
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.DataStrong
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Document
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+a:link {
+color:#0066AA
+}
+a:visited {
+color:#004488
+}
+a:active {
+color:#004488
+}
+.BeforeCaption
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #E0E0E0;
+}
+.ContentsDate
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  width: 100%;
+}
+.Pages
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  margin-left: 8px;
+  margin-right: 8px;
+  list-style-type: decimal;
+}
+.TitlesAndFooters
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.IndexProcName
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.ProcTitle
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.IndexAction
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  margin-left: 6pt;
+  list-style-type: NONE;
+}
+.Data
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Table
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #F0F0F0;
+  border-width: 1px;
+  border-color: #000000;
+}
+.FooterEmpty
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.SysTitleAndFooterContainer
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 0;
+  width: 100%;
+}
+.RowFooterEmpty
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.ContentFolder
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: NONE;
+}
+.RowFooterEmphasis
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowFooterStrongFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowFooterFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.Index
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FooterFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.ExtendedPage
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 1pt;
+  text-align: center;
+}
+.Container
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Date
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  width: 100%;
+}
+.Caption
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #E0E0E0;
+}
+.WarnBanner
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Frame
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.HeaderStrongFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.IndexTitle
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #002288;
+}
+.NoteContentFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.DataEmphasisFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Note
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Byline
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FatalBanner
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.ProcTitleFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.ByContentFolder
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: NONE;
+}
+.PagesProcLabel
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.RowHeaderFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowFooterEmphasisFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.WarnContent
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.DataEmpty
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Cell
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Header
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.PageNo
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  text-align: right;
+  vertical-align: top;
+}
+.ContentProcLabel
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.HeaderFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.PagesTitle
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #002288;
+}
+.RowHeaderEmpty
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.PagesProcName
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.Batch
+{
+  font-family: MingLiU, GothicBBB, SAS Monospace, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+  border-width: 1px;
+  border-color: #000000;
+}
+.ContentItem
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  list-style-type: NONE;
+}
+.Body
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.PagesDate
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  width: 100%;
+}
+.HeaderEmpty
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FooterStrong
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FooterEmphasis
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.ErrorContent
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.DataFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.HeaderStrong
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.DataEmphasis
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.TitleAndNoteContainer
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 0;
+  width: 100%;
+}
+.RowFooter
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.IndexItem
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  margin-left: 6pt;
+  list-style-type: NONE;
+}
+.BylineContainer
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 0;
+  width: 100%;
+}
+.FatalContentFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.BodyDate
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  width: 100%;
+  text-align: right;
+  vertical-align: top;
+}
+.Contents
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  margin-left: 8px;
+  margin-right: 8px;
+  list-style-type: decimal;
+}
+.RowFooterStrong
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.UserText
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.HeadersAndFooters
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowHeaderEmphasisFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.ErrorBanner
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.ContentProcName
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.RowHeaderStrong
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.PagesItem
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  list-style-type: NONE;
+}
+.RowHeader
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FooterStrongFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.AfterCaption
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #E0E0E0;
+}
+.RowHeaderStrongFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowHeaderEmphasis
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.DataStrongFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Footer
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FolderAction
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  margin-left: 6pt;
+  list-style-type: NONE;
+}
+.HeaderEmphasisFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.SystemTitle
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.ErrorContentFixed
+{
+  font-family: MingLiU, GothicBBB, Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.SystemFooter
+{
+  font-family: MingLiU, GothicBBB, Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.FooterEmphasisFixed
+{
+  font-family: MingLiU, GothicBBB, Courier New, Courier, monospace, sans-serif;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+<noscript></noscript>
+</head>
+<body onload="startup()" onunload="shutdown()" class="Body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+
+//-->
+</script>
+
+<noscript></noscript>
+<div class="branch">
+<a name="IDX"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemTitle">                                                表 63-3-2 (094 年)綜稅核定補退稅發單平均每戶金額統計表二十分位申報統計表  單位：金額(千元)</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Tabulate: Table 1">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class=" c Header" rowspan="2" scope="col">&nbsp;</th>
+<th class=" Header" rowspan="2" scope="col">納 稅 單 位</th>
+<th class=" Header" colspan="3" scope="colgroup">已補稅</th>
+<th class=" Header" colspan="3" scope="colgroup">先依申報退稅</th>
+<th class=" Header" colspan="3" scope="colgroup">本次核定退稅</th>
+<th class=" Header" colspan="3" scope="colgroup">退稅合計</th>
+<th class=" Header" colspan="3" scope="colgroup">經核定已退變為補稅</th>
+<th class=" Header" colspan="3" scope="colgroup">經核定未退稅之補稅</th>
+<th class=" Header" colspan="3" scope="colgroup">本次核定補稅合計</th>
+<th class=" Header" colspan="2" scope="colgroup">本次核定不補退</th>
+</tr>
+<tr>
+<th class=" Header" scope="col">  戶    數</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">  金    額</th>
+<th class=" Header" scope="col">  戶    數</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">  金    額</th>
+<th class=" Header" scope="col">  戶    數</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">  金    額</th>
+<th class=" Header" scope="col">  戶    數</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">  金    額</th>
+<th class=" Header" scope="col">  戶    數</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">  金    額</th>
+<th class=" Header" scope="col">  戶    數</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">  金    額</th>
+<th class=" Header" scope="col">  戶    數</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+<th class=" Header" scope="col">  金    額</th>
+<th class=" Header" scope="col">  戶    數</th>
+<th class=" Header" scope="col"> 百  分  比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">分 位 別</th>
+<td class="r b Data" rowspan="2">     259125</td>
+<td class="r b Data" rowspan="2">         165</td>
+<td class="r b Data" rowspan="2">        0.06</td>
+<td class="r b Data" rowspan="2">          10</td>
+<td class="r b Data" rowspan="2">       45523</td>
+<td class="r b Data" rowspan="2">       17.57</td>
+<td class="r b Data" rowspan="2">           7</td>
+<td class="r b Data" rowspan="2">      117134</td>
+<td class="r b Data" rowspan="2">       45.20</td>
+<td class="r b Data" rowspan="2">           5</td>
+<td class="r b Data" rowspan="2">      162657</td>
+<td class="r b Data" rowspan="2">       62.77</td>
+<td class="r b Data" rowspan="2">           5</td>
+<td class="r b Data" rowspan="2">        1507</td>
+<td class="r b Data" rowspan="2">        0.58</td>
+<td class="r b Data" rowspan="2">          12</td>
+<td class="r b Data" rowspan="2">        1373</td>
+<td class="r b Data" rowspan="2">        0.53</td>
+<td class="r b Data" rowspan="2">           3</td>
+<td class="r b Data" rowspan="2">        2880</td>
+<td class="r b Data" rowspan="2">        1.11</td>
+<td class="r b Data" rowspan="2">           8</td>
+<td class="r b Data" rowspan="2">      139111</td>
+<td class="r b Data" rowspan="2">       53.68</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">第一分位  </th>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">第二分位  </th>
+<td class="r b Data">     259645</td>
+<td class="r b Data">         287</td>
+<td class="r b Data">        0.11</td>
+<td class="r b Data">           6</td>
+<td class="r b Data">       38319</td>
+<td class="r b Data">       14.76</td>
+<td class="r b Data">          12</td>
+<td class="r b Data">       86214</td>
+<td class="r b Data">       33.20</td>
+<td class="r b Data">           7</td>
+<td class="r b Data">      124533</td>
+<td class="r b Data">       47.96</td>
+<td class="r b Data">           9</td>
+<td class="r b Data">        2557</td>
+<td class="r b Data">        0.98</td>
+<td class="r b Data">           3</td>
+<td class="r b Data">        4534</td>
+<td class="r b Data">        1.75</td>
+<td class="r b Data">           4</td>
+<td class="r b Data">        7091</td>
+<td class="r b Data">        2.73</td>
+<td class="r b Data">           4</td>
+<td class="r b Data">      166340</td>
+<td class="r b Data">       64.06</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">第三分位  </th>
+<td class="r b Data">     258601</td>
+<td class="r b Data">         363</td>
+<td class="r b Data">        0.14</td>
+<td class="r b Data">           4</td>
+<td class="r b Data">       29294</td>
+<td class="r b Data">       11.33</td>
+<td class="r b Data">          14</td>
+<td class="r b Data">       69600</td>
+<td class="r b Data">       26.91</td>
+<td class="r b Data">           8</td>
+<td class="r b Data">       98894</td>
+<td class="r b Data">       38.24</td>
+<td class="r b Data">          10</td>
+<td class="r b Data">        2969</td>
+<td class="r b Data">        1.15</td>
+<td class="r b Data">           3</td>
+<td class="r b Data">       18186</td>
+<td class="r b Data">        7.03</td>
+<td class="r b Data">           2</td>
+<td class="r b Data">       21155</td>
+<td class="r b Data">        8.18</td>
+<td class="r b Data">           2</td>
+<td class="r b Data">      167846</td>
+<td class="r b Data">       64.91</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">第四分位  </th>
+<td class="r b Data">     259120</td>
+<td class="r b Data">         439</td>
+<td class="r b Data">        0.17</td>
+<td class="r b Data">           5</td>
+<td class="r b Data">       28904</td>
+<td class="r b Data">       11.15</td>
+<td class="r b Data">          16</td>
+<td class="r b Data">       69992</td>
+<td class="r b Data">       27.01</td>
+<td class="r b Data">           8</td>
+<td class="r b Data">       98896</td>
+<td class="r b Data">       38.17</td>
+<td class="r b Data">          10</td>
+<td class="r b Data">        3322</td>
+<td class="r b Data">        1.28</td>
+<td class="r b Data">           3</td>
+<td class="r b Data">       19584</td>
+<td class="r b Data">        7.56</td>
+<td class="r b Data">           3</td>
+<td class="r b Data">       22906</td>
+<td class="r b Data">        8.84</td>
+<td class="r b Data">           3</td>
+<td class="r b Data">      166222</td>
+<td class="r b Data">       64.15</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">第五分位  </th>
+<td class="r b Data">     259126</td>
+<td class="r b Data">         477</td>
+<td class="r b Data">        0.18</td>
+<td class="r b Data">           5</td>
+<td class="r b Data">       28880</td>
+<td class="r b Data">       11.15</td>
+<td class="r b Data">          17</td>
+<td class="r b Data">       71341</td>
+<td class="r b Data">       27.53</td>
+<td class="r b Data">           8</td>
+<td class="r b Data">      100221</td>
+<td class="r b Data">       38.68</td>
+<td class="r b Data">          11</td>
+<td class="r b Data">        3439</td>
+<td class="r b Data">        1.33</td>
+<td class="r b Data">           3</td>
+<td class="r b Data">       22284</td>
+<td class="r b Data">        8.60</td>
+<td class="r b Data">           3</td>
+<td class="r b Data">       25723</td>
+<td class="r b Data">        9.93</td>
+<td class="r b Data">           3</td>
+<td class="r b Data">      162062</td>
+<td class="r b Data">       62.54</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">第六分位  </th>
+<td class="r b Data">     259120</td>
+<td class="r b Data">         605</td>
+<td class="r b Data">        0.23</td>
+<td class="r b Data">           5</td>
+<td class="r b Data">       28997</td>
+<td class="r b Data">       11.19</td>
+<td class="r b Data">          18</td>
+<td class="r b Data">       72644</td>
+<td class="r b Data">       28.03</td>
+<td class="r b Data">           9</td>
+<td class="r b Data">      101641</td>
+<td class="r b Data">       39.23</td>
+<td class="r b Data">          11</td>
+<td class="r b Data">        4162</td>
+<td class="r b Data">        1.61</td>
+<td class="r b Data">           3</td>
+<td class="r b Data">       24876</td>
+<td class="r b Data">        9.60</td>
+<td class="r b Data">           3</td>
+<td class="r b Data">       29038</td>
+<td class="r b Data">       11.21</td>
+<td class="r b Data">           3</td>
+<td class="r b Data">      157438</td>
+<td class="r b Data">       60.76</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">第七分位  </th>
+<td class="r b Data">     259125</td>
+<td class="r b Data">         653</td>
+<td class="r b Data">        0.25</td>
+<td class="r b Data">           5</td>
+<td class="r b Data">       30311</td>
+<td class="r b Data">       11.70</td>
+<td class="r b Data">          20</td>
+<td class="r b Data">       74595</td>
+<td class="r b Data">       28.79</td>
+<td class="r b Data">           9</td>
+<td class="r b Data">      104906</td>
+<td class="r b Data">       40.48</td>
+<td class="r b Data">          12</td>
+<td class="r b Data">        4848</td>
+<td class="r b Data">        1.87</td>
+<td class="r b Data">           3</td>
+<td class="r b Data">       27333</td>
+<td class="r b Data">       10.55</td>
+<td class="r b Data">           3</td>
+<td class="r b Data">       32181</td>
+<td class="r b Data">       12.42</td>
+<td class="r b Data">           3</td>
+<td class="r b Data">      152349</td>
+<td class="r b Data">       58.79</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">第八分位  </th>
+<td class="r b Data">     259118</td>
+<td class="r b Data">         792</td>
+<td class="r b Data">        0.31</td>
+<td class="r b Data">           5</td>
+<td class="r b Data">       31413</td>
+<td class="r b Data">       12.12</td>
+<td class="r b Data">          22</td>
+<td class="r b Data">       76507</td>
+<td class="r b Data">       29.53</td>
+<td class="r b Data">          10</td>
+<td class="r b Data">      107920</td>
+<td class="r b Data">       41.65</td>
+<td class="r b Data">          13</td>
+<td class="r b Data">        5545</td>
+<td class="r b Data">        2.14</td>
+<td class="r b Data">           3</td>
+<td class="r b Data">       30249</td>
+<td class="r b Data">       11.67</td>
+<td class="r b Data">           3</td>
+<td class="r b Data">       35794</td>
+<td class="r b Data">       13.81</td>
+<td class="r b Data">           3</td>
+<td class="r b Data">      146817</td>
+<td class="r b Data">       56.66</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">第九分位  </th>
+<td class="r b Data">     259128</td>
+<td class="r b Data">         984</td>
+<td class="r b Data">        0.38</td>
+<td class="r b Data">           5</td>
+<td class="r b Data">       32872</td>
+<td class="r b Data">       12.69</td>
+<td class="r b Data">          23</td>
+<td class="r b Data">       79393</td>
+<td class="r b Data">       30.64</td>
+<td class="r b Data">          10</td>
+<td class="r b Data">      112265</td>
+<td class="r b Data">       43.32</td>
+<td class="r b Data">          14</td>
+<td class="r b Data">        6517</td>
+<td class="r b Data">        2.51</td>
+<td class="r b Data">           3</td>
+<td class="r b Data">       32346</td>
+<td class="r b Data">       12.48</td>
+<td class="r b Data">           3</td>
+<td class="r b Data">       38863</td>
+<td class="r b Data">       15.00</td>
+<td class="r b Data">           3</td>
+<td class="r b Data">      140872</td>
+<td class="r b Data">       54.36</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">第十分位  </th>
+<td class="r b Data">     259121</td>
+<td class="r b Data">        1091</td>
+<td class="r b Data">        0.42</td>
+<td class="r b Data">           5</td>
+<td class="r b Data">       34001</td>
+<td class="r b Data">       13.12</td>
+<td class="r b Data">          24</td>
+<td class="r b Data">       81480</td>
+<td class="r b Data">       31.44</td>
+<td class="r b Data">          11</td>
+<td class="r b Data">      115481</td>
+<td class="r b Data">       44.57</td>
+<td class="r b Data">          15</td>
+<td class="r b Data">        7466</td>
+<td class="r b Data">        2.88</td>
+<td class="r b Data">           3</td>
+<td class="r b Data">       34464</td>
+<td class="r b Data">       13.30</td>
+<td class="r b Data">           3</td>
+<td class="r b Data">       41930</td>
+<td class="r b Data">       16.18</td>
+<td class="r b Data">           3</td>
+<td class="r b Data">      135711</td>
+<td class="r b Data">       52.37</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">第十一分位</th>
+<td class="r b Data">     259122</td>
+<td class="r b Data">        1294</td>
+<td class="r b Data">        0.50</td>
+<td class="r b Data">           5</td>
+<td class="r b Data">       35887</td>
+<td class="r b Data">       13.85</td>
+<td class="r b Data">          27</td>
+<td class="r b Data">       82698</td>
+<td class="r b Data">       31.91</td>
+<td class="r b Data">          12</td>
+<td class="r b Data">      118585</td>
+<td class="r b Data">       45.76</td>
+<td class="r b Data">          17</td>
+<td class="r b Data">        8970</td>
+<td class="r b Data">        3.46</td>
+<td class="r b Data">           4</td>
+<td class="r b Data">       39120</td>
+<td class="r b Data">       15.10</td>
+<td class="r b Data">           3</td>
+<td class="r b Data">       48090</td>
+<td class="r b Data">       18.56</td>
+<td class="r b Data">           3</td>
+<td class="r b Data">      128334</td>
+<td class="r b Data">       49.53</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">第十二分位</th>
+<td class="r b Data">     259121</td>
+<td class="r b Data">        1682</td>
+<td class="r b Data">        0.65</td>
+<td class="r b Data">           5</td>
+<td class="r b Data">       37803</td>
+<td class="r b Data">       14.59</td>
+<td class="r b Data">          30</td>
+<td class="r b Data">       84745</td>
+<td class="r b Data">       32.70</td>
+<td class="r b Data">          14</td>
+<td class="r b Data">      122548</td>
+<td class="r b Data">       47.29</td>
+<td class="r b Data">          19</td>
+<td class="r b Data">       10565</td>
+<td class="r b Data">        4.08</td>
+<td class="r b Data">           4</td>
+<td class="r b Data">       43046</td>
+<td class="r b Data">       16.61</td>
+<td class="r b Data">           4</td>
+<td class="r b Data">       53611</td>
+<td class="r b Data">       20.69</td>
+<td class="r b Data">           4</td>
+<td class="r b Data">      120765</td>
+<td class="r b Data">       46.61</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">第十三分位</th>
+<td class="r b Data">     259123</td>
+<td class="r b Data">        2021</td>
+<td class="r b Data">        0.78</td>
+<td class="r b Data">           6</td>
+<td class="r b Data">       39735</td>
+<td class="r b Data">       15.33</td>
+<td class="r b Data">          32</td>
+<td class="r b Data">       84548</td>
+<td class="r b Data">       32.63</td>
+<td class="r b Data">          15</td>
+<td class="r b Data">      124283</td>
+<td class="r b Data">       47.96</td>
+<td class="r b Data">          21</td>
+<td class="r b Data">       12293</td>
+<td class="r b Data">        4.74</td>
+<td class="r b Data">           4</td>
+<td class="r b Data">       46599</td>
+<td class="r b Data">       17.98</td>
+<td class="r b Data">           4</td>
+<td class="r b Data">       58892</td>
+<td class="r b Data">       22.73</td>
+<td class="r b Data">           4</td>
+<td class="r b Data">      115683</td>
+<td class="r b Data">       44.64</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">第十四分位</th>
+<td class="r b Data">     259120</td>
+<td class="r b Data">        2243</td>
+<td class="r b Data">        0.87</td>
+<td class="r b Data">           7</td>
+<td class="r b Data">       39507</td>
+<td class="r b Data">       15.25</td>
+<td class="r b Data">          35</td>
+<td class="r b Data">       83590</td>
+<td class="r b Data">       32.26</td>
+<td class="r b Data">          17</td>
+<td class="r b Data">      123097</td>
+<td class="r b Data">       47.51</td>
+<td class="r b Data">          23</td>
+<td class="r b Data">       13621</td>
+<td class="r b Data">        5.26</td>
+<td class="r b Data">           4</td>
+<td class="r b Data">       50819</td>
+<td class="r b Data">       19.61</td>
+<td class="r b Data">           5</td>
+<td class="r b Data">       64440</td>
+<td class="r b Data">       24.87</td>
+<td class="r b Data">           4</td>
+<td class="r b Data">      111090</td>
+<td class="r b Data">       42.87</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">第十五分位</th>
+<td class="r b Data">     259123</td>
+<td class="r b Data">        2624</td>
+<td class="r b Data">        1.01</td>
+<td class="r b Data">           7</td>
+<td class="r b Data">       39615</td>
+<td class="r b Data">       15.29</td>
+<td class="r b Data">          40</td>
+<td class="r b Data">       81486</td>
+<td class="r b Data">       31.45</td>
+<td class="r b Data">          19</td>
+<td class="r b Data">      121101</td>
+<td class="r b Data">       46.73</td>
+<td class="r b Data">          26</td>
+<td class="r b Data">       14538</td>
+<td class="r b Data">        5.61</td>
+<td class="r b Data">           5</td>
+<td class="r b Data">       55242</td>
+<td class="r b Data">       21.32</td>
+<td class="r b Data">           5</td>
+<td class="r b Data">       69780</td>
+<td class="r b Data">       26.93</td>
+<td class="r b Data">           5</td>
+<td class="r b Data">      107857</td>
+<td class="r b Data">       41.62</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">第十六分位</th>
+<td class="r b Data">     259122</td>
+<td class="r b Data">        3125</td>
+<td class="r b Data">        1.21</td>
+<td class="r b Data">           8</td>
+<td class="r b Data">       39936</td>
+<td class="r b Data">       15.41</td>
+<td class="r b Data">          45</td>
+<td class="r b Data">       79391</td>
+<td class="r b Data">       30.64</td>
+<td class="r b Data">          22</td>
+<td class="r b Data">      119327</td>
+<td class="r b Data">       46.05</td>
+<td class="r b Data">          29</td>
+<td class="r b Data">       15579</td>
+<td class="r b Data">        6.01</td>
+<td class="r b Data">           5</td>
+<td class="r b Data">       59350</td>
+<td class="r b Data">       22.90</td>
+<td class="r b Data">           6</td>
+<td class="r b Data">       74929</td>
+<td class="r b Data">       28.92</td>
+<td class="r b Data">           6</td>
+<td class="r b Data">      104802</td>
+<td class="r b Data">       40.45</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">第十七分位</th>
+<td class="r b Data">     259123</td>
+<td class="r b Data">        3742</td>
+<td class="r b Data">        1.44</td>
+<td class="r b Data">          10</td>
+<td class="r b Data">       39587</td>
+<td class="r b Data">       15.28</td>
+<td class="r b Data">          51</td>
+<td class="r b Data">       75940</td>
+<td class="r b Data">       29.31</td>
+<td class="r b Data">          25</td>
+<td class="r b Data">      115527</td>
+<td class="r b Data">       44.58</td>
+<td class="r b Data">          34</td>
+<td class="r b Data">       16271</td>
+<td class="r b Data">        6.28</td>
+<td class="r b Data">           6</td>
+<td class="r b Data">       64456</td>
+<td class="r b Data">       24.87</td>
+<td class="r b Data">           6</td>
+<td class="r b Data">       80727</td>
+<td class="r b Data">       31.15</td>
+<td class="r b Data">           6</td>
+<td class="r b Data">      102456</td>
+<td class="r b Data">       39.54</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">第十八分位</th>
+<td class="r b Data">     259122</td>
+<td class="r b Data">        4607</td>
+<td class="r b Data">        1.78</td>
+<td class="r b Data">          11</td>
+<td class="r b Data">       38913</td>
+<td class="r b Data">       15.02</td>
+<td class="r b Data">          61</td>
+<td class="r b Data">       69941</td>
+<td class="r b Data">       26.99</td>
+<td class="r b Data">          31</td>
+<td class="r b Data">      108854</td>
+<td class="r b Data">       42.01</td>
+<td class="r b Data">          42</td>
+<td class="r b Data">       16778</td>
+<td class="r b Data">        6.47</td>
+<td class="r b Data">           8</td>
+<td class="r b Data">       71436</td>
+<td class="r b Data">       27.57</td>
+<td class="r b Data">           8</td>
+<td class="r b Data">       88214</td>
+<td class="r b Data">       34.04</td>
+<td class="r b Data">           8</td>
+<td class="r b Data">      100967</td>
+<td class="r b Data">       38.97</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">第十九分位</th>
+<td class="r b Data">     259123</td>
+<td class="r b Data">        6063</td>
+<td class="r b Data">        2.34</td>
+<td class="r b Data">          16</td>
+<td class="r b Data">       36998</td>
+<td class="r b Data">       14.28</td>
+<td class="r b Data">          80</td>
+<td class="r b Data">       58957</td>
+<td class="r b Data">       22.75</td>
+<td class="r b Data">          41</td>
+<td class="r b Data">       95955</td>
+<td class="r b Data">       37.03</td>
+<td class="r b Data">          56</td>
+<td class="r b Data">       16834</td>
+<td class="r b Data">        6.50</td>
+<td class="r b Data">          13</td>
+<td class="r b Data">       82456</td>
+<td class="r b Data">       31.82</td>
+<td class="r b Data">          11</td>
+<td class="r b Data">       99290</td>
+<td class="r b Data">       38.32</td>
+<td class="r b Data">          11</td>
+<td class="r b Data">      100876</td>
+<td class="r b Data">       38.93</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">第二十分位</th>
+<td class="r b Data">     259122</td>
+<td class="r b Data">        9850</td>
+<td class="r b Data">        3.80</td>
+<td class="r b Data">          63</td>
+<td class="r b Data">       28077</td>
+<td class="r b Data">       10.84</td>
+<td class="r b Data">         148</td>
+<td class="r b Data">       43841</td>
+<td class="r b Data">       16.92</td>
+<td class="r b Data">          72</td>
+<td class="r b Data">       71918</td>
+<td class="r b Data">       27.75</td>
+<td class="r b Data">         102</td>
+<td class="r b Data">       13699</td>
+<td class="r b Data">        5.29</td>
+<td class="r b Data">          67</td>
+<td class="r b Data">      104085</td>
+<td class="r b Data">       40.17</td>
+<td class="r b Data">          42</td>
+<td class="r b Data">      117784</td>
+<td class="r b Data">       45.46</td>
+<td class="r b Data">          45</td>
+<td class="r b Data">       97497</td>
+<td class="r b Data">       37.63</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">合    計</th>
+<td class="r b Data">    5182450</td>
+<td class="r b Data">       43107</td>
+<td class="r b Data">        0.83</td>
+<td class="r b Data">          21</td>
+<td class="r b Data">      704572</td>
+<td class="r b Data">       13.60</td>
+<td class="r b Data">          36</td>
+<td class="r b Data">     1544037</td>
+<td class="r b Data">       29.79</td>
+<td class="r b Data">          16</td>
+<td class="r b Data">     2248609</td>
+<td class="r b Data">       43.39</td>
+<td class="r b Data">          22</td>
+<td class="r b Data">      181480</td>
+<td class="r b Data">        3.50</td>
+<td class="r b Data">          10</td>
+<td class="r b Data">      831838</td>
+<td class="r b Data">       16.05</td>
+<td class="r b Data">          10</td>
+<td class="r b Data">     1013318</td>
+<td class="r b Data">       19.55</td>
+<td class="r b Data">          10</td>
+<td class="r b Data">     2625095</td>
+<td class="r b Data">       50.65</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class=" SystemFooter">一、說明：各欄項之金額係取千元後四捨五入。</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+<tr>
+<td class=" SystemFooter"> &nbsp;</td>
+</tr>
+</table><br>
+</div>
+</body>
+</html>
