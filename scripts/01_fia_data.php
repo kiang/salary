@@ -156,7 +156,7 @@ $cities = array(
   [10] => 變異係數
  */
 
-for ($i = 103; $i > 99; $i--) {
+for ($i = 104; $i > 99; $i--) {
     foreach ($cities AS $city => $cityName) {
         $pageFile = $tmpPath . '/' . $i . '_' . $city;
         if (!file_exists($pageFile)) {
