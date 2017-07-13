@@ -85,7 +85,7 @@ var routes = {
 };
 var router = Router(routes);
 
-var map, currentYear = '2014', currentButton = 'playButton2',
+var map, currentYear = '2015', currentButton = 'playButton2',
         currentPlayIndex = false,
         cunli, cunliSalary;
 
