@@ -12,7 +12,7 @@ if (!file_exists($targetPath)) {
 
 $result = array();
 
-for ($i = 103; $i > 99; $i--) {
+for ($i = 104; $i > 99; $i--) {
     $pageFile = $tmpPath . '/' . $i;
     if (!file_exists($pageFile)) {
         file_put_contents($pageFile, file_get_contents("http://www.fia.gov.tw/public/Attachment/isa{$i}/{$i}_6-3-2.html"));
