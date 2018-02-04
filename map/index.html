@@ -48,25 +48,41 @@
         </script>
         <div class="container">
             <h1>台灣所得地圖</h1>
+            <div class="pull-right">單位：千元
+                <span class="colorBox" style="background-color: white;"></span>&nbsp;無資料
+                <span class="colorBox" style="background-color: green;"></span>&nbsp;500
+                <span class="colorBox" style="background-color: yellow;"></span>&nbsp;700
+                <br class="hidden-md hidden-lg">
+                <span class="colorBox" style="background-color: orange;"></span>&nbsp;900
+                <span class="colorBox" style="background-color: red;"></span>&nbsp;1100
+                <span class="colorBox" style="background-color: purple;"></span>&nbsp;1300
+                <br class="hidden-md hidden-lg">
+                <span class="colorBox" style="background-color: darkblue;"></span>&nbsp;1500
+                <span class="colorBox" style="background-color: black;"></span>&nbsp;>1500
+            </div>
             <div class="row">
-                <p class="hidden-sm hidden-xs">&nbsp;</p>
                 <div id="map-canvas" class="col-md-12"></div>
+                <h2 id="content" class="text-muted">在地圖上滑動或點選以顯示數據</h2>
+                <div class="btn-group btn-group-justified">
+                    <a class="btn btn-primary btn-lg" id="playButton1" href="#">
+                        <span class="glyphicon glyphicon-play" style="display: none"></span>&nbsp;平均數
+                    </a>
+                    <a class="btn btn-primary btn-lg" id="playButton2" href="#">
+                        <span class="glyphicon glyphicon-play" style="display: none"></span>&nbsp;中位數
+                    </a>
+                    <a class="btn btn-primary btn-lg" id="playButton3" href="#">
+                        <span class="glyphicon glyphicon-play" style="display: none"></span>&nbsp;標準差
+                    </a>
+                    <a class="btn btn-primary btn-lg" id="playButton4" href="#">
+                        <span class="glyphicon glyphicon-play" style="display: none"></span>&nbsp;第一分位數
+                    </a>
+                    <a class="btn btn-primary btn-lg" id="playButton5" href="#">
+                        <span class="glyphicon glyphicon-play" style="display: none"></span>&nbsp;第三分位數
+                    </a>
+                </div>
                 <div id="detail" class="col-md-12">
                     <div class="col-md-8 col-sm-12 col-xs-12">
-                        <h3 id="title"></h3>
-                        <div>單位：千元
-                            <span class="colorBox" style="background-color: white;"></span>&nbsp;無資料
-                            <span class="colorBox" style="background-color: green;"></span>&nbsp;500
-                            <span class="colorBox" style="background-color: yellow;"></span>&nbsp;700
-                            <br class="hidden-md hidden-lg">
-                            <span class="colorBox" style="background-color: orange;"></span>&nbsp;900
-                            <span class="colorBox" style="background-color: red;"></span>&nbsp;1100
-                            <span class="colorBox" style="background-color: purple;"></span>&nbsp;1300
-                            <br class="hidden-md hidden-lg">
-                            <span class="colorBox" style="background-color: darkblue;"></span>&nbsp;1500
-                            <span class="colorBox" style="background-color: black;"></span>&nbsp;>1500
-                        </div>
-                        <div style="float: left;">年度
+                        <div class="col-md-6">年度
                             <div class="btn-group">
                               <a href="#" class="btn btn-primary btn-year" data-year="2015">2015</a>
                               <a href="#" class="btn btn-primary btn-year" data-year="2014">2014</a>
@@ -84,7 +100,7 @@
                                 <a href="#" class="btn btn-default btn-year" data-year="2002">2002</a>
                             </div>
                         </div>
-                        <div style="float: right;">快速定位
+                        <div class="col-md-6">快速定位
                             <div class="btn-group">
                                 <a href="#" class="btn btn-default" onclick="map.setCenter({lat: 25.053699, lng: 121.507837});
                                         return false">台北</a>
@@ -117,25 +133,8 @@
                             </div>
                         </div>
                         <div class="clearfix"></div>
+                        <h3 id="title"></h3>
                         <hr>
-                        <h2 id="content" class="text-muted">在地圖上滑動或點選以顯示數據</h2>
-                        <div class="btn-group btn-group-justified">
-                            <a class="btn btn-primary btn-lg" id="playButton1" href="#">
-                                <span class="glyphicon glyphicon-play" style="display: none"></span>&nbsp;平均數
-                            </a>
-                            <a class="btn btn-primary btn-lg" id="playButton2" href="#">
-                                <span class="glyphicon glyphicon-play" style="display: none"></span>&nbsp;中位數
-                            </a>
-                            <a class="btn btn-primary btn-lg" id="playButton3" href="#">
-                                <span class="glyphicon glyphicon-play" style="display: none"></span>&nbsp;標準差
-                            </a>
-                            <a class="btn btn-primary btn-lg" id="playButton4" href="#">
-                                <span class="glyphicon glyphicon-play" style="display: none"></span>&nbsp;第一分位數
-                            </a>
-                            <a class="btn btn-primary btn-lg" id="playButton5" href="#">
-                                <span class="glyphicon glyphicon-play" style="display: none"></span>&nbsp;第三分位數
-                            </a>
-                        </div>
                         <div id="cunliDetail"></div>
                     </div>
                     <div class="col-md-4 col-sm-12 col-xs-12">
