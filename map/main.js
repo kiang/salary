@@ -253,13 +253,13 @@ map.on('singleclick', function(evt) {
 map.once('postrender', function(e) {
   $('a.btn-play').click(function() {
     currentButton = $(this).attr('id');
-    window.location.hash = '#' + currentYear + '/' + currentButton + '/' + currentCunliCode;
+    window.location.hash = '#' + currentYear + '/' + currentButton;
     return false;
   });
 
   $('a.btn-year').click(function () {
       currentYear = $(this).attr('data-year');
-      window.location.hash = '#' + currentYear + '/' + currentButton + '/' + currentCunliCode;
+      window.location.hash = '#' + currentYear + '/' + currentButton;
       return false;
   });
 
