@@ -220,6 +220,7 @@ function showFeature(feature) {
         window.location.hash = targetHash;
     }
     map.getView().fit(feature.getGeometry());
+    geolocationCentered = true;
 
     if(false === selectedFeature) {
       selectedFeature = new ol.Feature();
