@@ -199,14 +199,14 @@ function showFeature(feature) {
     var cunli = feature.get('C_Name') + feature.get('T_Name') + feature.get('V_Name');
     var cunliKey = feature.get('VILLAGE_ID');
     var headerPrinted = false;
-    var detail = '<h3>' + cunli + '</h3><div style="float:right;">單位：金額(千元)</div><table class="table table-boarded">';
+    var detail = '<h3>' + cunli + '</h3><div style="float:right;">單位：金額(千元)</div><table class="table table-striped table-fixed" style="display: block;overflow:scroll;">';
     var targetHash = '#' + currentYear + '/' + currentButton + '/' + cunliKey;
     if (cunliSalary[cunliKey]) {
         for (y in cunliSalary[cunliKey]) {
             var yLine = '<tr><td>' + y + '</td>';
             for (k in cunliSalary[cunliKey][y]) {
                 if (false === headerPrinted) {
-                    detail += '<tr><td>年度</td><td>納稅單位</td><td>綜合所得總額</td><td>平均數</td><td>中位數</td><td>第一分位數</td><td>第三分位數</td><td>標準差</td><td>變異係數</td></tr>';
+                    detail += '<thead><tr><td>年度</td><td>納稅單位</td><td>綜合所得總額</td><td>平均數</td><td>中位數</td><td>第一分位數</td><td>第三分位數</td><td>標準差</td><td>變異係數</td></tr></thead><tbody>';
                     headerPrinted = true;
                 }
                 yLine += '<td>' + cunliSalary[cunliKey][y][k] + '</td>';
@@ -214,7 +214,7 @@ function showFeature(feature) {
             detail += yLine + '</tr>';
         }
     }
-    detail += '</table>';
+    detail += '</tbody></table>';
     $('#sidebar-main-block').html(detail);
     if (window.location.hash !== targetHash) {
         window.location.hash = targetHash;
