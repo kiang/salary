@@ -224,15 +224,6 @@ function showFeature(feature) {
 
     if(false === selectedFeature) {
       selectedFeature = new ol.Feature();
-      selectedFeature.setStyle(new ol.style.Style({
-        stroke: new ol.style.Stroke({
-            color: 'rgba(255,0,0,0.7)',
-            width: 5
-        }),
-        fill: new ol.style.Fill({
-            color: 'rgba(255,255,0,1)',
-        })
-      }));
       new ol.layer.Vector({
         map: map,
         source: new ol.source.Vector({
@@ -240,6 +231,23 @@ function showFeature(feature) {
         })
       });
     }
+    selectedFeature.setStyle(new ol.style.Style({
+      stroke: new ol.style.Stroke({
+          color: 'rgba(255,0,0,0.7)',
+          width: 5
+      }),
+      fill: new ol.style.Fill({
+          color: 'rgba(255,255,0,1)',
+      }),
+      text: new ol.style.Text({
+        font: 'bold 16px "Open Sans", "Arial Unicode MS", "sans-serif"',
+        placement: 'point',
+        fill: new ol.style.Fill({
+          color: 'blue'
+        }),
+        text: cunli
+      })
+    }));
     selectedFeature.setGeometry(feature.getGeometry());
 }
 
