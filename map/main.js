@@ -147,44 +147,52 @@ new ol.layer.Vector({
 var currentYear = '2016', currentButton = 'playButton2', currentCunliCode = '',
   currentPlayIndex = false, cunli, cunliSalary,
   valueKeys = {
-      playButton1: 'avg',
-      playButton2: 'mid',
-      playButton3: 'sd',
-      playButton4: 'mid1',
-      playButton5: 'mid3'
+    playButton1: 'avg',
+    playButton2: 'mid',
+    playButton3: 'sd',
+    playButton4: 'mid1',
+    playButton5: 'mid3'
+  }, buttonKeys = {
+    avg: 'playButton1',
+    mid: 'playButton2',
+    sd: 'playButton3',
+    mid1: 'playButton4',
+    mid3: 'playButton5'
   };
 
 var showCunli = function (theYear, theButton, cunliCode) {
-    if (!cunliCode) {
-        cunliCode = '';
-    } else {
-      vectorCunli.getSource().forEachFeature(function(f) {
-        if(f.get('VILLAGE_ID') === cunliCode) {
-          showFeature(f);
-        }
-      });
-    }
-    console.log([theYear, theButton, cunliCode]);
-    currentYear = theYear;
-    currentButton = theButton;
-    currentCunliCode = cunliCode;
-    vectorCunli.getSource().changed();
-
-    $('a.btn-year').each(function () {
-        if ($(this).attr('data-year') === currentYear) {
-            $(this).removeClass('btn-default').addClass('btn-primary');
-        } else {
-            $(this).removeClass('btn-primary').addClass('btn-default');
-        }
+  if(buttonKeys[theButton]) {
+    theButton = buttonKeys[theButton];
+  }
+  currentYear = theYear;
+  currentButton = theButton;
+  currentCunliCode = cunliCode;
+  if (!cunliCode) {
+      cunliCode = '';
+  } else {
+    vectorCunli.getSource().forEachFeature(function(f) {
+      if(f.get('VILLAGE_ID') === cunliCode) {
+        showFeature(f);
+      }
     });
-    $('a.btn-play').each(function () {
-        if ($(this).attr('id') === currentButton) {
-            $(this).removeClass('btn-default').addClass('btn-primary');
-        } else {
-            $(this).removeClass('btn-primary').addClass('btn-default');
-        }
-    });
+  }
+  console.log([theYear, theButton, cunliCode]);
+  vectorCunli.getSource().changed();
 
+  $('a.btn-year').each(function () {
+      if ($(this).attr('data-year') === currentYear) {
+          $(this).removeClass('btn-default').addClass('btn-primary');
+      } else {
+          $(this).removeClass('btn-primary').addClass('btn-default');
+      }
+  });
+  $('a.btn-play').each(function () {
+      if ($(this).attr('id') === currentButton) {
+          $(this).removeClass('btn-default').addClass('btn-primary');
+      } else {
+          $(this).removeClass('btn-primary').addClass('btn-default');
+      }
+  });
 };
 
 function showFeature(feature) {
