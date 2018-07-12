@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta property="og:title" content="台灣所得地圖(中位數)">
+    <meta property="og:image" content="http://kiang.github.io/salary/map/og_image.png">
+    <meta property="og:description" content="台灣所得地圖(中位數)">
+    <meta property="og:type" content="website">
+    <title>台灣所得地圖(中位數)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.4/ol.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/ol3-sidebar.css" />
+    <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+    <style>
+      html, body {
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+      }
+      .map {
+        width:100%;
+        height:100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
+      .colorBox {
+          width: 1em;
+          height: 1em;
+          border: 1px solid #34495E;
+          display: inline-block;
+          margin: 0 3px;
+      }
+      .ol-popup {
+        position: absolute;
+        background-color: white;
+        -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+        filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid #cccccc;
+        bottom: 12px;
+        left: -50px;
+        min-width: 300px;
+      }
+      .ol-popup:after, .ol-popup:before {
+        top: 100%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+      }
+      .ol-popup:after {
+        border-top-color: white;
+        border-width: 10px;
+        left: 48px;
+        margin-left: -10px;
+      }
+      .ol-popup:before {
+        border-top-color: #cccccc;
+        border-width: 11px;
+        left: 48px;
+        margin-left: -11px;
+      }
+      .ol-popup-closer {
+        text-decoration: none;
+        position: absolute;
+        top: 2px;
+        right: 8px;
+      }
+      .ol-popup-closer:after {
+        content: "✖";
+      }
+    </style>
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.12&appId=1393405437614114&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    <div id="sidebar" class="sidebar collapsed">
+        <!-- Nav tabs -->
+        <div class="sidebar-tabs">
+            <ul role="tablist">
+                <li><a href="#home" role="tab"><i class="fa fa-bars"></i></a></li>
+                <li><a href="#fb" role="tab"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#tools" role="tab"><i class="fa fa-arrows"></i></a></li>
+                <li><a href="https://github.com/kiang/salary" role="tab" target="_blank"><i class="fa fa-github"></i></a></li>
+            </ul>
+        </div>
+
+        <!-- Tab panes -->
+        <div class="sidebar-content">
+            <div class="sidebar-pane" id="home">
+                <h1 class="sidebar-header">
+                    台灣所得地圖(中位數)
+                    <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+                </h1>
+                <p id="sidebar-main-block"></p>
+                <div class="pull-right">單位：千元
+                    <span class="colorBox" style="background-color: white;"></span>&nbsp;無資料
+                    <span class="colorBox" style="background-color: green;"></span>&nbsp;500
+                    <span class="colorBox" style="background-color: yellow;"></span>&nbsp;700
+                    <span class="colorBox" style="background-color: orange;"></span>&nbsp;900
+                    <span class="colorBox" style="background-color: red;"></span>&nbsp;1100
+                    <span class="colorBox" style="background-color: purple;"></span>&nbsp;1300
+                    <span class="colorBox" style="background-color: darkblue;"></span>&nbsp;1500
+                    <span class="colorBox" style="background-color: black;"></span>&nbsp;>1500
+                </div>
+                * 本統計之所得為課稅資料，未納入「政府移轉支出」各戶所得、免稅所得、分離課稅所得等資料，故不宜逕作為衡量所得差距之參據，相關所得資料應以行政院主計總處公布之資料為準。
+            </div>
+            <div class="sidebar-pane" id="fb">
+              <div class="fb-page" data-href="https://www.facebook.com/k.olc.tw/" data-tabs="timeline" data-width="380" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/k.olc.tw/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/k.olc.tw/">江明宗</a></blockquote></div>
+              <hr />#捐款支持明宗以科技監督台南
+              <br />線上刷卡： <a href="https://donate.spgateway.com/finjonkiang/go" target="_blank">https://donate.spgateway.com/finjonkiang/go</a>
+              <br />郵局劃撥： 31639415
+              <br />收款戶名： 107年臺南市議員擬參選人江明宗政治獻金專戶
+            </div>
+            <div class="sidebar-pane" id="tools">
+              快速定位
+              <a href="#" class="btn btn-default btn-city" data-lat="25.053699" data-lng="121.507837">台北</a>
+              <a href="#" class="btn btn-default btn-city" data-lat="24.752504" data-lng="121.771097">宜蘭</a>
+              <a href="#" class="btn btn-default btn-city" data-lat="24.804498" data-lng="120.988528">新竹</a>
+              <a href="#" class="btn btn-default btn-city" data-lat="24.167804" data-lng="120.658214">台中</a>
+              <a href="#" class="btn btn-default btn-city" data-lat="23.477332" data-lng="120.430085">嘉義</a>
+              <a href="#" class="btn btn-default btn-city" data-lat="22.996169" data-lng="120.201330">台南</a>
+              <a href="#" class="btn btn-default btn-city" data-lat="22.643894" data-lng="120.317828">高雄</a>
+              <a href="#" class="btn btn-default btn-city" data-lat="22.674185" data-lng="120.501103">屏東</a>
+              <a href="#" class="btn btn-default btn-city" data-lat="23.999479" data-lng="121.606658">花蓮</a>
+              <a href="#" class="btn btn-default btn-city" data-lat="22.793229" data-lng="121.124322">台東</a>
+              <a href="#" class="btn btn-default btn-city" data-lat="23.962005" data-lng="120.963292">南投</a>
+              <a href="#" class="btn btn-default btn-city" data-lat="23.561951" data-lng="119.608123">澎湖</a>
+              <a href="#" class="btn btn-default btn-city" data-lat="24.446522" data-lng="118.376170">金門</a>
+              <a href="#" class="btn btn-default btn-city" data-lat="26.149491" data-lng="119.936241">馬祖</a>
+            </div>
+        </div>
+    </div>
+    <div id="map" class="map"></div>
+    <div id="popup" class="ol-popup">
+      <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+      <div id="popup-content"></div>
+    </div>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.4/ol.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="js/routie.min.js"></script>
+    <script src="js/ol3-sidebar.js"></script>
+    <script src="mid.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-80817009-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
