@@ -51,16 +51,30 @@ var vectorCunli = new ol.layer.Vector({
     if (cunliSalary[key] && cunliSalary[key][currentYear]) {
       count = cunliSalary[key][2016]['avg'] - cunliSalary[key][2014]['avg'];
     }
-    var fillColor = 'rgba(255,0,0,0.5)';
-    if(count > 0) {
-      fillColor = 'rgba(0,255,0,0.5)';
+    var fillColor;
+    if(count < -480) {
+      fillColor = 'rgba(139,0,0,0.5)';
+    } else if(count < -360) {
+      fillColor = 'rgba(220,20,60,0.5)';
+    } else if(count < -240) {
+      fillColor = 'rgba(240,128,128,0.5)';
+    } else if(count < -120) {
+      fillColor = 'rgba(250,128,114,0.5)';
+    } else if(count < 0) {
+      fillColor = 'rgba(255,160,122,0.5)';
+    } else if(count < 120) {
+      fillColor = 'rgba(127,255,0,0.5)';
+    } else if(count < 240) {
+      fillColor = 'rgba(50,205,50,0.5)';
+    } else if(count < 360) {
+      fillColor = 'rgba(220,20,60,0.5)';
+    } else if(count < 480) {
+      fillColor = 'rgba(107,142,35,0.5)';
+    } else {
+      fillColor = 'rgba(0,100,0,0.5)';
     }
     if(!stylePool[fillColor]) {
       stylePool[fillColor] = new ol.style.Style({
-        stroke: new ol.style.Stroke({
-            color: 'rgba(86,113,228,0.7)',
-            width: 1
-        }),
         fill: new ol.style.Fill({
             color: fillColor,
         })
