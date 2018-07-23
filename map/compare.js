@@ -47,31 +47,37 @@ var vectorCunli = new ol.layer.Vector({
     format: new ol.format.TopoJSON()
   }),
   style: function(f) {
+    var valueKey = 'mid';
+    if(valueKeys[currentButton]) {
+      valueKey = valueKeys[currentButton];
+    } else if(buttonKeys[currentButton]) {
+      valueKey = currentButton;
+    }
     var key = f.get('VILLAGE_ID'), count = 0;
-    if (cunliSalary[key] && cunliSalary[key][currentYear]) {
-      count = cunliSalary[key][2016]['avg'] - cunliSalary[key][2014]['avg'];
+    if (cunliSalary[key] && cunliSalary[key][2016] && cunliSalary[key][currentYear]) {
+      count = cunliSalary[key][2016][valueKey] - cunliSalary[key][currentYear][valueKey];
     }
     var fillColor;
-    if(count < -480) {
-      fillColor = 'rgba(139,0,0,0.5)';
-    } else if(count < -360) {
-      fillColor = 'rgba(220,20,60,0.5)';
-    } else if(count < -240) {
-      fillColor = 'rgba(240,128,128,0.5)';
-    } else if(count < -120) {
-      fillColor = 'rgba(250,128,114,0.5)';
+    if(count < -120) {
+      fillColor = 'rgba(139,0,0,0.5)'; //DarkRed
+    } else if(count < -90) {
+      fillColor = 'rgba(220,20,60,0.5)'; //Crimson
+    } else if(count < -60) {
+      fillColor = 'rgba(240,128,128,0.5)'; //LightCoral
+    } else if(count < -30) {
+      fillColor = 'rgba(250,128,114,0.5)'; //Salmon
     } else if(count < 0) {
-      fillColor = 'rgba(255,160,122,0.5)';
+      fillColor = 'rgba(255,160,122,0.5)'; //LightSalmon
+    } else if(count < 30) {
+      fillColor = 'rgba(127,255,0,0.5)'; //Chartreuse
+    } else if(count < 60) {
+      fillColor = 'rgba(50,205,50,0.5)'; //LimeGreen
+    } else if(count < 90) {
+      fillColor = 'rgba(34,139,34,0.5)'; //ForestGreen
     } else if(count < 120) {
-      fillColor = 'rgba(127,255,0,0.5)';
-    } else if(count < 240) {
-      fillColor = 'rgba(50,205,50,0.5)';
-    } else if(count < 360) {
-      fillColor = 'rgba(220,20,60,0.5)';
-    } else if(count < 480) {
-      fillColor = 'rgba(107,142,35,0.5)';
+      fillColor = 'rgba(107,142,35,0.5)'; //OliveDrab
     } else {
-      fillColor = 'rgba(0,100,0,0.5)';
+      fillColor = 'rgba(0,100,0,0.5)'; //DarkGreen
     }
     if(!stylePool[fillColor]) {
       stylePool[fillColor] = new ol.style.Style({
@@ -81,6 +87,7 @@ var vectorCunli = new ol.layer.Vector({
       });
     }
     f.set('fillColor', fillColor);
+    f.set('count', count);
     return stylePool[fillColor];
   }
 });
@@ -161,7 +168,7 @@ new ol.layer.Vector({
   })
 });
 
-var currentYear = '2016', currentButton = 'playButton2', currentCunliCode = '',
+var currentYear = '2014', currentButton = 'playButton2', currentCunliCode = '',
   currentPlayIndex = false, cunli, cunliSalary,
   valueKeys = {
     playButton1: 'avg',
@@ -195,6 +202,21 @@ var showCunli = function (theYear, theButton, cunliCode) {
   }
   console.log([theYear, theButton, cunliCode]);
   vectorCunli.getSource().changed();
+
+  $('a.btn-year').each(function () {
+      if ($(this).attr('data-year') === currentYear) {
+          $(this).removeClass('btn-default').addClass('btn-primary');
+      } else {
+          $(this).removeClass('btn-primary').addClass('btn-default');
+      }
+  });
+  $('a.btn-play').each(function () {
+      if ($(this).attr('id') === currentButton) {
+          $(this).removeClass('btn-default').addClass('btn-primary');
+      } else {
+          $(this).removeClass('btn-primary').addClass('btn-default');
+      }
+  });
 };
 
 function showFeature(feature) {

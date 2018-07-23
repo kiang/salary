@@ -3,11 +3,11 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <meta property="og:title" content="台灣所得地圖(平均數)">
+    <meta property="og:title" content="台灣所得地圖(中位數)">
     <meta property="og:image" content="http://kiang.github.io/salary/map/og_image.png">
-    <meta property="og:description" content="台灣所得地圖(平均數)">
+    <meta property="og:description" content="台灣所得地圖(中位數)">
     <meta property="og:type" content="website">
-    <title>台灣所得地圖(平均數)</title>
+    <title>台灣所得地圖(中位數)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.4/ol.css" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
@@ -102,20 +102,11 @@
         <div class="sidebar-content">
             <div class="sidebar-pane" id="home">
                 <h1 class="sidebar-header">
-                    台灣所得地圖(平均數)
+                    台灣所得地圖(中位數)
                     <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
                 </h1>
                 <p id="sidebar-main-block"></p>
-                <div class="pull-right">單位：千元
-                    <span class="colorBox" style="background-color: white;"></span>&nbsp;無資料
-                    <span class="colorBox" style="background-color: green;"></span>&nbsp;500
-                    <span class="colorBox" style="background-color: yellow;"></span>&nbsp;700
-                    <span class="colorBox" style="background-color: orange;"></span>&nbsp;900
-                    <span class="colorBox" style="background-color: red;"></span>&nbsp;1100
-                    <span class="colorBox" style="background-color: purple;"></span>&nbsp;1300
-                    <span class="colorBox" style="background-color: darkblue;"></span>&nbsp;1500
-                    <span class="colorBox" style="background-color: black;"></span>&nbsp;>1500
-                </div>
+                <div class="pull-right">單位：千元</div>
                 * 本統計之所得為課稅資料，未納入「政府移轉支出」各戶所得、免稅所得、分離課稅所得等資料，故不宜逕作為衡量所得差距之參據，相關所得資料應以行政院主計總處公布之資料為準。
             </div>
             <div class="sidebar-pane" id="fb">
@@ -126,6 +117,29 @@
               <br />收款戶名： 107年臺南市議員擬參選人江明宗政治獻金專戶
             </div>
             <div class="sidebar-pane" id="tools">
+              <a class="btn btn-primary btn-lg btn-block btn-play" id="playButton1" href="#">平均數</a>
+              <a class="btn btn-primary btn-lg btn-block btn-play" id="playButton2" href="#">中位數</a>
+              <a class="btn btn-primary btn-lg btn-block btn-play" id="playButton3" href="#">標準差</a>
+              <a class="btn btn-primary btn-lg btn-block btn-play" id="playButton4" href="#">第一分位數</a>
+              <a class="btn btn-primary btn-lg btn-block btn-play" id="playButton5" href="#">第三分位數</a>
+              <hr />
+              年度
+              <a href="#" class="btn btn-default btn-year" data-year="2016">2016</a>
+              <a href="#" class="btn btn-default btn-year" data-year="2015">2015</a>
+              <a href="#" class="btn btn-primary btn-year" data-year="2014">2014</a>
+              <a href="#" class="btn btn-default btn-year" data-year="2013">2013</a>
+              <a href="#" class="btn btn-default btn-year" data-year="2012">2012</a>
+              <a href="#" class="btn btn-default btn-year" data-year="2011">2011</a>
+              <a href="#" class="btn btn-default btn-year" data-year="2010">2010</a>
+              <a href="#" class="btn btn-default btn-year" data-year="2009">2009</a>
+              <a href="#" class="btn btn-default btn-year" data-year="2008">2008</a>
+              <a href="#" class="btn btn-default btn-year" data-year="2007">2007</a>
+              <a href="#" class="btn btn-default btn-year" data-year="2006">2006</a>
+              <a href="#" class="btn btn-default btn-year" data-year="2005">2005</a>
+              <a href="#" class="btn btn-default btn-year" data-year="2004">2004</a>
+              <a href="#" class="btn btn-default btn-year" data-year="2003">2003</a>
+              <a href="#" class="btn btn-default btn-year" data-year="2002">2002</a>
+              <hr />
               快速定位
               <a href="#" class="btn btn-default btn-city" data-lat="25.053699" data-lng="121.507837">台北</a>
               <a href="#" class="btn btn-default btn-city" data-lat="24.752504" data-lng="121.771097">宜蘭</a>
@@ -156,7 +170,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script src="js/routie.min.js"></script>
     <script src="js/ol3-sidebar.js"></script>
-    <script src="avg.js"></script>
+    <script src="compare.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
