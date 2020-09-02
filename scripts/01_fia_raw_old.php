@@ -525,4 +525,4 @@ foreach (glob($basePath . '/raw/*') AS $rawPath) {
 
 //echo var_export($missing);
 
-file_put_contents($basePath . '/map/fia_data.json', json_encode($result));
+file_put_contents($basePath . '/map/old/fia_data.json', json_encode($result));
