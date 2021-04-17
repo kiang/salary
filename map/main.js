@@ -43,7 +43,7 @@ var stylePool = {};
 
 var vectorCunli = new ol.layer.Vector({
   source: new ol.source.Vector({
-    url: '20180330.json',
+    url: 'https://kiang.github.io/taiwan_basecode/cunli/topo/20180330.json',
     format: new ol.format.TopoJSON()
   }),
   style: function(f) {
@@ -176,7 +176,6 @@ var showCunli = function (theYear, theButton, cunliCode) {
       }
     });
   }
-  console.log([theYear, theButton, cunliCode]);
   vectorCunli.getSource().changed();
 
   $('a.btn-year').each(function () {
