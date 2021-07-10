@@ -2,8 +2,8 @@
 
 $basePath = dirname(__DIR__);
 $cunliCodes = array();
-$cunliJson = json_decode(file_get_contents($basePath . '/map/20180330.json'), true);
-foreach($cunliJson['objects']['20180330']['geometries'] AS $cunli) {
+$cunliJson = json_decode(file_get_contents($basePath . '/map/cunli.json'), true);
+foreach($cunliJson['objects']['20210324']['geometries'] AS $cunli) {
     if(empty($cunli['properties']['VILLNAME'])) {
         continue;
     }
@@ -60,6 +60,7 @@ $codeMap = array(
     '台中市大安區龜売里' => '66000220004',
     '台中市大肚區蔗廍里' => '66000240016',
     '台中市霧峰區丁臺里' => '66000260018',
+    '台南市安南區顯宮里' => '67000350034',
     '台南市安南區󻕯南里' => '67000350003',
     '台南市安南區公󻕯里' => '67000350024',
     '台南市安南區𥂁田里' => '67000350019',
@@ -208,7 +209,7 @@ $missing = array();
 $skip = array('合計', '其他', '');
 $errorPool = array();
 
-$years = array('isa106', 'isa107');
+$years = array('isa106', 'isa107', 'isa108');
 foreach($years AS $year) {
     $rawPath = $basePath . '/raw/' . $year;
     $p = pathinfo($rawPath);
@@ -267,4 +268,4 @@ foreach($years AS $year) {
     }
 }
 
-file_put_contents($basePath . '/map/fia_data.json', json_encode($result));
+file_put_contents($basePath . '/map/fia_data.json', json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));

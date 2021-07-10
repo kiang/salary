@@ -43,7 +43,7 @@ var stylePool = {};
 
 var vectorCunli = new ol.layer.Vector({
   source: new ol.source.Vector({
-    url: 'https://kiang.github.io/taiwan_basecode/cunli/topo/20180330.json',
+    url: 'https://kiang.github.io/taiwan_basecode/cunli/topo/20210324.json',
     format: new ol.format.TopoJSON()
   }),
   style: function(f) {
@@ -144,7 +144,7 @@ new ol.layer.Vector({
   })
 });
 
-var currentYear = '2018', currentButton = 'playButton2', currentCunliCode = '',
+var currentYear = '2019', currentButton = 'playButton2', currentCunliCode = '',
   currentPlayIndex = false, cunli, cunliSalary,
   valueKeys = {
     playButton1: 'avg',
