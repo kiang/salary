@@ -321,6 +321,10 @@ map.once('postrender', function (e) {
 function ColorBar(value) {
   if (value == 0)
     return "rgba(255,255,255,0.6)" //white
+  else if (value <= 300)
+    return "rgba(128,128,128,0.6)" //grey
+  else if (value <= 400)
+    return "rgba(150,75,0,0.6)" //brown
   else if (value <= 500)
     return "rgba(0,255,0,0.6)" //green
   else if (value <= 700)
