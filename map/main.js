@@ -144,7 +144,7 @@ new ol.layer.Vector({
   })
 });
 
-var currentYear = '2019', currentButton = 'playButton2', currentCunliCode = '',
+var currentYear = '2020', currentButton = 'playButton2', currentCunliCode = '',
   currentPlayIndex = false, cunli, cunliSalary,
   valueKeys = {
     playButton1: 'avg',
