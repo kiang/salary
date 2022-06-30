@@ -144,20 +144,20 @@ new ol.layer.Vector({
   })
 });
 
-var currentYear = '2020', currentButton = 'playButton2', currentCunliCode = '',
+var currentYear = '2020', currentButton = 'mid', currentCunliCode = '',
   currentPlayIndex = false, cunli, cunliSalary,
   valueKeys = {
-    playButton1: 'avg',
-    playButton2: 'mid',
-    playButton3: 'sd',
-    playButton4: 'mid1',
-    playButton5: 'mid3'
+    avg: 'avg',
+    mid: 'mid',
+    sd: 'sd',
+    mid1: 'mid1',
+    mid3: 'mid3'
   }, buttonKeys = {
-    avg: 'playButton1',
-    mid: 'playButton2',
-    sd: 'playButton3',
-    mid1: 'playButton4',
-    mid3: 'playButton5'
+    avg: 'avg',
+    mid: 'mid',
+    sd: 'sd',
+    mid1: 'mid1',
+    mid3: 'mid3'
   };
 
 var showCunli = function (theYear, theButton, cunliCode) {
