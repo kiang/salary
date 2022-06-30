@@ -200,7 +200,7 @@ function showFeature(feature) {
   var headerPrinted = false;
   var detail = '<h3>' + cunli + '</h3><div style="float:right;">單位：金額(千元)</div><table class="table table-striped table-fixed" style="display: block;overflow:scroll;">';
   var targetHash = '#' + currentYear + '/' + currentButton + '/' + cunliKey;
-  var chartDataSet = [];
+  var chartDataSet1 = [], chartDataSet2 = [];
   if (cunliSalary[cunliKey]) {
     detail += '<canvas id="chart1" height="300"></canvas>';
     var chartData = {
@@ -209,7 +209,8 @@ function showFeature(feature) {
     };
     for (y in cunliSalary[cunliKey]) {
       chartData.labels.push(y);
-      chartDataSet.push(cunliSalary[cunliKey][y].mid);
+      chartDataSet1.push(cunliSalary[cunliKey][y].mid);
+      chartDataSet2.push(cunliSalary[cunliKey][y].avg);
       var yLine = '<tr><td>' + y + '</td>';
       for (k in cunliSalary[cunliKey][y]) {
         if (false === headerPrinted) {
@@ -228,7 +229,12 @@ function showFeature(feature) {
     chartData.datasets.push({
       label: "中位數",
       backgroundColor: "rgb(255, 99, 132)",
-      data: chartDataSet
+      data: chartDataSet1
+    });
+    chartData.datasets.push({
+      label: "平均數",
+      backgroundColor: "rgb(132, 99, 255)",
+      data: chartDataSet2
     });
     const config1 = {
       type: 'line',
