@@ -238,17 +238,7 @@ function showFeature(feature) {
     });
     const config1 = {
       type: 'line',
-      data: chartData,
-      options: {
-        scales: {
-          xAxis: {
-            stacked: true
-          },
-          yAxis: {
-            stacked: true
-          }
-        }
-      }
+      data: chartData
     };
     const ctx1 = document.getElementById('chart1').getContext('2d');
     const myChart1 = new Chart(ctx1, config1);
