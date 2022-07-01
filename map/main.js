@@ -55,7 +55,7 @@ var vectorCunli = new ol.layer.Vector({
     if (!stylePool[fillColor]) {
       stylePool[fillColor] = new ol.style.Style({
         stroke: new ol.style.Stroke({
-          color: 'rgba(86,113,228,0.7)',
+          color: 'rgba(0,0,0,0.7)',
           width: 1
         }),
         fill: new ol.style.Fill({
@@ -264,7 +264,7 @@ function showFeature(feature) {
       width: 5
     }),
     fill: new ol.style.Fill({
-      color: 'rgba(255,255,0,1)',
+      color: 'rgba(255,255,0,0.5)',
     }),
     text: new ol.style.Text({
       font: 'bold 16px "Open Sans", "Arial Unicode MS", "sans-serif"',
@@ -322,23 +322,23 @@ function ColorBar(value) {
   if (value == 0)
     return "rgba(255,255,255,0.6)" //white
   else if (value <= 300)
-    return "rgba(128,128,128,0.6)" //grey
+    return "rgba(254,232,200,0.6)"
   else if (value <= 400)
-    return "rgba(150,75,0,0.6)" //brown
+    return "rgba(253,212,158,0.6)"
   else if (value <= 500)
-    return "rgba(0,255,0,0.6)" //green
+    return "rgba(253,187,132,0.6)"
   else if (value <= 700)
-    return "rgba(255,255,0,0.6)" //yellow
+    return "rgba(252,141,89,0.6)"
   else if (value <= 900)
-    return "rgba(255,165,0,0.6)" //orange
+    return "rgba(239,101,72,0.6)"
   else if (value <= 1100)
-    return "rgba(255,0,0,0.6)" //red
+    return "rgba(215,48,31,0.6)"
   else if (value <= 1300)
-    return "rgba(128,0,128,0.6)" //purple
+    return "rgba(179,0,0,0.6)"
   else if (value <= 1500)
-    return "rgba(0,0,139,0.6)" //darkblue
+    return "rgba(127,0,0,0.6)"
   else
-    return "rgba(0,0,0,0.6)" //black
+    return "rgba(64,0,0,0.6)"
 }
 
 routie(':theYear/:theButton/:cunliCode?', showCunli);
