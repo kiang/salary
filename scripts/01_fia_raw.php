@@ -268,4 +268,5 @@ foreach($years AS $year) {
     }
 }
 
+ksort($result);
 file_put_contents($basePath . '/docs/map/fia_data.json', json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
