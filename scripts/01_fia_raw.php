@@ -2,7 +2,7 @@
 
 $basePath = dirname(__DIR__);
 $cunliCodes = array();
-$cunliJson = json_decode(file_get_contents($basePath . '/map/cunli.json'), true);
+$cunliJson = json_decode(file_get_contents($basePath . '/docs/map/cunli.json'), true);
 foreach($cunliJson['objects']['20210324']['geometries'] AS $cunli) {
     if(empty($cunli['properties']['VILLNAME'])) {
         continue;
