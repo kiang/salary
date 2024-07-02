@@ -1,7 +1,42 @@
 $.ajaxSetup({ async: false });
 
+let countrySort = {}, countrySortPool = {};
 $.getJSON('fia_data.json', function (data) {
   cunliSalary = data;
+  for (cunliCode in cunliSalary) {
+    countrySort[cunliCode] = {};
+    for (year in cunliSalary[cunliCode]) {
+      countrySort[cunliCode][year] = {};
+      if (!countrySortPool[year]) {
+        countrySortPool[year] = {};
+      }
+      for (key in cunliSalary[cunliCode][year]) {
+        countrySort[cunliCode][year][key] = 0;
+        if (!countrySortPool[year][key]) {
+          countrySortPool[year][key] = {};
+        }
+        countrySortPool[year][key][cunliSalary[cunliCode][year][key]] = 0;
+      }
+    }
+  }
+  for (year in countrySortPool) {
+    for (key in countrySortPool[year]) {
+      let pool = Object.keys(countrySortPool[year][key]);
+      pool.sort(function (a, b) {
+        return b - a;
+      });
+      for (let i = 0; i < pool.length; i++) {
+        countrySortPool[year][key][pool[i]] = i + 1;
+      }
+    }
+  }
+  for (cunliCode in countrySort) {
+    for (year in countrySort[cunliCode]) {
+      for (key in countrySort[cunliCode][year]) {
+        countrySort[cunliCode][year][key] = countrySortPool[year][key][cunliSalary[cunliCode][year][key]];
+      }
+    }
+  }
 });
 
 var sidebar = new ol.control.Sidebar({ element: 'sidebar', position: 'right' });
@@ -40,32 +75,43 @@ for (var i = 0; i < 21; ++i) {
 }
 
 var stylePool = {};
+var cunliStyle = function (f) {
+  var key = f.get('VILLCODE'), count = 0;
+  if (cunliSalary[key] && cunliSalary[key][currentYear]) {
+    count = countrySort[key][currentYear][currentButton];
+  }
+  var fillColor = ColorBar(count);
+  if (!stylePool[fillColor]) {
+    stylePool[fillColor] = new ol.style.Style({
+      stroke: new ol.style.Stroke({
+        color: 'rgba(0,0,0,0.7)',
+        width: 1
+      }),
+      fill: new ol.style.Fill({
+        color: fillColor,
+      }),
+      text: new ol.style.Text({
+        font: '14px "Open Sans", "Arial Unicode MS", "sans-serif"',
+        fill: new ol.style.Fill({
+          color: 'rgba(0,0,255,1)'
+        })
+      })
+    });
+  }
+  f.set('fillColor', fillColor);
+  var theStyle = stylePool[fillColor].clone();
+  if (countrySort[key] && countrySort[key][currentYear] && countrySort[key][currentYear][currentButton]) {
+    theStyle.getText().setText(countrySort[key][currentYear][currentButton].toString());
+  }
+  return theStyle;
+}
 
 var vectorCunli = new ol.layer.Vector({
   source: new ol.source.Vector({
     url: 'https://kiang.github.io/taiwan_basecode/cunli/topo/20210324.json',
     format: new ol.format.TopoJSON()
   }),
-  style: function (f) {
-    var key = f.get('VILLCODE'), count = 0;
-    if (cunliSalary[key] && cunliSalary[key][currentYear]) {
-      count = cunliSalary[key][currentYear][valueKeys[currentButton]];
-    }
-    var fillColor = ColorBar(count);
-    if (!stylePool[fillColor]) {
-      stylePool[fillColor] = new ol.style.Style({
-        stroke: new ol.style.Stroke({
-          color: 'rgba(0,0,0,0.7)',
-          width: 1
-        }),
-        fill: new ol.style.Fill({
-          color: fillColor,
-        })
-      });
-    }
-    f.set('fillColor', fillColor);
-    return stylePool[fillColor];
-  }
+  style: cunliStyle
 });
 
 var baseLayer = new ol.layer.Tile({
@@ -145,7 +191,7 @@ new ol.layer.Vector({
 });
 
 var currentYear = '2022', currentButton = 'mid', currentCunliCode = '',
-  currentPlayIndex = false, cunli, cunliSalary,
+  cunli, cunliSalary,
   valueKeys = {
     avg: 'avg',
     mid: 'mid',
