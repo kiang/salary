@@ -1,21 +1,33 @@
 $.ajaxSetup({ async: false });
 
-let countrySort = {}, countrySortPool = {};
+let countrySort = {}, countrySortPool = {}, cunliListPool = {};
 $.getJSON('fia_data.json', function (data) {
   cunliSalary = data;
   for (cunliCode in cunliSalary) {
-    countrySort[cunliCode] = {};
+    countrySort[cunliCode] = {
+      name: ''
+    };
     for (year in cunliSalary[cunliCode]) {
       countrySort[cunliCode][year] = {};
       if (!countrySortPool[year]) {
         countrySortPool[year] = {};
+      }
+      if (!cunliListPool[year]) {
+        cunliListPool[year] = {};
       }
       for (key in cunliSalary[cunliCode][year]) {
         countrySort[cunliCode][year][key] = 0;
         if (!countrySortPool[year][key]) {
           countrySortPool[year][key] = {};
         }
+        if (!cunliListPool[year][key]) {
+          cunliListPool[year][key] = {};
+        }
+        if (!cunliListPool[year][key][cunliSalary[cunliCode][year][key]]) {
+          cunliListPool[year][key][cunliSalary[cunliCode][year][key]] = [];
+        }
         countrySortPool[year][key][cunliSalary[cunliCode][year][key]] = 0;
+        cunliListPool[year][key][cunliSalary[cunliCode][year][key]].push(cunliCode);
       }
     }
   }
@@ -78,7 +90,7 @@ var stylePool = {};
 var cunliStyle = function (f) {
   var key = f.get('VILLCODE'), count = 0;
   if (cunliSalary[key] && cunliSalary[key][currentYear]) {
-    count = countrySort[key][currentYear][currentButton];
+    count = cunliSalary[key][currentYear][currentButton];
   }
   var fillColor = ColorBar(count);
   if (!stylePool[fillColor]) {
@@ -344,12 +356,14 @@ map.once('postrender', function (e) {
   $('a.btn-play').click(function () {
     currentButton = $(this).attr('id');
     window.location.hash = '#' + currentYear + '/' + currentButton;
+    updateCunliList();
     return false;
   });
 
   $('a.btn-year').click(function () {
     currentYear = $(this).attr('data-year');
     window.location.hash = '#' + currentYear + '/' + currentButton;
+    updateCunliList();
     return false;
   });
 
@@ -389,15 +403,45 @@ function ColorBar(value) {
 
 routie(':theYear/:theButton/:cunliCode?', showCunli);
 
-var firstFound = false;
+var firstFound = false, cunliInitDone = false;
 vectorCunli.on('change', function (e) {
   if (currentCunliCode !== '' && false === firstFound && vectorCunli.getSource().getState() === 'ready') {
     vectorCunli.getSource().forEachFeature(function (f) {
-      if (f.get('VILLCODE') === currentCunliCode) {
+      var p = f.getProperties();
+      if (p.VILLCODE === currentCunliCode) {
         showFeature(f);
         firstFound = true;
         sidebar.open('home');
       }
     });
+    if (false === cunliInitDone) {
+      vectorCunli.getSource().forEachFeature(function (f) {
+        var p = f.getProperties();
+        if (countrySort[p.VILLCODE]) {
+          countrySort[p.VILLCODE].name = p.COUNTYNAME + p.TOWNNAME + p.VILLNAME;
+        }
+      });
+      cunliInitDone = true;
+      updateCunliList();
+    }
   }
 })
+
+function updateCunliList() {
+  var salaryList = Object.keys(countrySortPool[currentYear][currentButton]).reverse();
+  var cunliListHtml = '<h1>' + currentYear + ' / ' + currentButton + '</h1>';
+  cunliListHtml += '<table class="table table-striped table-fixed">';
+  for (k in salaryList) {
+    cunliListHtml += '<tr><td>' + salaryList[k] + '</td><td>';
+    for (j in cunliListPool[currentYear][currentButton][salaryList[k]]) {
+      var theCode = cunliListPool[currentYear][currentButton][salaryList[k]][j];
+      cunliListHtml += '<a href="#' + currentYear + '/' + currentButton + '/' + theCode + '" class="btn-cunli-list">' + countrySort[theCode].name + '</a> ';
+    }
+    cunliListHtml += '</td></tr>';
+  }
+  cunliListHtml += '</table>';
+  $('#cunliList').html(cunliListHtml);
+  $('.btn-cunli-list').click(function () {
+    sidebar.open('home');
+  });
+}
