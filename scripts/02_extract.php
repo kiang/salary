@@ -88,18 +88,18 @@ $txtPairs = array(
 );
 
 $targetPath = $basePath . '/data/csv';
-if(!file_exists($targetPath)) {
-  mkdir($targetPath, 0777, true);
+if (!file_exists($targetPath)) {
+    mkdir($targetPath, 0777, true);
 }
 
-foreach (glob($basePath . '/raw/*') AS $rawPath) {
+foreach (glob($basePath . '/raw/*') as $rawPath) {
     $p = pathinfo($rawPath);
     $y = substr($p['filename'], 3);
     $oFh = fopen($targetPath . '/' . ($y + 1911) . '.csv', 'w');
     fputcsv($oFh, array('縣市', '鄉鎮市區', '村里', '納稅單位', '綜合所得總額', '平均數', '中位數', '第一分位數', '第三分位數', '標準差', '變異係數'));
     switch (substr($p['filename'], 0, 3)) {
         case 'isa':
-            foreach ($cities AS $city => $cityName) {
+            foreach ($cities as $city => $cityName) {
                 switch ($y) {
                     case '99':
                         $pageFile = "{$rawPath}/isa165-{$city}.html";
@@ -113,12 +113,12 @@ foreach (glob($basePath . '/raw/*') AS $rawPath) {
                     $page = strtr($page, $trBase);
                     $lines = explode('</tr>', $page);
                     $lastLine = array();
-                    foreach ($lines AS $line) {
+                    foreach ($lines as $line) {
                         $cols = explode('</td>', $line);
                         if (count($cols) !== 13) {
                             continue;
                         }
-                        foreach ($cols AS $k => $v) {
+                        foreach ($cols as $k => $v) {
                             $cols[$k] = trim(strip_tags($v));
                         }
                         if (in_array($cols[1], $skip) || in_array($cols[2], $skip)) {
@@ -140,40 +140,98 @@ foreach (glob($basePath . '/raw/*') AS $rawPath) {
             }
             break;
         case 'ias':
-            foreach ($cities AS $city => $cityName) {
-                $pageFile = "{$rawPath}/ias165{$city}.html";
-                if (file_exists($pageFile)) {
-                    $page = file_get_contents($pageFile);
-                    $page = strtr($page, $trBase);
-                    if (false !== strpos($page, 'Big5-HKSCS') || false !== strpos($page, 'charset=big5')) {
-                        $page = mb_convert_encoding($page, 'utf-8', 'big5');
+            $oldFormatFile = "{$rawPath}/IAS165.HTM";
+            if (!file_exists($oldFormatFile)) {
+                foreach ($cities as $city => $cityName) {
+                    $pageFile = "{$rawPath}/ias165{$city}.html";
+                    $forceConvert = false;
+                    if(!file_exists($pageFile)) {
+                        $forceConvert = true;
+                        $pageFile = "{$rawPath}/ias165{$city}.htm";
                     }
-                    $lines = explode('</tr>', $page);
-                    $lastLine = array();
-                    foreach ($lines AS $line) {
-                        $cols = preg_split('/<\\/t[dh]>/', $line);
-                        foreach ($cols AS $k => $v) {
-                            $cols[$k] = trim(strip_tags($v));
+                    if (file_exists($pageFile)) {
+                        $page = file_get_contents($pageFile);
+                        $page = strtr($page, $trBase);
+                        if (false !== strpos($page, 'Big5-HKSCS') || false !== strpos($page, 'charset=big5') || $forceConvert) {
+                            $page = mb_convert_encoding($page, 'utf-8', 'big5');
                         }
-                        if(count($cols) < 8) {
-                          continue;
+                        if(!$forceConvert) {
+                            $lines = explode('</tr>', $page);
+                        } else {
+                            $lines = explode('</TR>', $page);
                         }
-                        if (empty($cols[2]) || in_array($cols[1], $skip) || in_array($cols[0], $skip)) {
-                          continue;
-                        }
+                        
+                        $lastLine = array();
+                        foreach ($lines as $line) {
+                            if(!$forceConvert) {
+                                $cols = preg_split('/<\\/t[dh]>/', $line);
+                            } else {
+                                $cols = preg_split('/<\\/T[DH]>/', $line);
+                            }
+                            
+                            foreach ($cols as $k => $v) {
+                                $cols[$k] = trim(strip_tags($v));
+                            }
+                            if (count($cols) < 8) {
+                                continue;
+                            }
+                            if (empty($cols[2]) || in_array($cols[1], $skip) || in_array($cols[0], $skip)) {
+                                continue;
+                            }
 
-                        if (count($cols) === 10 && isset($lastLine[0])) {
-                            $cols = array_merge(array($lastLine[0]), $cols);
-                        }
-                        unset($cols[10]);
-                        $cols[0] = strtr($cols[0], $txtPairs);
-                        $cols[1] = strtr($cols[1], $txtPairs);
-                        fputcsv($oFh, array_merge(array($cityName), $cols));
+                            if (count($cols) === 10 && isset($lastLine[0])) {
+                                $cols = array_merge(array($lastLine[0]), $cols);
+                            }
+                            unset($cols[10]);
+                            $cols[0] = strtr($cols[0], $txtPairs);
+                            $cols[1] = strtr($cols[1], $txtPairs);
+                            fputcsv($oFh, array_merge(array($cityName), $cols));
 
-                        $lastLine = $cols;
+                            $lastLine = $cols;
+                        }
                     }
                 }
+            } else {
+                $page = file_get_contents($oldFormatFile);
+                $page = mb_convert_encoding($page, 'utf-8', 'big5');
+                $page = strtr($page, $trBase);
+                $cityPos = strpos($page, '縣市別');
+                $oldCities = [];
+                while (false !== $cityPos) {
+                    $posEnd = strpos($page, '</b>', $cityPos);
+                    $city = substr($page, $cityPos, $posEnd - $cityPos);
+                    $oldCities[] = str_replace('縣市別：', '', $city);
+                    $cityPos = strpos($page, '縣市別', $posEnd);
+                }
+                $lines = explode('</TR>', $page);
+                $lastLine = array();
+                foreach ($lines as $line) {
+                    $cols = preg_split('/<\\/T[DH]>/', $line);
+                    foreach ($cols as $k => $v) {
+                        $cols[$k] = trim(strip_tags($v));
+                    }
+                    if (count($cols) < 8) {
+                        continue;
+                    }
+                    if ($cols[1] === '納 稅 單 位') {
+                        $cityName = array_shift($oldCities);
+                    }
+                    if (empty($cols[2]) || in_array($cols[1], $skip) || in_array($cols[0], $skip)) {
+                        continue;
+                    }
+
+                    if (count($cols) === 10 && isset($lastLine[0])) {
+                        $cols = array_merge(array($lastLine[0]), $cols);
+                    }
+                    unset($cols[10]);
+                    $cols[0] = strtr($cols[0], $txtPairs);
+                    $cols[1] = strtr($cols[1], $txtPairs);
+                    fputcsv($oFh, array_merge(array($cityName), $cols));
+
+                    $lastLine = $cols;
+                }
             }
+
             break;
     }
 }
