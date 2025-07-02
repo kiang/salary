@@ -241,7 +241,7 @@ $missing = array();
 $skip = array('合計', '其他', '');
 $errorPool = array();
 
-$years = array('isa100', 'isa101', 'isa102', 'isa103', 'isa104', 'isa105', 'isa106', 'isa107', 'isa108', 'isa109', 'isa110', 'isa111');
+$years = array('isa100', 'isa101', 'isa102', 'isa103', 'isa104', 'isa105', 'isa106', 'isa107', 'isa108', 'isa109', 'isa110', 'isa111', 'isa112');
 foreach($years AS $year) {
     $rawPath = $basePath . '/raw/' . $year;
     $p = pathinfo($rawPath);

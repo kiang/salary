@@ -202,7 +202,7 @@ new ol.layer.Vector({
   })
 });
 
-var currentYear = '2022', currentButton = 'mid', currentCunliCode = '',
+var currentYear = '2023', currentButton = 'mid', currentCunliCode = '',
   cunli, cunliSalary,
   valueKeys = {
     avg: 'avg',
