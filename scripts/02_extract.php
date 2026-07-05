@@ -111,16 +111,41 @@ foreach (glob($basePath . '/raw/*') as $rawPath) {
                 if (file_exists($pageFile)) {
                     $page = file_get_contents($pageFile);
                     $page = strtr($page, $trBase);
-                    $lines = explode('</tr>', $page);
+                    $rows = array();
+                    if (intval($y) >= 113) {
+                        // 113+ renders the district label as a nested table
+                        // inside its cell; DOM textContent flattens it back
+                        $dom = new DOMDocument();
+                        libxml_use_internal_errors(true);
+                        $dom->loadHTML('<?xml encoding="UTF-8">' . $page);
+                        libxml_clear_errors();
+                        foreach ($dom->getElementsByTagName('tr') as $tr) {
+                            $cols = array();
+                            foreach ($tr->childNodes as $child) {
+                                if ($child->nodeName === 'td') {
+                                    $cols[] = preg_replace('/^[\s\x{00A0}]+|[\s\x{00A0}]+$/u', '', $child->textContent);
+                                }
+                            }
+                            if (count($cols) === 12) {
+                                $cols[] = '';
+                                $rows[] = $cols;
+                            }
+                        }
+                    } else {
+                        $lines = explode('</tr>', $page);
+                        foreach ($lines as $line) {
+                            $cols = explode('</td>', $line);
+                            if (count($cols) !== 13) {
+                                continue;
+                            }
+                            foreach ($cols as $k => $v) {
+                                $cols[$k] = trim(strip_tags($v));
+                            }
+                            $rows[] = $cols;
+                        }
+                    }
                     $lastLine = array();
-                    foreach ($lines as $line) {
-                        $cols = explode('</td>', $line);
-                        if (count($cols) !== 13) {
-                            continue;
-                        }
-                        foreach ($cols as $k => $v) {
-                            $cols[$k] = trim(strip_tags($v));
-                        }
+                    foreach ($rows as $cols) {
                         if (in_array($cols[1], $skip) || in_array($cols[2], $skip)) {
                             continue;
                         }
