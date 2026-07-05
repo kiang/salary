@@ -241,7 +241,7 @@ $missing = array();
 $skip = array('合計', '其他', '');
 $errorPool = array();
 
-$years = array('isa100', 'isa101', 'isa102', 'isa103', 'isa104', 'isa105', 'isa106', 'isa107', 'isa108', 'isa109', 'isa110', 'isa111', 'isa112');
+$years = array('isa100', 'isa101', 'isa102', 'isa103', 'isa104', 'isa105', 'isa106', 'isa107', 'isa108', 'isa109', 'isa110', 'isa111', 'isa112', 'isa113');
 foreach($years AS $year) {
     $rawPath = $basePath . '/raw/' . $year;
     $p = pathinfo($rawPath);
@@ -250,15 +250,22 @@ foreach($years AS $year) {
         $pageFile = "{$rawPath}/{$y}_165-{$city}.html";
         if (file_exists($pageFile)) {
             $page = file_get_contents($pageFile);
-            $lines = explode('</tr>', $page);
+            $dom = new DOMDocument();
+            libxml_use_internal_errors(true);
+            $dom->loadHTML('<?xml encoding="UTF-8">' . $page);
+            libxml_clear_errors();
             $lastLine = array();
-            foreach ($lines AS $line) {
-                $cols = explode('</td>', $line);
-                if (count($cols) !== 13) {
-                    continue;
+            foreach ($dom->getElementsByTagName('tr') AS $tr) {
+                // direct td children only; 113+ renders the district label as a
+                // nested table inside its cell, textContent flattens it back
+                $cols = array();
+                foreach ($tr->childNodes AS $child) {
+                    if ($child->nodeName === 'td') {
+                        $cols[] = preg_replace('/^[\s\x{00A0}]+|[\s\x{00A0}]+$/u', '', $child->textContent);
+                    }
                 }
-                foreach ($cols AS $k => $v) {
-                    $cols[$k] = trim(strip_tags($v));
+                if (count($cols) !== 12) {
+                    continue;
                 }
                 if ($cols[2] === '合　計' || $cols[2] === '其　他') {
                     continue;
