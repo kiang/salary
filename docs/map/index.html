@@ -1,199 +1,596 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant-TW">
   <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta property="og:title" content="台灣所得地圖">
     <meta property="og:image" content="https://kiang.github.io/salary/map/og_image.png">
-    <meta property="og:description" content="台灣所得地圖">
+    <meta property="og:description" content="以村里為單位呈現台灣綜合所得統計（2011-2024），支援中位數、平均數等指標與歷年趨勢圖表">
     <meta property="og:type" content="website">
+    <meta name="description" content="以村里為單位呈現台灣綜合所得統計（2011-2024），支援中位數、平均數等指標與歷年趨勢圖表">
     <title>台灣所得地圖</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.4/ol.css" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/ol3-sidebar.css" />
-    <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" integrity="sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <style>
+      :root {
+        --surface: #fcfcfb;
+        --surface-glass: rgba(252, 252, 251, 0.92);
+        --ink: #0b0b0b;
+        --ink-2: #52514e;
+        --ink-3: #898781;
+        --hairline: #e1e0d9;
+        --accent: #2a78d6;
+        --accent-soft: rgba(42, 120, 214, 0.12);
+        --radius-lg: 16px;
+        --radius-sm: 10px;
+        --shadow: 0 4px 24px rgba(11, 11, 11, 0.12), 0 1px 3px rgba(11, 11, 11, 0.08);
+        --font: "Noto Sans TC", system-ui, -apple-system, "Segoe UI", sans-serif;
+      }
+      * { box-sizing: border-box; }
       html, body {
         width: 100%;
         height: 100%;
-        padding: 0px;
-        margin: 0px;
+        padding: 0;
+        margin: 0;
+        font-family: var(--font);
+        color: var(--ink);
+        overscroll-behavior: none;
       }
-      .map {
-        width:100%;
-        height:100%;
+      #map {
         position: absolute;
-        top: 0px;
-        left: 0px;
+        inset: 0;
+        background: #eceae4;
       }
-      .colorBox {
-          width: 1em;
-          height: 1em;
-          border: 1px solid #34495E;
-          display: inline-block;
-          margin: 0 3px;
-      }
-      .ol-popup {
+      .leaflet-container { font-family: var(--font); }
+
+      /* ---------- floating panels ---------- */
+      .panel {
         position: absolute;
-        background-color: white;
-        -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
-        filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
-        padding: 15px;
-        border-radius: 10px;
-        border: 1px solid #cccccc;
-        bottom: 12px;
-        left: -50px;
-        min-width: 300px;
+        z-index: 1000;
+        background: var(--surface-glass);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(11, 11, 11, 0.08);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow);
       }
-      .ol-popup:after, .ol-popup:before {
-        top: 100%;
-        border: solid transparent;
-        content: " ";
-        height: 0;
-        width: 0;
+
+      /* header / controls */
+      #control-panel {
+        top: 12px;
+        left: 12px;
+        width: 340px;
+        max-width: calc(100vw - 24px);
+        padding: 14px 16px;
+        max-height: calc(100vh - 96px);
+        overflow-y: auto;
+      }
+      #control-panel h1 {
+        font-size: 20px;
+        font-weight: 900;
+        margin: 0;
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      #control-panel h1 .dot {
+        width: 10px; height: 10px; border-radius: 50%;
+        background: linear-gradient(135deg, #fdbb84, #d7301f);
+        flex: none;
+      }
+      .subtitle {
+        font-size: 12px;
+        color: var(--ink-3);
+        margin: 2px 0 10px;
+      }
+      .icon-row {
+        margin-left: auto;
+        display: flex;
+        gap: 6px;
+      }
+      .icon-btn {
+        appearance: none;
+        border: 1px solid var(--hairline);
+        background: var(--surface);
+        color: var(--ink-2);
+        border-radius: 8px;
+        width: 30px; height: 30px;
+        font-size: 15px;
+        line-height: 1;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.15s, color 0.15s;
+      }
+      .icon-btn:hover { background: var(--accent-soft); color: var(--accent); }
+      .icon-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+      /* search */
+      .search-wrap { position: relative; margin-bottom: 10px; }
+      #search-input {
+        width: 100%;
+        padding: 8px 12px 8px 32px;
+        font: inherit;
+        font-size: 14px;
+        border: 1px solid var(--hairline);
+        border-radius: var(--radius-sm);
+        background: var(--surface);
+        color: var(--ink);
+        outline: none;
+      }
+      #search-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+      .search-wrap::before {
+        content: "⌕";
         position: absolute;
+        left: 10px; top: 50%;
+        transform: translateY(-54%);
+        font-size: 17px;
+        color: var(--ink-3);
         pointer-events: none;
       }
-      .ol-popup:after {
-        border-top-color: white;
-        border-width: 10px;
-        left: 48px;
-        margin-left: -10px;
-      }
-      .ol-popup:before {
-        border-top-color: #cccccc;
-        border-width: 11px;
-        left: 48px;
-        margin-left: -11px;
-      }
-      .ol-popup-closer {
-        text-decoration: none;
+      #search-results {
         position: absolute;
-        top: 2px;
-        right: 8px;
+        top: calc(100% + 4px);
+        left: 0; right: 0;
+        z-index: 1200;
+        background: var(--surface);
+        border: 1px solid var(--hairline);
+        border-radius: var(--radius-sm);
+        box-shadow: var(--shadow);
+        max-height: 260px;
+        overflow-y: auto;
+        display: none;
       }
-      .ol-popup-closer:after {
-        content: "✖";
+      #search-results button {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 8px 12px;
+        font: inherit;
+        font-size: 13px;
+        border: 0;
+        border-bottom: 1px solid var(--hairline);
+        background: transparent;
+        cursor: pointer;
+      }
+      #search-results button:last-child { border-bottom: 0; }
+      #search-results button:hover { background: var(--accent-soft); }
+      #search-results .muted { color: var(--ink-3); font-size: 12px; }
+
+      .section-label {
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--ink-3);
+        letter-spacing: 2px;
+        margin: 10px 0 6px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+      .chip {
+        appearance: none;
+        font: inherit;
+        font-size: 13px;
+        font-weight: 500;
+        padding: 5px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--hairline);
+        background: var(--surface);
+        color: var(--ink-2);
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+      .chip:hover { border-color: var(--accent); color: var(--accent); }
+      .chip.active {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #fff;
+        font-weight: 700;
+      }
+      .year-row { display: flex; align-items: center; gap: 10px; }
+      .year-row input[type="range"] {
+        flex: 1;
+        accent-color: var(--accent);
+      }
+      #year-value {
+        font-size: 16px;
+        font-weight: 900;
+        font-variant-numeric: tabular-nums;
+        min-width: 46px;
+        text-align: center;
+        color: var(--accent);
+      }
+      #play-btn { flex: none; }
+
+      /* legend */
+      #legend {
+        left: 12px;
+        bottom: 24px;
+        padding: 10px 14px 12px;
+        font-size: 11px;
+        color: var(--ink-2);
+      }
+      #legend .legend-title { font-weight: 700; margin-bottom: 6px; font-size: 12px; color: var(--ink); }
+      #legend .scale { display: flex; }
+      #legend .step { width: 30px; }
+      #legend .swatch { height: 10px; }
+      #legend .step:first-child .swatch { border-radius: 5px 0 0 5px; border: 1px solid var(--hairline); }
+      #legend .step .tick {
+        margin-top: 3px;
+        font-size: 10px;
+        color: var(--ink-3);
+        font-variant-numeric: tabular-nums;
+        transform: translateX(14px);
+        white-space: nowrap;
+      }
+      #legend .step:last-child .swatch { border-radius: 0 5px 5px 0; }
+
+      /* detail panel */
+      #detail-panel {
+        top: 12px;
+        right: 12px;
+        width: 400px;
+        max-width: calc(100vw - 24px);
+        max-height: calc(100vh - 48px);
+        display: none;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      #detail-panel.open { display: flex; }
+      .detail-head {
+        padding: 16px 18px 12px;
+        border-bottom: 1px solid var(--hairline);
+        position: relative;
+      }
+      .detail-head .crumb { font-size: 12px; color: var(--ink-3); }
+      .detail-head h2 { margin: 2px 0 0; font-size: 22px; font-weight: 900; letter-spacing: 1px; }
+      .close-btn {
+        position: absolute;
+        top: 12px; right: 12px;
+      }
+      .detail-body { padding: 14px 18px 18px; overflow-y: auto; }
+      .stat-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+      .stat-tile {
+        background: var(--surface);
+        border: 1px solid var(--hairline);
+        border-radius: var(--radius-sm);
+        padding: 10px 12px;
+      }
+      .stat-tile .k { font-size: 11px; color: var(--ink-3); font-weight: 500; }
+      .stat-tile .v {
+        font-size: 22px;
+        font-weight: 900;
+        line-height: 1.25;
+        color: var(--ink);
+      }
+      .stat-tile .v small { font-size: 12px; font-weight: 500; color: var(--ink-3); margin-left: 2px; }
+      .stat-tile.highlight { border-color: var(--accent); background: var(--accent-soft); }
+      .stat-tile.highlight .v { color: var(--accent); }
+      .chart-box { margin: 4px 0 14px; height: 240px; position: relative; }
+      .chart-box canvas { max-width: 100%; }
+      .detail-table-wrap {
+        overflow-x: auto;
+        border: 1px solid var(--hairline);
+        border-radius: var(--radius-sm);
+      }
+      table.detail-table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 12px;
+        white-space: nowrap;
+        font-variant-numeric: tabular-nums;
+      }
+      table.detail-table th, table.detail-table td {
+        padding: 6px 10px;
+        text-align: right;
+        border-bottom: 1px solid var(--hairline);
+      }
+      table.detail-table th {
+        background: var(--surface);
+        color: var(--ink-3);
+        font-weight: 700;
+        position: sticky;
+        top: 0;
+      }
+      table.detail-table td:first-child, table.detail-table th:first-child { text-align: left; font-weight: 700; }
+      table.detail-table tr:last-child td { border-bottom: 0; }
+      table.detail-table tr.current td { background: var(--accent-soft); }
+      .detail-actions { display: flex; gap: 8px; margin-top: 12px; }
+      .btn {
+        appearance: none;
+        font: inherit;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 8px 14px;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--hairline);
+        background: var(--surface);
+        color: var(--ink-2);
+        cursor: pointer;
+      }
+      .btn:hover { border-color: var(--accent); color: var(--accent); }
+      .footnote { font-size: 11px; color: var(--ink-3); line-height: 1.6; margin-top: 12px; }
+
+      /* ranking panel */
+      #ranking-panel {
+        top: 12px;
+        left: 12px;
+        width: 340px;
+        max-width: calc(100vw - 24px);
+        max-height: calc(100vh - 48px);
+        display: none;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      #ranking-panel.open { display: flex; }
+      .ranking-head { padding: 14px 16px 10px; border-bottom: 1px solid var(--hairline); position: relative; }
+      .ranking-head h2 { margin: 0 0 2px; font-size: 17px; font-weight: 900; }
+      .ranking-head .sub { font-size: 12px; color: var(--ink-3); }
+      #ranking-filter {
+        width: 100%;
+        margin-top: 8px;
+        padding: 6px 10px;
+        font: inherit;
+        font-size: 13px;
+        border: 1px solid var(--hairline);
+        border-radius: 8px;
+        outline: none;
+      }
+      #ranking-filter:focus { border-color: var(--accent); }
+      #ranking-list { overflow-y: auto; padding: 4px 0; }
+      .rank-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        padding: 7px 16px;
+        font: inherit;
+        font-size: 13px;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        text-align: left;
+      }
+      .rank-row:hover { background: var(--accent-soft); }
+      .rank-row .rank {
+        flex: none;
+        min-width: 34px;
+        font-weight: 900;
+        font-variant-numeric: tabular-nums;
+        color: var(--ink-3);
+        text-align: right;
+      }
+      .rank-row.top3 .rank { color: var(--accent); }
+      .rank-row .name { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+      .rank-row .val {
+        flex: none;
+        font-weight: 700;
+        font-variant-numeric: tabular-nums;
+      }
+
+      /* modal */
+      #about-modal {
+        position: fixed;
+        inset: 0;
+        z-index: 2000;
+        background: rgba(11, 11, 11, 0.45);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      #about-modal.open { display: flex; }
+      #about-modal .modal-card {
+        background: var(--surface);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow);
+        max-width: 480px;
+        width: 100%;
+        max-height: 80vh;
+        overflow-y: auto;
+        padding: 22px 24px;
+        position: relative;
+      }
+      #about-modal h2 { margin: 0 0 10px; font-size: 20px; font-weight: 900; }
+      #about-modal p { font-size: 13px; line-height: 1.8; color: var(--ink-2); }
+      #about-modal a { color: var(--accent); }
+
+      /* loading overlay */
+      #loading {
+        position: fixed;
+        inset: 0;
+        z-index: 3000;
+        background: var(--surface);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        transition: opacity 0.4s;
+      }
+      #loading.done { opacity: 0; pointer-events: none; }
+      #loading .logo { font-size: 26px; font-weight: 900; letter-spacing: 4px; }
+      #loading .bar {
+        width: 220px; height: 6px;
+        background: var(--hairline);
+        border-radius: 3px;
+        overflow: hidden;
+      }
+      #loading .bar i {
+        display: block;
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(90deg, #fdbb84, #d7301f);
+        border-radius: 3px;
+        transition: width 0.2s;
+      }
+      #loading .hint { font-size: 12px; color: var(--ink-3); }
+
+      /* credit */
+      #credit {
+        position: absolute;
+        z-index: 1000;
+        right: 12px;
+        bottom: 24px;
+        background: var(--surface-glass);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(11, 11, 11, 0.08);
+        border-radius: 999px;
+        box-shadow: var(--shadow);
+        padding: 6px 14px;
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--ink-2);
+        text-decoration: none;
+      }
+      #credit:hover { color: var(--accent); }
+
+      .leaflet-control-attribution { font-size: 10px; background: rgba(252,252,251,0.75) !important; }
+      .leaflet-tooltip.cunli-tip {
+        font-family: var(--font);
+        border-radius: 8px;
+        border: 1px solid var(--hairline);
+        box-shadow: var(--shadow);
+        padding: 8px 12px;
+      }
+      .cunli-tip .tip-name { font-weight: 900; font-size: 13px; }
+      .cunli-tip .tip-val { font-size: 12px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+      .cunli-tip .tip-rank { font-size: 11px; color: var(--accent); font-weight: 700; }
+
+      @media (max-width: 767px) {
+        #control-panel {
+          top: 8px; left: 8px; right: 8px;
+          width: auto;
+          max-height: 46vh;
+          padding: 10px 14px;
+        }
+        #control-panel h1 { font-size: 17px; }
+        #detail-panel, #ranking-panel {
+          top: auto;
+          left: 0; right: 0; bottom: 0;
+          width: auto;
+          max-width: none;
+          max-height: 62vh;
+          border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+        }
+        #legend { bottom: 34px; left: 8px; padding: 8px 10px; }
+        #legend .step { width: 24px; }
+        #credit { right: 8px; bottom: 34px; }
       }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3GE076J7DJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3GE076J7DJ');
-</script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5571465503362954"
-     crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GE076J7DJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3GE076J7DJ');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5571465503362954" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.12&appId=1393405437614114&autoLogAppEvents=1';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-    <div id="sidebar" class="sidebar collapsed">
-        <!-- Nav tabs -->
-        <div class="sidebar-tabs">
-            <ul role="tablist">
-                <li><a href="#home" role="tab"><i class="fa fa-bars"></i></a></li>
-                <li><a href="#fb" role="tab"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#tools" role="tab"><i class="fa fa-arrows"></i></a></li>
-                <li><a href="#cunliList" role="tab"><i class="fa fa-sort-numeric-asc"></i></a></li>
-                <li><a href="https://github.com/kiang/salary" role="tab" target="_blank"><i class="fa fa-github"></i></a></li>
-            </ul>
-        </div>
+    <div id="map"></div>
 
-        <!-- Tab panes -->
-        <div class="sidebar-content">
-            <div class="sidebar-pane" id="home">
-                <h1 class="sidebar-header">
-                    台灣所得地圖
-                    <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
-                </h1>
-                <p id="sidebar-main-block"></p>
-                <div class="pull-right">單位：千元
-                    <span class="colorBox" style="background-color: white;"></span>&nbsp;無資料
-                    <span class="colorBox" style="background-color: rgba(254,232,200,0.6);"></span>&nbsp;300
-                    <span class="colorBox" style="background-color: rgba(253,212,158,0.6);"></span>&nbsp;400
-                    <span class="colorBox" style="background-color: rgba(253,187,132,0.6);"></span>&nbsp;500
-                    <span class="colorBox" style="background-color: rgba(252,141,89,0.6);"></span>&nbsp;700
-                    <span class="colorBox" style="background-color: rgba(239,101,72,0.6);"></span>&nbsp;900
-                    <span class="colorBox" style="background-color: rgba(215,48,31,0.6);"></span>&nbsp;1100
-                    <span class="colorBox" style="background-color: rgba(179,0,0,0.6);"></span>&nbsp;1300
-                    <span class="colorBox" style="background-color: rgba(127,0,0,0.6);"></span>&nbsp;1500
-                    <span class="colorBox" style="background-color: rgba(64,0,0,0.6);"></span>&nbsp;>1500
-                </div>
-                * 本統計之所得為課稅資料，未納入「政府移轉支出」各戶所得、免稅所得、分離課稅所得等資料，故不宜逕作為衡量所得差距之參據，相關所得資料應以行政院主計總處公布之資料為準。
-            </div>
-            <div class="sidebar-pane" id="fb">
-              <div class="fb-page" data-href="https://www.facebook.com/k.olc.tw/" data-tabs="timeline" data-width="380" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/k.olc.tw/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/k.olc.tw/">江明宗</a></blockquote></div>
-            </div>
-            <div class="sidebar-pane" id="tools">
-              <a class="btn btn-primary btn-lg btn-block btn-play" id="avg" href="#">平均數</a>
-              <a class="btn btn-primary btn-lg btn-block btn-play" id="mid" href="#">中位數</a>
-              <a class="btn btn-primary btn-lg btn-block btn-play" id="sd" href="#">標準差</a>
-              <a class="btn btn-primary btn-lg btn-block btn-play" id="mid1" href="#">第一分位數</a>
-              <a class="btn btn-primary btn-lg btn-block btn-play" id="mid3" href="#">第三分位數</a>
-              <hr />
-              年度
-              <a href="#" class="btn btn-primary btn-year" data-year="2024">2024</a>
-              <a href="#" class="btn btn-primary btn-year" data-year="2023">2023</a>
-              <a href="#" class="btn btn-primary btn-year" data-year="2022">2022</a>
-              <a href="#" class="btn btn-primary btn-year" data-year="2021">2021</a>
-              <a href="#" class="btn btn-primary btn-year" data-year="2020">2020</a>
-              <a href="#" class="btn btn-primary btn-year" data-year="2019">2019</a>
-              <a href="#" class="btn btn-primary btn-year" data-year="2018">2018</a>
-              <a href="#" class="btn btn-primary btn-year" data-year="2017">2017</a>
-              <a href="#" class="btn btn-primary btn-year" data-year="2016">2016</a>
-              <a href="#" class="btn btn-primary btn-year" data-year="2015">2015</a>
-              <a href="#" class="btn btn-primary btn-year" data-year="2014">2014</a>
-              <a href="#" class="btn btn-primary btn-year" data-year="2013">2013</a>
-              <a href="#" class="btn btn-primary btn-year" data-year="2012">2012</a>
-              <a href="#" class="btn btn-primary btn-year" data-year="2011">2011</a>
-              <hr />
-              快速定位
-              <a href="#" class="btn btn-default btn-city" data-lat="25.053699" data-lng="121.507837">台北</a>
-              <a href="#" class="btn btn-default btn-city" data-lat="24.752504" data-lng="121.771097">宜蘭</a>
-              <a href="#" class="btn btn-default btn-city" data-lat="24.804498" data-lng="120.988528">新竹</a>
-              <a href="#" class="btn btn-default btn-city" data-lat="24.167804" data-lng="120.658214">台中</a>
-              <a href="#" class="btn btn-default btn-city" data-lat="23.477332" data-lng="120.430085">嘉義</a>
-              <a href="#" class="btn btn-default btn-city" data-lat="22.996169" data-lng="120.201330">台南</a>
-              <a href="#" class="btn btn-default btn-city" data-lat="22.643894" data-lng="120.317828">高雄</a>
-              <a href="#" class="btn btn-default btn-city" data-lat="22.674185" data-lng="120.501103">屏東</a>
-              <a href="#" class="btn btn-default btn-city" data-lat="23.999479" data-lng="121.606658">花蓮</a>
-              <a href="#" class="btn btn-default btn-city" data-lat="22.793229" data-lng="121.124322">台東</a>
-              <a href="#" class="btn btn-default btn-city" data-lat="23.962005" data-lng="120.963292">南投</a>
-              <a href="#" class="btn btn-default btn-city" data-lat="23.561951" data-lng="119.608123">澎湖</a>
-              <a href="#" class="btn btn-default btn-city" data-lat="24.446522" data-lng="118.376170">金門</a>
-              <a href="#" class="btn btn-default btn-city" data-lat="26.149491" data-lng="119.936241">馬祖</a>
-            </div>
-            <div class="sidebar-pane" id="cunliList">
-              
-            </div>
+    <!-- loading -->
+    <div id="loading">
+      <div class="logo">台灣所得地圖</div>
+      <div class="bar"><i id="loading-bar"></i></div>
+      <div class="hint" id="loading-hint">載入資料中…</div>
+    </div>
+
+    <!-- control panel -->
+    <div id="control-panel" class="panel">
+      <h1>
+        <span class="dot"></span>台灣所得地圖
+        <span class="icon-row">
+          <button class="icon-btn" id="btn-ranking" title="全國排行">☰</button>
+          <button class="icon-btn" id="btn-locate" title="定位到我的位置">◎</button>
+          <button class="icon-btn" id="btn-about" title="關於本站">?</button>
+        </span>
+      </h1>
+      <div class="subtitle" id="subtitle">村里綜合所得統計 · 財政資訊中心</div>
+      <div class="search-wrap">
+        <input id="search-input" type="search" placeholder="搜尋村里，例如：永康區 或 大安區仁愛里" autocomplete="off">
+        <div id="search-results"></div>
+      </div>
+      <div class="section-label">統計指標</div>
+      <div class="chips" id="metric-chips"></div>
+      <div class="section-label">年度</div>
+      <div class="year-row">
+        <button class="icon-btn" id="play-btn" title="播放歷年變化">▶</button>
+        <input type="range" id="year-slider" min="0" max="0" step="1" value="0">
+        <div id="year-value">–</div>
+      </div>
+      <div class="section-label" style="margin-top:12px;">快速定位</div>
+      <div class="chips" id="city-chips"></div>
+    </div>
+
+    <!-- legend -->
+    <div id="legend" class="panel">
+      <div class="legend-title" id="legend-title">中位數（千元）</div>
+      <div class="scale" id="legend-scale"></div>
+    </div>
+
+    <!-- ranking panel -->
+    <div id="ranking-panel" class="panel">
+      <div class="ranking-head">
+        <h2>全國排行</h2>
+        <div class="sub" id="ranking-sub"></div>
+        <button class="icon-btn close-btn" id="ranking-close" title="關閉">✕</button>
+        <input id="ranking-filter" type="search" placeholder="輸入縣市、鄉鎮或村里名稱過濾" autocomplete="off">
+      </div>
+      <div id="ranking-list"></div>
+    </div>
+
+    <!-- detail panel -->
+    <div id="detail-panel" class="panel">
+      <div class="detail-head">
+        <div class="crumb" id="detail-crumb"></div>
+        <h2 id="detail-name"></h2>
+        <button class="icon-btn close-btn" id="detail-close" title="關閉">✕</button>
+      </div>
+      <div class="detail-body">
+        <div class="stat-grid" id="detail-stats"></div>
+        <div class="chart-box"><canvas id="trend-chart" height="220"></canvas></div>
+        <div class="detail-table-wrap" id="detail-table"></div>
+        <div class="detail-actions">
+          <button class="btn" id="btn-share">複製分享連結</button>
+          <button class="btn" id="btn-zoom">縮放至村里</button>
         </div>
+        <div class="footnote">單位：千元。本統計之所得為課稅資料，未納入「政府移轉支出」各戶所得、免稅所得、分離課稅所得等資料，故不宜逕作為衡量所得差距之參據，相關所得資料應以行政院主計總處公布之資料為準。</div>
+      </div>
     </div>
-    <div id="map" class="map"></div>
-    <div style="position: fixed; bottom: 0px; left: 0px;">
-        <a href="https://facebook.com/k.olc.tw/" target="_blank" class="btn btn-lg alert-primary">北中西區台南市議員參選人江明宗 製作</a>
+
+    <!-- about modal -->
+    <div id="about-modal">
+      <div class="modal-card">
+        <button class="icon-btn close-btn" id="about-close" title="關閉">✕</button>
+        <h2>關於台灣所得地圖</h2>
+        <p>本地圖以村里為單位，呈現財政部財政資訊中心公布的綜合所得申報統計（2011－2024）。可切換平均數、中位數、標準差與第一、三分位數等指標，點選村里可查看歷年趨勢與完整統計表。</p>
+        <p>本統計之所得為課稅資料，未納入「政府移轉支出」各戶所得、免稅所得、分離課稅所得等資料，故不宜逕作為衡量所得差距之參據，相關所得資料應以行政院主計總處公布之資料為準。</p>
+        <p>
+          資料來源：<a href="https://www.fia.gov.tw/" target="_blank" rel="noopener">財政部財政資訊中心</a><br>
+          程式與資料：<a href="https://github.com/kiang/salary" target="_blank" rel="noopener">github.com/kiang/salary</a><br>
+          製作：<a href="https://facebook.com/k.olc.tw/" target="_blank" rel="noopener">江明宗</a>
+        </p>
+      </div>
     </div>
-    <div id="popup" class="ol-popup">
-      <a href="#" id="popup-closer" class="ol-popup-closer"></a>
-      <div id="popup-content"></div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.4/ol.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
-    <script src="js/routie.min.js"></script>
-    <script src="js/ol3-sidebar.js"></script>
+
+    <a id="credit" href="https://facebook.com/k.olc.tw/" target="_blank" rel="noopener">北中西區台南市議員參選人江明宗 製作</a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" integrity="sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="main.js"></script>
   </body>
 </html>
